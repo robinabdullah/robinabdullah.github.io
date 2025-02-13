@@ -1,265 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Abdullah Saleh Robin - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-      /* Reset default styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        line-height: 1.6;
-      }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #35424a;
+            padding: 15px 30px;
+            color: white;
+        }
 
-      /* Navigation Bar */
-      nav {
-        background: #35424a;
-        color: #fff;
-        padding: 15px 0;
-        text-align: center;
-      }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
-      nav ul {
-        list-style: none;
-        padding: 0;
-      }
+        nav ul li {
+            margin: 0 15px;
+        }
 
-      nav ul li {
-        display: inline;
-        margin: 0 15px;
-      }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-      }
+        .hero {
+            text-align: center;
+            background: #e8491d;
+            color: white;
+            padding: 80px 20px;
+        }
 
-      nav ul li a:hover {
-        color: #e8491d;
-      }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #e8491d;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
 
-      /* Hero Section */
-      .hero {
-        text-align: center;
-        padding: 50px 20px;
-        background: #e8491d;
-        color: white;
-      }
+        .section {
+            padding: 50px;
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
 
-      .hero h1 {
-        font-size: 2.5rem;
-      }
+        .projects-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-      .hero p {
-        font-size: 1.2rem;
-      }
+        .project-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 250px;
+        }
 
-      /* Sections */
-      main {
-        max-width: 1100px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-      }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
 
-      section {
-        margin-bottom: 40px;
-      }
+        .skills-list li {
+            background: #e8491d;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+        }
 
-      section h2 {
-        border-bottom: 2px solid #e8491d;
-        display: inline-block;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-      }
-
-      /* Experience & Projects */
-      .experience,
-      .project {
-        background: #f9f9f9;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-left: 4px solid #e8491d;
-      }
-
-      .experience h3,
-      .project h3 {
-        color: #e8491d;
-      }
-
-      .experience ul,
-      .project ul {
-        margin-left: 20px;
-      }
-
-      /* Skills */
-      #skills ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      #skills li {
-        background: #e8491d;
-        color: white;
-        padding: 8px 15px;
-        margin: 5px;
-        border-radius: 5px;
-      }
-
-      /* Contact */
-      #contact a {
-        color: #e8491d;
-        text-decoration: none;
-      }
-
-      /* Footer */
-      footer {
-        text-align: center;
-        padding: 20px;
-        background: #35424a;
-        color: white;
-      }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: white;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="hero">
-        <h1>Abdullah Saleh Robin</h1>
-        <p>
-          Senior .NET Developer | Cloud Enthusiast | Microservices Architect
-        </p>
-      </div>
+        <nav>
+            <div class="logo">Robin.dev</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-      <section id="about">
+    <section class="hero">
+        <h1>Abdullah Saleh Robin</h1>
+        <p>Senior .NET Developer | Cloud & Microservices Expert</p>
+        <a href="#contact" class="cta-button">Hire Me</a>
+    </section>
+
+    <section id="about" class="section">
         <h2>About Me</h2>
-        <p>
-          Senior .NET Developer with 8+ years of experience in delivering
-          scalable, high-performance enterprise applications. Skilled in
-          microservices architecture, cloud solutions (Azure, AWS), and leading
-          cross-functional teams. Passionate about driving digital
-          transformation and mentoring developers.
-        </p>
-      </section>
+        <p>With 8+ years of experience in developing scalable, high-performance applications, I specialize in .NET, cloud solutions (Azure, AWS), and microservices architecture. I thrive in leading teams, optimizing system performance, and driving digital transformation.</p>
+    </section>
 
-      <section id="experience">
+    <section id="experience" class="section">
         <h2>Work Experience</h2>
-        <div class="experience">
-          <h3>Senior Developer - Optimizely</h3>
-          <p>May 2023 – Present</p>
-          <ul>
-            <li>
-              Customized and maintained the Optimizely Configured Commerce (B2B)
-              Product.
-            </li>
-            <li>
-              Engineered a robust script that accelerated product version
-              upgrades by 35%.
-            </li>
-            <li>
-              Led code reviews and upheld best practices in software
-              development.
-            </li>
-          </ul>
+        <div class="exp-item">
+            <h3>Senior Developer - Optimizely</h3>
+            <p>May 2023 – Present</p>
+            <ul>
+                <li>Customized and maintained the Optimizely Configured Commerce (B2B) Product.</li>
+                <li>Led code reviews, enforcing best practices and scalability.</li>
+            </ul>
         </div>
-        <div class="experience">
-          <h3>Senior Software Engineer - Orion Informatics Ltd</h3>
-          <p>May 2022 – April 2023</p>
-          <ul>
-            <li>Implemented Socket.IO for persistent connection management.</li>
-            <li>
-              Handled complex reconnection scenarios and optimized real-time
-              features.
-            </li>
-          </ul>
+        <div class="exp-item">
+            <h3>Senior Software Engineer - Orion Informatics</h3>
+            <p>May 2022 – April 2023</p>
+            <ul>
+                <li>Implemented real-time Socket.IO solutions.</li>
+                <li>Optimized connection handling, reducing latency by 20%.</li>
+            </ul>
         </div>
-        <div class="experience">
-          <h3>Senior Programmer - Synesis IT</h3>
-          <p>September 2020 – April 2022</p>
-          <ul>
-            <li>
-              Led the development team in .NET Core, Java Spring, and Angular.
-            </li>
-            <li>
-              Designed scalable microservices and improved system performance.
-            </li>
-          </ul>
-        </div>
-      </section>
+    </section>
 
-      <section id="projects">
+    <section id="projects" class="section">
         <h2>Projects</h2>
-        <div class="project">
-          <h3>B2B Configured Commerce Product</h3>
-          <p>
-            Enhanced Optimizely’s B2B platform, reducing upgrade times by 35%.
-          </p>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>B2B Configured Commerce</h3>
+                <p>Enhanced Optimizely's B2B platform, reducing upgrade times by 35%.</p>
+            </div>
+            <div class="project-card">
+                <h3>Covid-19 Patient Management</h3>
+                <p>Developed a telehealth CRM, supporting 2,000+ daily consultations.</p>
+            </div>
         </div>
-        <div class="project">
-          <h3>NSDA – Govt. Skill Training Monitor</h3>
-          <p>
-            Built a scalable system for 100,000+ skill training providers in
-            Bangladesh.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Covid-19 Patient Management</h3>
-          <p>
-            Developed a telehealth CRM for COVID-19 suspected patients,
-            supporting 2,000+ daily consultations.
-          </p>
-        </div>
-      </section>
+    </section>
 
-      <section id="skills">
+    <section id="skills" class="section">
         <h2>Skills</h2>
-        <ul>
-          <li>.NET, ASP.NET Core, Entity Framework</li>
-          <li>Microservices, CQRS, DDD</li>
-          <li>Azure, AWS, Docker, Kubernetes</li>
-          <li>Angular, React, TypeScript</li>
-          <li>Agile, Scrum, DevOps</li>
+        <ul class="skills-list">
+            <li>.NET Core, C#, Entity Framework</li>
+            <li>Azure, AWS, Docker, Kubernetes</li>
+            <li>React, Angular, TypeScript</li>
+            <li>Microservices, CQRS, DDD</li>
         </ul>
-      </section>
+    </section>
 
-      <section id="contact">
+    <section id="contact" class="section">
         <h2>Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:robinabdullah@yahoo.com">robinabdullah@yahoo.com</a>
-        </p>
+        <p>Email: <a href="mailto:robinabdullah@yahoo.com">robinabdullah@yahoo.com</a></p>
         <p>LinkedIn: <a href="#">linkedin.com/in/your-profile</a></p>
         <p>GitHub: <a href="#">github.com/yourgithub</a></p>
-      </section>
-    </main>
+    </section>
 
     <footer>
-      <p>&copy; 2025 Abdullah Saleh Robin. All Rights Reserved.</p>
+        <p>&copy; 2025 Abdullah Saleh Robin. All Rights Reserved.</p>
     </footer>
-  </body>
+</body>
 </html>
