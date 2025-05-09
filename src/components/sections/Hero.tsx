@@ -77,11 +77,18 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
                 {bio}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="button-primary">
+                <a 
+                  href="/cv/Resume of Abdullah Saleh Robin.pdf" 
+                  download="Abdullah_Robin_Resume.pdf"
+                  className="px-5 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-90 transition-all shadow-md"
+                >
+                  Download CV
+                </a>
+                <Link href="#contact" className="px-5 py-2 text-sm bg-transparent border border-[#6366f1]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md">
                   Contact Me
                 </Link>
-                <Link href="#projects" className="button-secondary">
-                  View My Work
+                <Link href="#projects" className="px-5 py-2 text-sm border border-[#a855f7]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md">
+                  View Work
                 </Link>
               </div>
               
@@ -160,11 +167,24 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               {bio}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="#contact" className="button-primary">
+              <a 
+                href="/cv/Resume of Abdullah Saleh Robin.pdf" 
+                download="Abdullah_Robin_Resume.pdf"
+                className="px-5 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-90 transition-all shadow-md"
+              >
+                Download CV
+              </a>
+              <Link 
+                href="#contact" 
+                className="px-5 py-2 text-sm bg-transparent border border-[#6366f1]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md"
+              >
                 Contact Me
               </Link>
-              <Link href="#projects" className="button-secondary">
-                View My Work
+              <Link 
+                href="#projects" 
+                className="px-5 py-2 text-sm border border-[#a855f7]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md"
+              >
+                View Work
               </Link>
             </div>
             
