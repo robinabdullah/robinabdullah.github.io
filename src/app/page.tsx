@@ -25,6 +25,12 @@ const defaultData = {
       twitter: "https://twitter.com/"
     }
   },
+  statistics: {
+    yearsExperience: 7,
+    projectsDelivered: 20,
+    technologiesMastered: 15,
+    codeCommits: 5000
+  },
   skills: {
     frontend: ["HTML", "CSS", "JavaScript"],
     backend: ["Node.js", "Express"],
@@ -57,7 +63,7 @@ export default function Home() {
     fetchData();
   }, []);
 
-  const { personalInfo, skills, experience, education, projects } = portfolioData;
+  const { personalInfo, skills, experience, education, projects, statistics } = portfolioData;
 
   if (isLoading) {
     return (
@@ -77,6 +83,7 @@ export default function Home() {
         bio={personalInfo.bio}
         avatar={personalInfo.avatar}
         socialLinks={personalInfo.socialLinks}
+        statistics={statistics}
       />
       
       <About 

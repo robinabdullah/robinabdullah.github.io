@@ -9,7 +9,9 @@ This portfolio website is designed for a senior software engineer with the prima
 
 ## Design References
 - Visual design inspired by [Abhishek Ganvir's portfolio](mdc:https:/abhishekganvir.vercel.app)
+  - Use MCP browser tools (`mcp_browser-tools_takeScreenshot`) to access and reference this site when needed
 - Content structure influenced by [Biswajit Panday's portfolio](mdc:https:/biswajitpanday.github.io), particularly for statistics and career information
+  - Use MCP browser tools (`mcp_browser-tools_takeScreenshot`) to access and reference this site when needed
 
 ## Core Data Structure
 - Primary data source: [portfolio.json](mdc:src/data/portfolio.json)
@@ -21,4 +23,11 @@ This portfolio website is designed for a senior software engineer with the prima
 2. Easy navigation for recruiters
 3. Clear presentation of skills and experience
 4. Mobile-responsive design
+
+## Reference Access
+- Use `mcp_browser-tools_*` functions to access and analyze the reference websites
+- Available tools include:
+  - `mcp_browser-tools_takeScreenshot` to capture visual references
+  - `mcp_browser-tools_getSelectedElement` to inspect specific elements
+  - `mcp_browser-tools_runAccessibilityAudit` for accessibility best practices
 

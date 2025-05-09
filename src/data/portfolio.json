@@ -13,6 +13,12 @@
       "twitter": "https://twitter.com/"
     }
   },
+  "statistics": {
+    "yearsExperience": 7,
+    "projectsDelivered": 20,
+    "technologiesMastered": 15,
+    "codeCommits": 5000
+  },
   "skills": {
     "frontend": [
       "HTML5",

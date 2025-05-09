@@ -1,9 +1,10 @@
 'use client';
 
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useCountUp } from 'react-countup';
 
 interface HeroProps {
   name: string;
@@ -14,10 +15,42 @@ interface HeroProps {
     github: string;
     linkedin: string;
     twitter: string;
-  }
+  };
+  statistics?: {
+    yearsExperience: number;
+    projectsDelivered: number;
+    technologiesMastered: number;
+    codeCommits: number;
+  };
 }
 
-export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProps) {
+function StatItem({ value, label, delay }: { value: number; label: string; delay: number }) {
+  const countUpRef = useRef<HTMLDivElement>(null);
+  const { start } = useCountUp({
+    ref: countUpRef,
+    start: 0,
+    end: value,
+    delay: delay,
+    duration: 2,
+    suffix: "+",
+    formattingFn: value >= 1000 ? (val) => val.toLocaleString() + "+" : undefined,
+  });
+
+  useEffect(() => {
+    start();
+  }, [start]);
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent" ref={countUpRef}>
+        0
+      </div>
+      <div className="mt-2 text-sm text-gray-300 font-medium">{label}</div>
+    </div>
+  );
+}
+
+export default function Hero({ name, title, bio, avatar, socialLinks, statistics }: HeroProps) {
   const [isMounted, setIsMounted] = useState(false);
   
   // Handle hydration issues with animations
@@ -37,10 +70,10 @@ export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProp
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 Hi, I'm <span className="gradient-text">{name}</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
                 <span className="relative inline-block gradient-text">{title}</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 {bio}
               </p>
               <div className="flex flex-wrap gap-4">
@@ -61,7 +94,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProp
             
             {/* Image */}
             <div className="flex justify-center">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-gray-200 shadow-lg">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-gray-800 shadow-lg">
                 <Image 
                   src={avatar} 
                   alt={name} 
@@ -72,6 +105,36 @@ export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProp
               </div>
             </div>
           </div>
+
+          {/* Static Statistics */}
+          {statistics && (
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 bg-[#0300145e] backdrop-blur-sm p-8 rounded-xl border border-[#ffffff10]">
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+                  {statistics.yearsExperience}+
+                </div>
+                <div className="mt-2 text-sm text-gray-300 font-medium">Years of Development Experience</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+                  {statistics.projectsDelivered}+
+                </div>
+                <div className="mt-2 text-sm text-gray-300 font-medium">Projects Delivered</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+                  {statistics.technologiesMastered}+
+                </div>
+                <div className="mt-2 text-sm text-gray-300 font-medium">Technologies Mastered</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+                  {statistics.codeCommits.toLocaleString()}+
+                </div>
+                <div className="mt-2 text-sm text-gray-300 font-medium">Code Commits</div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     );
@@ -90,10 +153,10 @@ export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProp
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I'm <span className="gradient-text">{name}</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
               <span className="relative inline-block gradient-text">{title}</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-300 mb-8">
               {bio}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -119,7 +182,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProp
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-gray-200 shadow-lg">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-gray-800 shadow-lg">
               <Image 
                 src={avatar} 
                 alt={name} 
@@ -130,6 +193,49 @@ export default function Hero({ name, title, bio, avatar, socialLinks }: HeroProp
             </div>
           </motion.div>
         </div>
+
+        {/* Statistics */}
+        {statistics && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 bg-[#0300145e] backdrop-blur-sm p-8 rounded-xl border border-[#ffffff10]"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="flex flex-col items-center"
+            >
+              <StatItem value={statistics.yearsExperience} label="Years of Development Experience" delay={0.6} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+              className="flex flex-col items-center"
+            >
+              <StatItem value={statistics.projectsDelivered} label="Projects Delivered" delay={0.8} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.7 }}
+              className="flex flex-col items-center"
+            >
+              <StatItem value={statistics.technologiesMastered} label="Technologies Mastered" delay={1.0} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.8 }}
+              className="flex flex-col items-center"
+            >
+              <StatItem value={statistics.codeCommits} label="Code Commits" delay={1.2} />
+            </motion.div>
+          </motion.div>
+        )}
       </div>
       
       {/* Scroll down indicator */}
@@ -179,7 +285,7 @@ function SocialLink({ href, platform }: { href: string; platform: string }) {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="flex items-center text-gray-600 hover:text-primary-light transition-colors"
+      className="flex items-center text-gray-400 hover:text-primary-light transition-colors"
     >
       <span className="mr-2">{iconMap[platform as keyof typeof iconMap]}</span>
       <span>{platform}</span>
