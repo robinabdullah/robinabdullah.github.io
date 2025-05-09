@@ -3,14 +3,31 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+// Array of section IDs to track
+const SECTIONS = ['home', 'about', 'skills', 'projects', 'contact'];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
-  // Handle scroll event to add background to header on scroll
+  // Handle scroll events to update header background and active section
   useEffect(() => {
     const handleScroll = () => {
+      // Update header background
       setScrolled(window.scrollY > 50);
+      
+      // Update active section based on scroll position
+      const currentPosition = window.scrollY + 100; // Offset to trigger section earlier
+      
+      // Find the current section by checking section positions
+      for (let i = SECTIONS.length - 1; i >= 0; i--) {
+        const section = document.getElementById(SECTIONS[i]);
+        if (section && section.offsetTop <= currentPosition) {
+          setActiveSection(SECTIONS[i]);
+          break;
+        }
+      }
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -22,32 +39,32 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 ${
-      scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
-    } transition-all duration-300`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+      scrolled ? 'bg-[#030014]/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="mx-auto px-4 sm:px-6 lg:px-[5%]">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-semibold">
-              <span className="gradient-text">Robin Abdullah</span>
+            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+              Abdullah Robin
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:block">
-            <ul className="flex space-x-8">
-              <li><Link href="#home" className="hover:text-primary-light">Home</Link></li>
-              <li><Link href="#about" className="hover:text-primary-light">About</Link></li>
-              <li><Link href="#skills" className="hover:text-primary-light">Skills</Link></li>
-              <li><Link href="#projects" className="hover:text-primary-light">Projects</Link></li>
-              <li><Link href="#contact" className="hover:text-primary-light">Contact</Link></li>
-            </ul>
-          </nav>
+          <div className="hidden md:block">
+            <div className="ml-8 flex items-center space-x-8">
+              <NavLink href="#home" label="Home" isActive={activeSection === 'home'} />
+              <NavLink href="#about" label="About" isActive={activeSection === 'about'} />
+              <NavLink href="#skills" label="Skills" isActive={activeSection === 'skills'} />
+              <NavLink href="#projects" label="Projects" isActive={activeSection === 'projects'} />
+              <NavLink href="#contact" label="Contact" isActive={activeSection === 'contact'} />
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-600 focus:outline-none"
+            className="md:hidden text-gray-300 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle mobile menu"
           >
@@ -64,16 +81,60 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <ul className="px-4 pt-2 pb-4 space-y-2">
-            <li><Link href="#home" className="block py-2 hover:text-primary-light" onClick={toggleMenu}>Home</Link></li>
-            <li><Link href="#about" className="block py-2 hover:text-primary-light" onClick={toggleMenu}>About</Link></li>
-            <li><Link href="#skills" className="block py-2 hover:text-primary-light" onClick={toggleMenu}>Skills</Link></li>
-            <li><Link href="#projects" className="block py-2 hover:text-primary-light" onClick={toggleMenu}>Projects</Link></li>
-            <li><Link href="#contact" className="block py-2 hover:text-primary-light" onClick={toggleMenu}>Contact</Link></li>
-          </ul>
+        <div className="md:hidden bg-[#030014]/95 backdrop-blur-md shadow-lg">
+          <div className="px-4 pt-2 pb-4 space-y-2">
+            <MobileNavLink href="#home" label="Home" onClick={toggleMenu} isActive={activeSection === 'home'} />
+            <MobileNavLink href="#about" label="About" onClick={toggleMenu} isActive={activeSection === 'about'} />
+            <MobileNavLink href="#skills" label="Skills" onClick={toggleMenu} isActive={activeSection === 'skills'} />
+            <MobileNavLink href="#projects" label="Projects" onClick={toggleMenu} isActive={activeSection === 'projects'} />
+            <MobileNavLink href="#contact" label="Contact" onClick={toggleMenu} isActive={activeSection === 'contact'} />
+          </div>
         </div>
       )}
-    </header>
+    </nav>
+  );
+}
+
+// Desktop Navigation Link with hover effect and active state
+function NavLink({ href, label, isActive }: { href: string; label: string; isActive: boolean }) {
+  return (
+    <Link 
+      href={href} 
+      className={`group relative px-1 py-2 text-sm font-medium ${
+        isActive ? 'text-white' : 'text-gray-300 hover:text-white'
+      } transition-colors duration-300`}
+    >
+      {label}
+      <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-[#a855f7] to-[#6366f1] transform ${
+        isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+      } origin-left transition-transform duration-300`}></span>
+    </Link>
+  );
+}
+
+// Mobile Navigation Link with active state
+function MobileNavLink({ 
+  href, 
+  label, 
+  onClick, 
+  isActive 
+}: { 
+  href: string; 
+  label: string; 
+  onClick: () => void;
+  isActive: boolean;
+}) {
+  return (
+    <Link 
+      href={href} 
+      className={`block py-2 px-3 rounded transition-colors duration-300 ${
+        isActive 
+        ? 'text-white bg-gradient-to-r from-[#a855f7]/20 to-[#6366f1]/20 border-l-2 border-[#a855f7]' 
+        : 'text-gray-300 hover:text-white hover:bg-[#ffffff10]'
+      }`}
+      onClick={onClick}
+    >
+      {label}
+    </Link>
   );
 }

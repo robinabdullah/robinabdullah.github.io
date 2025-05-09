@@ -17,7 +17,7 @@ interface ProjectsProps {
 
 export default function Projects({ projects }: ProjectsProps) {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export default function Projects({ projects }: ProjectsProps) {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-light to-primary-dark mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
             A selection of my recent work
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white rounded-lg shadow-md overflow-hidden"
+      className="bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden"
     >
       <div className="relative h-64 w-full">
         <Image 
@@ -78,13 +78,13 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
+        <p className="text-gray-200 mb-4">{project.description}</p>
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech, i) => (
             <span 
               key={i} 
-              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+              className="bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-sm"
             >
               {tech}
             </span>
@@ -104,7 +104,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="button-secondary text-sm px-4 py-2"
+            className="button-secondary text-sm px-4 py-2 bg-white/10 hover:bg-white/20 border-gray-700"
           >
             View Code
           </Link>

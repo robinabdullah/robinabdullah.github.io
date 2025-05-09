@@ -46,22 +46,44 @@
   },
   "experience": [
     {
-      "company": "Tech Solutions Ltd.",
-      "position": "Senior Full Stack Developer",
-      "period": "2022 - Present",
-      "description": "Lead development of web applications using React, Next.js, and Node.js. Implement CI/CD pipelines and mentor junior developers."
+      "company": "Optimizely",
+      "position": "Senior Developer",
+      "period": "May 2023 - Present",
+      "description": "Customized and maintained Optimizely Configured Commerce (B2B) Product, collaborating with cross-functional international teams. Engineered a script to accelerate product upgrades, reducing upgrade time by 35%. Led code reviews to uphold best practices and coding standards.",
+      "location": "Dhaka, Bangladesh",
+      "workType": "Full-time, On-site"
     },
     {
-      "company": "WebDev Agency",
-      "position": "Frontend Developer",
-      "period": "2020 - 2022",
-      "description": "Developed responsive interfaces using React and collaborated with UX/UI designers to implement clean, maintainable code."
+      "company": "Orion Informatics Ltd",
+      "position": "Senior Software Engineer",
+      "period": "May 2022 - Apr 2023",
+      "description": "Implemented Socket.IO for a persistent connection manager. Managed edge cases like lost connections, automatic re-connections, and real-time data synchronization. Developed skills in real-time data handling and troubleshooting in a fast-paced environment.",
+      "location": "Bangladesh",
+      "workType": "Full-time, Hybrid"
     },
     {
-      "company": "Digital Creations",
-      "position": "Web Developer",
-      "period": "2018 - 2020",
-      "description": "Built websites for clients using HTML, CSS, JavaScript, and WordPress. Focused on mobile-first responsive design."
+      "company": "Synesis IT",
+      "position": "Senior Programmer",
+      "period": "Sep 2020 - Apr 2022",
+      "description": "Worked as a Senior full-stack developer mainly in .Net Core, Java Spring, Angular, TypeScript. Led development teams and guided their career growth. Participated in client meetings, collected requirements, analyzed system needs, and prioritized tasks. Handled database design, built complex queries, and analyzed technical problems to design solutions.",
+      "location": "Dhaka, Bangladesh",
+      "workType": "Full-time"
+    },
+    {
+      "company": "Synesis IT",
+      "position": "Programmer",
+      "period": "Sep 2017 - Aug 2020",
+      "description": "Worked as a full-stack developer mainly in .Net Core, Java Spring, Angular. Practiced agile methodologies for improving software quality at each release. Initialized projects from scratch using design principles and standard coding conventions. Created highly readable, clean and easily maintainable source code.",
+      "location": "Dhaka",
+      "workType": "Full-time"
+    },
+    {
+      "company": "Freelance",
+      "position": "Freelance Software Engineer",
+      "period": "Apr 2016 - May 2017",
+      "description": "Developed software for clients while completing my degree. Successfully delivered and deployed three projects built with ASP.Net web and ASP.NET WPF. One project expanded to multiple development phases as new requirements emerged.",
+      "location": "Bangladesh",
+      "workType": "Freelance"
     }
   ],
   "education": [

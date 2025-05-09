@@ -12,6 +12,8 @@ interface AboutProps {
     position: string;
     period: string;
     description: string;
+    location?: string;
+    workType?: string;
   }>;
   education: Array<{
     institution: string;
@@ -23,7 +25,7 @@ interface AboutProps {
 
 export default function About({ name, about, avatar, experience, education }: AboutProps) {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +50,7 @@ export default function About({ name, about, avatar, experience, education }: Ab
             transition={{ duration: 0.5 }}
             className="md:col-span-1"
           >
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden">
               <div className="relative h-72 w-full">
                 <Image 
                   src={avatar} 
@@ -59,7 +61,7 @@ export default function About({ name, about, avatar, experience, education }: Ab
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">{name}</h3>
-                <p className="text-gray-600">{about}</p>
+                <p className="text-gray-200">{about}</p>
               </div>
             </div>
           </motion.div>
@@ -80,8 +82,12 @@ export default function About({ name, about, avatar, experience, education }: Ab
                   <div key={index} className="border-l-4 border-primary-light pl-5 pb-5">
                     <h4 className="text-xl font-medium">{item.position}</h4>
                     <p className="text-primary-light font-medium">{item.company}</p>
-                    <p className="text-gray-500 text-sm mt-1">{item.period}</p>
-                    <p className="text-gray-600 mt-2">{item.description}</p>
+                    <div className="flex flex-wrap gap-x-4 text-gray-300 text-sm mt-1">
+                      <p>{item.period}</p>
+                      {item.location && <p>• {item.location}</p>}
+                      {item.workType && <p>• {item.workType}</p>}
+                    </div>
+                    <p className="text-gray-200 mt-2">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -95,8 +101,8 @@ export default function About({ name, about, avatar, experience, education }: Ab
                   <div key={index} className="border-l-4 border-primary-light pl-5 pb-5">
                     <h4 className="text-xl font-medium">{item.degree}</h4>
                     <p className="text-primary-light font-medium">{item.institution}</p>
-                    <p className="text-gray-500 text-sm mt-1">{item.period}</p>
-                    <p className="text-gray-600 mt-2">{item.description}</p>
+                    <p className="text-gray-300 text-sm mt-1">{item.period}</p>
+                    <p className="text-gray-200 mt-2">{item.description}</p>
                   </div>
                 ))}
               </div>
