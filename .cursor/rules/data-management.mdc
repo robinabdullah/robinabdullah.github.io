@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Data Management Guidelines
+
+## Central Data Source
+- All website content should be managed through [portfolio.json](mdc:src/data/portfolio.json)
+- Components should not have hardcoded content that belongs in the data source
+
+## Data Structure
+The portfolio.json file is structured to include:
+- Personal information
+- Professional summary
+- Skills and competencies
+- Work experience
+- Education
+- Projects
+- Contact information
+- Career statistics
+
+## Data Consumption
+- Components should implement proper null checking when accessing data
+- Use TypeScript interfaces to define data shapes
+- Implement data transformation functions separately from rendering logic
+
+## Error Handling
+- All components must check for null/undefined values before rendering
+- Provide fallback content or graceful degradation when data is missing
+- Consider using optional chaining (`?.`) and nullish coalescing (`??`) operators
+

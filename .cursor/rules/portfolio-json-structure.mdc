@@ -1,0 +1,100 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Portfolio JSON Structure
+
+The [portfolio.json](mdc:src/data/portfolio.json) file contains all content for the portfolio website and should follow this structure:
+
+## Basic Information
+```json
+{
+  "basics": {
+    "name": "Abdullah Saleh Robin",
+    "title": "Senior Software Engineer",
+    "summary": "...",
+    "location": "...",
+    "email": "...",
+    "phone": "...",
+    "profiles": [
+      { "network": "LinkedIn", "url": "..." },
+      { "network": "GitHub", "url": "..." }
+      // Other profiles
+    ]
+  }
+}
+```
+
+## Career Statistics
+```json
+{
+  "statistics": {
+    "yearsOfExperience": 5,
+    "projectsDelivered": 20,
+    "technologiesMastered": 15,
+    "codeCommits": 2000
+  }
+}
+```
+
+## Skills and Expertise
+```json
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        { "name": "React", "level": 90 },
+        // Other frontend skills
+      ]
+    },
+    // Other skill categories
+  ]
+}
+```
+
+## Experience
+```json
+{
+  "experience": [
+    {
+      "company": "...",
+      "position": "...",
+      "startDate": "...",
+      "endDate": "...",
+      "description": "...",
+      "achievements": ["..."]
+    }
+    // Other experiences
+  ]
+}
+```
+
+## Projects
+```json
+{
+  "projects": [
+    {
+      "title": "...",
+      "description": "...",
+      "technologies": ["..."],
+      "imageUrl": "...",
+      "projectUrl": "...",
+      "githubUrl": "..."
+    }
+    // Other projects
+  ]
+}
+```
+
+## Education and Certifications
+```json
+{
+  "education": [...],
+  "certifications": [...]
+}
+```
+
+Components should implement type checking and null checks when accessing this data structure.
+

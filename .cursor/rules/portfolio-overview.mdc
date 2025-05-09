@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Portfolio Website Overview
+
+This portfolio website is designed for a senior software engineer with the primary goal of creating an attractive, professional, and easily navigable showcase for recruiters.
+
+## Design References
+- Visual design inspired by [Abhishek Ganvir's portfolio](mdc:https:/abhishekganvir.vercel.app)
+- Content structure influenced by [Biswajit Panday's portfolio](mdc:https:/biswajitpanday.github.io), particularly for statistics and career information
+
+## Core Data Structure
+- Primary data source: [portfolio.json](mdc:src/data/portfolio.json)
+- All components should fetch data from this central JSON file
+- PDF CV [Resume of Abdullah Saleh Robin.pdf](mdc:cv/Resume of Abdullah Saleh Robin.pdf) contains the source information
+
+## Design Principles
+1. Professional and modern aesthetic
+2. Easy navigation for recruiters
+3. Clear presentation of skills and experience
+4. Mobile-responsive design
+

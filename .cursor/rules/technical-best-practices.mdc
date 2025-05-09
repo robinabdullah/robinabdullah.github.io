@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Technical Best Practices
+
+## Code Quality
+- Use TypeScript for type safety
+- Implement consistent error handling
+- Write clean, readable, and maintainable code
+- Follow DRY (Don't Repeat Yourself) principles
+
+## Performance Optimization
+- Implement code splitting where appropriate
+- Optimize images and assets
+- Consider lazy loading for non-critical components
+- Minimize unnecessary re-renders in React components
+
+## Accessibility
+- Ensure proper semantic HTML is used
+- Maintain WCAG compliance where possible
+- Implement proper keyboard navigation
+- Include appropriate ARIA attributes where needed
+
+## Responsive Design
+- Test thoroughly across all device sizes
+- Implement a mobile-first approach
+- Use Tailwind's responsive utilities consistently
+- Ensure interactive elements are properly sized for touch devices
+
+## SEO Considerations
+- Implement proper meta tags
+- Use semantic HTML structure
+- Ensure appropriate heading hierarchy
+- Implement proper image alt text
+
