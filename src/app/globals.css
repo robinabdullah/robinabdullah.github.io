@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 17, 24, 39;
+  --background-rgb: 249, 250, 251;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 249, 250, 251;
+    --background-rgb: 17, 24, 39;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-light to-primary-dark bg-clip-text text-transparent;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+  
+  .button-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-light to-primary-dark text-white rounded-md font-medium hover:opacity-90 transition-opacity;
+  }
+  
+  .button-secondary {
+    @apply px-6 py-3 border border-gray-300 rounded-md font-medium hover:bg-gray-50 transition-colors;
+  }
+}
