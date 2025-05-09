@@ -80,7 +80,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
                 <a 
                   href="/cv/Resume of Abdullah Saleh Robin.pdf" 
                   download="Abdullah_Robin_Resume.pdf"
-                  className="px-5 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-90 transition-all shadow-md"
+                  className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-90 transition-all shadow-md flex items-center justify-center w-36"
                 >
                   Download CV
                 </a>
@@ -170,19 +170,19 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               <a 
                 href="/cv/Resume of Abdullah Saleh Robin.pdf" 
                 download="Abdullah_Robin_Resume.pdf"
-                className="px-5 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-90 transition-all shadow-md"
+                className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-90 transition-all shadow-md flex items-center justify-center w-36"
               >
                 Download CV
               </a>
               <Link 
                 href="#contact" 
-                className="px-5 py-2 text-sm bg-transparent border border-[#6366f1]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md"
+                className="px-5 py-2.5 text-sm bg-transparent border border-[#6366f1]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md flex items-center justify-center w-36"
               >
                 Contact Me
               </Link>
               <Link 
                 href="#projects" 
-                className="px-5 py-2 text-sm border border-[#a855f7]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md"
+                className="px-5 py-2.5 text-sm border border-[#a855f7]/50 text-gray-200 rounded-md hover:bg-[#ffffff10] transition-all shadow-md flex items-center justify-center w-36"
               >
                 View Work
               </Link>

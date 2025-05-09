@@ -14,8 +14,8 @@ export default function Header() {
   // Handle scroll events to update header background and active section
   useEffect(() => {
     const handleScroll = () => {
-      // Update header background
-      setScrolled(window.scrollY > 50);
+      // Update header background - more responsive threshold
+      setScrolled(window.scrollY > 20);
       
       // Update active section based on scroll position
       const currentPosition = window.scrollY + 100; // Offset to trigger section earlier
@@ -39,14 +39,14 @@ export default function Header() {
   };
 
   return (
-    <nav className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-[#030014]/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-[#030014]/85 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
     }`}>
       <div className="mx-auto px-4 sm:px-6 lg:px-[5%]">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent hover:opacity-90 transition-opacity">
               Abdullah Robin
             </Link>
           </div>
@@ -107,7 +107,7 @@ function NavLink({ href, label, isActive }: { href: string; label: string; isAct
       {label}
       <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-[#a855f7] to-[#6366f1] transform ${
         isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-      } origin-left transition-transform duration-300`}></span>
+      } origin-left transition-transform duration-300 ease-out`}></span>
     </Link>
   );
 }
