@@ -31,7 +31,7 @@ function StatItem({ value, label, delay }: { value: number; label: string; delay
     start: 0,
     end: value,
     delay: delay,
-    duration: 2,
+    duration: 2.5,
     suffix: "+",
     formattingFn: value >= 1000 ? (val) => val.toLocaleString() + "+" : undefined,
   });
@@ -41,11 +41,11 @@ function StatItem({ value, label, delay }: { value: number; label: string; delay
   }, [start]);
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent" ref={countUpRef}>
+    <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500" ref={countUpRef}>
         0
       </div>
-      <div className="mt-2 text-sm text-gray-300 font-medium">{label}</div>
+      <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">{label}</div>
     </div>
   );
 }
@@ -115,30 +115,34 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
 
           {/* Static Statistics */}
           {statistics && (
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 bg-[#0300145e] backdrop-blur-sm p-8 rounded-xl border border-[#ffffff10]">
-              <div className="flex flex-col items-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-[#0300147a] backdrop-blur-xl p-8 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
+              <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 blur-xl"></div>
+              
+              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {statistics.yearsExperience}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium">Years of Development Experience</div>
+                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Years of Experience</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {statistics.projectsDelivered}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium">Projects Delivered</div>
+                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Projects Delivered</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {statistics.technologiesMastered}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium">Technologies Mastered</div>
+                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Technologies Mastered</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {statistics.codeCommits.toLocaleString()}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium">Code Commits</div>
+                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Code Commits</div>
               </div>
             </div>
           )}
@@ -220,15 +224,19 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 bg-[#0300145e] backdrop-blur-sm p-8 rounded-xl border border-[#ffffff10]"
+            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-[#0300147a] backdrop-blur-xl p-8 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden group"
           >
+            {/* Decorative elements */}
+            <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
+            <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 blur-xl"></div>
+            
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.5 }}
               className="flex flex-col items-center"
             >
-              <StatItem value={statistics.yearsExperience} label="Years of Development Experience" delay={0.6} />
+              <StatItem value={statistics.yearsExperience} label="Years of Experience" delay={0.6} />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
