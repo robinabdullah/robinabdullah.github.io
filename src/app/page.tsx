@@ -19,6 +19,7 @@ const defaultData = {
     avatar: "/images/profile.jpg",
     email: "hello@example.com",
     location: "Dhaka, Bangladesh",
+    careerStartDate: "2016-04-01",
     socialLinks: {
       github: "https://github.com/",
       linkedin: "https://linkedin.com/in/",
@@ -83,6 +84,7 @@ export default function Home() {
         bio={personalInfo.bio}
         avatar={personalInfo.avatar}
         socialLinks={personalInfo.socialLinks}
+        careerStartDate={personalInfo.careerStartDate}
         statistics={statistics}
       />
       

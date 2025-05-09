@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,8 +16,9 @@ interface HeroProps {
     linkedin: string;
     twitter: string;
   };
+  careerStartDate?: string;
   statistics?: {
-    yearsExperience: number;
+    yearsExperience?: number;
     projectsDelivered: number;
     technologiesMastered: number;
     codeCommits: number;
@@ -50,14 +51,58 @@ function StatItem({ value, label, delay }: { value: number; label: string; delay
   );
 }
 
-export default function Hero({ name, title, bio, avatar, socialLinks, statistics }: HeroProps) {
+// Calculate years of experience
+function calculateYearsOfExperience(startDate: string): number {
+  const start = new Date(startDate);
+  const today = new Date();
+  
+  // Calculate the difference in years
+  let years = today.getFullYear() - start.getFullYear();
+  
+  // If we haven't reached the anniversary month/day yet, subtract 1 year
+  if (
+    today.getMonth() < start.getMonth() ||
+    (today.getMonth() === start.getMonth() && today.getDate() < start.getDate())
+  ) {
+    years--;
+  }
+  
+  return years;
+}
+
+export default function Hero({ 
+  name, 
+  title, 
+  bio, 
+  avatar, 
+  socialLinks, 
+  careerStartDate,
+  statistics 
+}: HeroProps) {
   const [isMounted, setIsMounted] = useState(false);
+  
+  // Calculate years of experience 
+  const yearsOfExperience = useMemo(() => {
+    if (careerStartDate) {
+      return calculateYearsOfExperience(careerStartDate);
+    }
+    // Fallback to the static value if provided, or default to 0
+    return statistics?.yearsExperience || 0;
+  }, [careerStartDate, statistics?.yearsExperience]);
   
   // Handle hydration issues with animations
   useEffect(() => {
     setIsMounted(true);
     return () => setIsMounted(false);
   }, []);
+
+  // Prepare a static or dynamic statistics object
+  const displayStats = {
+    yearsExperience: yearsOfExperience,
+    projectsDelivered: statistics?.projectsDelivered || 0,
+    technologiesMastered: statistics?.technologiesMastered || 0,
+    codeCommits: statistics?.codeCommits || 0
+  };
 
   // Prevent SSR rendering of animations
   if (!isMounted) {
@@ -122,25 +167,25 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               
               <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                  {statistics.yearsExperience}+
+                  {displayStats.yearsExperience}+
                 </div>
                 <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Years of Experience</div>
               </div>
               <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                  {statistics.projectsDelivered}+
+                  {displayStats.projectsDelivered}+
                 </div>
                 <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Projects Delivered</div>
               </div>
               <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                  {statistics.technologiesMastered}+
+                  {displayStats.technologiesMastered}+
                 </div>
                 <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Technologies Mastered</div>
               </div>
               <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                  {statistics.codeCommits.toLocaleString()}+
+                  {displayStats.codeCommits.toLocaleString()}+
                 </div>
                 <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Code Commits</div>
               </div>
@@ -236,7 +281,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               transition={{ duration: 0.3, delay: 0.5 }}
               className="flex flex-col items-center"
             >
-              <StatItem value={statistics.yearsExperience} label="Years of Experience" delay={0.6} />
+              <StatItem value={displayStats.yearsExperience} label="Years of Experience" delay={0.6} />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -244,7 +289,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               transition={{ duration: 0.3, delay: 0.6 }}
               className="flex flex-col items-center"
             >
-              <StatItem value={statistics.projectsDelivered} label="Projects Delivered" delay={0.8} />
+              <StatItem value={displayStats.projectsDelivered} label="Projects Delivered" delay={0.8} />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -252,7 +297,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               transition={{ duration: 0.3, delay: 0.7 }}
               className="flex flex-col items-center"
             >
-              <StatItem value={statistics.technologiesMastered} label="Technologies Mastered" delay={1.0} />
+              <StatItem value={displayStats.technologiesMastered} label="Technologies Mastered" delay={1.0} />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -260,7 +305,7 @@ export default function Hero({ name, title, bio, avatar, socialLinks, statistics
               transition={{ duration: 0.3, delay: 0.8 }}
               className="flex flex-col items-center"
             >
-              <StatItem value={statistics.codeCommits} label="Code Commits" delay={1.2} />
+              <StatItem value={displayStats.codeCommits} label="Code Commits" delay={1.2} />
             </motion.div>
           </motion.div>
         )}
