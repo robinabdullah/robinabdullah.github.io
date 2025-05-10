@@ -113,7 +113,8 @@ export default function Hero({
             {/* Static version for SSR */}
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                Hi, I'm <span className="gradient-text">{name}</span>
+                Hi, I'm <br />
+                <span className="gradient-text">{name}</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
                 <span className="relative inline-block gradient-text">{title}</span>
@@ -207,7 +208,8 @@ export default function Hero({
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm <span className="gradient-text">{name}</span>
+              Hi, I'm <br />
+              <span className="gradient-text">{name}</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
               <span className="relative inline-block gradient-text">{title}</span>
