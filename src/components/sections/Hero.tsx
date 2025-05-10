@@ -122,23 +122,15 @@ export default function Hero({
               <p className="text-lg text-gray-300 mb-8">
                 {bio}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 items-center">
                 <a 
                   href="/cv/Resume of Abdullah Saleh Robin.pdf" 
                   download="Abdullah_Robin_Resume.pdf"
-                  className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-100 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center w-36"
+                  className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-100 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center w-44"
                 >
-                  Download CV
+                  Download Resume
                 </a>
-                <Link href="#contact" className="px-5 py-2.5 text-sm bg-transparent border border-[#6366f1]/50 text-gray-200 rounded-md hover:bg-[#ffffff15] hover:scale-105 hover:border-[#6366f1] transition-all duration-300 shadow-md flex items-center justify-center w-36">
-                  Contact Me
-                </Link>
-                <Link href="#projects" className="px-5 py-2.5 text-sm border border-[#a855f7]/50 text-gray-200 rounded-md hover:bg-[#ffffff15] hover:scale-105 hover:border-[#a855f7] transition-all duration-300 shadow-md flex items-center justify-center w-36">
-                  View Work
-                </Link>
-              </div>
-              
-              <div className="mt-8 flex space-x-4">
+                
                 <SocialLink href={socialLinks.github} platform="GitHub" />
                 <SocialLink href={socialLinks.linkedin} platform="LinkedIn" />
                 <SocialLink href={socialLinks.twitter} platform="Twitter" />
@@ -217,29 +209,15 @@ export default function Hero({
             <p className="text-lg text-gray-300 mb-8">
               {bio}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 items-center">
               <a 
                 href="/cv/Resume of Abdullah Saleh Robin.pdf" 
                 download="Abdullah_Robin_Resume.pdf"
-                className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-100 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center w-36"
+                className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-100 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center w-44"
               >
-                Download CV
+                Download Resume
               </a>
-              <Link 
-                href="#contact" 
-                className="px-5 py-2.5 text-sm bg-transparent border border-[#6366f1]/50 text-gray-200 rounded-md hover:bg-[#ffffff15] hover:scale-105 hover:border-[#6366f1] transition-all duration-300 shadow-md flex items-center justify-center w-36"
-              >
-                Contact Me
-              </Link>
-              <Link 
-                href="#projects" 
-                className="px-5 py-2.5 text-sm border border-[#a855f7]/50 text-gray-200 rounded-md hover:bg-[#ffffff15] hover:scale-105 hover:border-[#a855f7] transition-all duration-300 shadow-md flex items-center justify-center w-36"
-              >
-                View Work
-              </Link>
-            </div>
-            
-            <div className="mt-8 flex space-x-4">
+              
               <SocialLink href={socialLinks.github} platform="GitHub" />
               <SocialLink href={socialLinks.linkedin} platform="LinkedIn" />
               <SocialLink href={socialLinks.twitter} platform="Twitter" />
