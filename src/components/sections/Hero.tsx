@@ -118,7 +118,7 @@ export default function Hero({
             {/* Static version for SSR */}
             <div className="z-10">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                Hi, I'm <br />
+                <span className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-3">Hi, I'm</span> <br />
                 <span className="gradient-text">{name}</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
@@ -205,7 +205,7 @@ export default function Hero({
             className="z-10"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm <br />
+              <span className="text-2xl md:text-3xl lg:text-4xl text-gray-300">Hi, I'm</span> <br />
               <span className="gradient-text">{name}</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
