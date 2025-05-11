@@ -94,6 +94,7 @@ export default function Home() {
         avatar={personalInfo.avatar}
         experience={experience}
         education={education}
+        careerStartDate={personalInfo.careerStartDate}
       />
       
       <Skills skills={skills} />
