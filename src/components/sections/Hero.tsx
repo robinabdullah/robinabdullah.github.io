@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useCountUp } from 'react-countup';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface HeroProps {
   name: string;
@@ -80,6 +80,7 @@ export default function Hero({
   statistics 
 }: HeroProps) {
   const [isMounted, setIsMounted] = useState(false);
+  const [dotLottie, setDotLottie] = useState(null);
   
   // Calculate years of experience 
   const yearsOfExperience = useMemo(() => {
@@ -104,6 +105,10 @@ export default function Hero({
     codeCommits: statistics?.codeCommits || 0
   };
 
+  const dotLottieRefCallback = (dotLottie: any) => {
+    setDotLottie(dotLottie);
+  };
+
   // Prevent SSR rendering of animations
   if (!isMounted) {
     return (
@@ -111,7 +116,7 @@ export default function Hero({
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Static version for SSR */}
-            <div>
+            <div className="z-10">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 Hi, I'm <br />
                 <span className="gradient-text">{name}</span>
@@ -137,23 +142,22 @@ export default function Hero({
               </div>
             </div>
             
-            {/* Image */}
-            <div className="flex justify-center">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-gray-800 shadow-lg">
-                <Image 
-                  src={avatar} 
-                  alt={name} 
-                  fill 
-                  style={{ objectFit: 'cover' }}
-                  priority
-                />
+            {/* Lottie Animation Placeholder */}
+            <div className="flex justify-center items-center md:justify-end p-4 relative">
+              {/* Background glow effects */}
+              <div className="absolute -z-10 w-96 h-96 blur-[120px] rounded-full bg-purple-700/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute -z-10 w-64 h-64 blur-[80px] rounded-full bg-indigo-600/10 bottom-0 right-0"></div>
+              
+              {/* Animation placeholder */}
+              <div className="w-full max-w-[320px] md:max-w-[400px] h-[320px] md:h-[400px] relative">
+                {/* Empty placeholder for SSR */}
               </div>
             </div>
           </div>
 
           {/* Static Statistics */}
           {statistics && (
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden mx-auto max-w-5xl">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden">
               {/* Decorative elements */}
               <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
               <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 blur-xl"></div>
@@ -198,6 +202,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="z-10"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I'm <br />
@@ -224,20 +229,25 @@ export default function Hero({
             </div>
           </motion.div>
           
-          {/* Image */}
+          {/* Lottie Animation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center"
+            className="flex justify-center items-center md:justify-end p-4 relative"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-gray-800 shadow-lg">
-              <Image 
-                src={avatar} 
-                alt={name} 
-                fill 
-                style={{ objectFit: 'cover' }}
-                priority
+            {/* Background glow effects */}
+            <div className="absolute -z-10 w-96 h-96 blur-[120px] rounded-full bg-purple-700/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute -z-10 w-64 h-64 blur-[80px] rounded-full bg-indigo-600/10 bottom-0 right-0"></div>
+            
+            {/* Animation container */}
+            <div className="w-full max-w-[320px] md:max-w-[400px] h-[320px] md:h-[400px] relative">
+              <DotLottieReact
+                src="https://lottie.host/58753882-bb6a-49f5-a2c0-950eda1e135a/NLbpVqGegK.lottie"
+                autoplay
+                loop
+                dotLottieRefCallback={dotLottieRefCallback}
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
           </motion.div>
@@ -249,7 +259,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden mx-auto max-w-5xl"
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden"
           >
             {/* Decorative elements */}
             <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
