@@ -42,11 +42,11 @@ function StatItem({ value, label, delay }: { value: number; label: string; delay
   }, [start]);
 
   return (
-    <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+    <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
       <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500" ref={countUpRef}>
         0
       </div>
-      <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">{label}</div>
+      <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">{label}</div>
     </div>
   );
 }
@@ -153,34 +153,34 @@ export default function Hero({
 
           {/* Static Statistics */}
           {statistics && (
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-[#0300147a] backdrop-blur-xl p-8 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden mx-auto max-w-5xl">
               {/* Decorative elements */}
               <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
               <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 blur-xl"></div>
               
-              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+              <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {displayStats.yearsExperience}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Years of Experience</div>
+                <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Years of Experience</div>
               </div>
-              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+              <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {displayStats.projectsDelivered}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Projects Delivered</div>
+                <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Projects Delivered</div>
               </div>
-              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+              <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {displayStats.technologiesMastered}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Technologies Mastered</div>
+                <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Technologies Mastered</div>
               </div>
-              <div className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
+              <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
                   {displayStats.codeCommits.toLocaleString()}+
                 </div>
-                <div className="mt-2 text-sm text-gray-300 font-medium group-hover:text-white">Code Commits</div>
+                <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Code Commits</div>
               </div>
             </div>
           )}
@@ -249,7 +249,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-[#0300147a] backdrop-blur-xl p-8 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden group"
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden mx-auto max-w-5xl"
           >
             {/* Decorative elements */}
             <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
