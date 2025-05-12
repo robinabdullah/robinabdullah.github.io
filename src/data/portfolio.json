@@ -21,34 +21,62 @@
     "codeCommits": 5000
   },
   "skills": {
-    "frontend": [
-      "HTML5",
-      "CSS3",
-      "JavaScript (ES6+)",
-      "TypeScript",
+    "programmingLanguages": [
+      "C#",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "ASP.NET Core",
+      "ASP.NET MVC",
+      "Blazor",
+      "Express.js",
       "React",
-      "Next.js",
+      "Next.js"
+    ],
+    "architecturesPatterns": [
+      "Domain Driven Design",
+      "Microservices",
+      "Client-Server",
+      "Event-Driven",
+      "CQRS",
+      "Serverless"
+    ],
+    "databases": [
+      "MSSQL",
+      "MongoDB",
+      "MySQL",
+      "DynamoDB",
+      "SQLite"
+    ],
+    "cloudPlatforms": [
+      "Azure",
+      "AWS"
+    ],
+    "devOpsTools": [
+      "Git",
+      "Azure DevOps",
+      "Docker",
+      "Jenkins",
+      "IIS",
+      "Jira"
+    ],
+    "frontEndTechnologies": [
+      "React",
+      "Angular",
+      "Redux",
+      "Bootstrap",
       "Tailwind CSS",
       "Material UI"
     ],
-    "backend": [
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "PostgreSQL",
-      "Firebase",
-      "REST API",
-      "GraphQL"
-    ],
-    "tools": [
-      "Git",
-      "GitHub",
-      "VS Code",
-      "Docker",
-      "AWS",
-      "Vercel",
-      "Webpack",
-      "Figma"
+    "otherSkills": [
+      "SignalR & Socket.io",
+      "Entity Framework Core",
+      "REST",
+      "gRPC",
+      "LINQ",
+      "RabbitMQ",
+      "Redis"
     ]
   },
   "experience": [

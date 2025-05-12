@@ -33,9 +33,14 @@ const defaultData = {
     codeCommits: 5000
   },
   skills: {
-    frontend: ["HTML", "CSS", "JavaScript"],
-    backend: ["Node.js", "Express"],
-    tools: ["Git", "GitHub"]
+    programmingLanguages: ["JavaScript", "TypeScript"],
+    frameworks: ["React", "Next.js"],
+    architecturesPatterns: [],
+    databases: [],
+    cloudPlatforms: [],
+    devOpsTools: ["Git", "GitHub"],
+    frontEndTechnologies: ["HTML", "CSS"],
+    otherSkills: []
   },
   experience: [],
   education: [],
@@ -74,6 +79,18 @@ export default function Home() {
     );
   }
 
+  // Create a default skills object that matches the Skills component interface
+  const skillsData = {
+    programmingLanguages: skills.programmingLanguages || [],
+    frameworks: skills.frameworks || [],
+    architecturesPatterns: skills.architecturesPatterns || [],
+    databases: skills.databases || [],
+    cloudPlatforms: skills.cloudPlatforms || [],
+    devOpsTools: skills.devOpsTools || [],
+    frontEndTechnologies: skills.frontEndTechnologies || [],
+    otherSkills: skills.otherSkills || []
+  };
+
   return (
     <main>
       <Header />
@@ -97,7 +114,7 @@ export default function Home() {
         careerStartDate={personalInfo.careerStartDate}
       />
       
-      <Skills skills={skills} />
+      <Skills skills={skillsData} />
       
       <Projects projects={projects} />
       
