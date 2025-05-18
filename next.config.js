@@ -2,9 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  // Use this for GitHub Pages:
-  basePath: process.env.NODE_ENV === 'production' ? '/robinabdullah.github.io' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/robinabdullah.github.io/' : '',
+  // For user sites (username.github.io), the basePath and assetPrefix should be empty
+  // For project sites, you would use the repository name
+  basePath: '',
+  assetPrefix: '',
   images: {
     domains: ['localhost'],
     unoptimized: true,
