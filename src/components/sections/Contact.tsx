@@ -1,8 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { 
+  PAGECLIP_SCRIPT_URL, 
+  PAGECLIP_CSS_URL, 
+  getFormActionUrl 
+} from '@/config/pageclip-config';
 
 interface ContactProps {
   email: string;
@@ -26,6 +31,32 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
 
+  useEffect(() => {
+    // Load PageClip script
+    const script = document.createElement('script');
+    script.src = PAGECLIP_SCRIPT_URL;
+    script.charset = 'utf-8';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Load PageClip CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = PAGECLIP_CSS_URL;
+    link.media = 'screen';
+    document.head.appendChild(link);
+
+    // Clean up on unmount
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
@@ -33,28 +64,55 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Here you would typically send the form data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+  // The PageClip form will handle submission directly, but we'll keep this function
+  // to reset the form state when the PageClip callback is triggered
+  const handleFormReset = () => {
+    setFormState({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
   };
 
+  // Optional: hook into Pageclip form submit events when the script is loaded
+  useEffect(() => {
+    const setupPageclip = () => {
+      if (window.Pageclip) {
+        const form = document.querySelector('.pageclip-form') as HTMLFormElement;
+        if (form) {
+          window.Pageclip.form(form, {
+            onResponse: (error: any, response: any) => {
+              if (!error) {
+                handleFormReset();
+                setSubmitStatus('success');
+              } else {
+                setSubmitStatus('error');
+              }
+              setIsSubmitting(false);
+            }
+          });
+        }
+      }
+    };
+
+    // Check if Pageclip is already loaded
+    if (window.Pageclip) {
+      setupPageclip();
+    } else {
+      // Otherwise set up a listener for when it loads
+      const checkPageclip = setInterval(() => {
+        if (window.Pageclip) {
+          clearInterval(checkPageclip);
+          setupPageclip();
+        }
+      }, 100);
+
+      // Clean up interval
+      return () => clearInterval(checkPageclip);
+    }
+  }, []);
+  
   return (
     <section id="contact" className="py-2 bg-dark/10 backdrop-blur-sm">
       <div className="section-container">
@@ -169,7 +227,11 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm rounded-lg shadow-md p-8">
+            <form 
+              action={getFormActionUrl()} 
+              method="post"
+              className="pageclip-form bg-white/5 backdrop-blur-sm rounded-lg shadow-md p-8"
+            >
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-900/50 text-green-300 rounded-md">
                   Thank you for your message! I'll get back to you as soon as possible.
@@ -181,7 +243,7 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
                   There was an error sending your message. Please try again later.
                 </div>
               )}
-
+              
               <div className="mb-6">
                 <label htmlFor="name" className="block text-white mb-2">Name</label>
                 <input
@@ -236,17 +298,9 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full button-primary py-3 flex justify-center"
+                className="pageclip-form__submit w-full button-primary py-3 flex justify-center items-center"
               >
-                {isSubmitting ? (
-                  <svg className="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                  </svg>
-                ) : (
-                  'Send Message'
-                )}
+                <span>Send Message</span>
               </button>
             </form>
           </motion.div>
