@@ -119,7 +119,7 @@ export default function Hero({
             <div className="z-10">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 <span className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-3">Hi, I'm</span> <br />
-                <span className="gradient-text">{name}</span>
+                <span className="gradient-text whitespace-nowrap">{name}</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
                 <span className="relative inline-block gradient-text">{title}</span>
@@ -143,7 +143,7 @@ export default function Hero({
             </div>
             
             {/* Lottie Animation Placeholder */}
-            <div className="flex justify-center items-center md:justify-end p-4 relative">
+            <div className="flex justify-center items-center md:justify-end pl-0 pr-6 relative">
               {/* Background glow effects */}
               <div className="absolute -z-10 w-96 h-96 blur-[120px] rounded-full bg-purple-700/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
               <div className="absolute -z-10 w-64 h-64 blur-[80px] rounded-full bg-indigo-600/10 bottom-0 right-0"></div>
@@ -205,8 +205,8 @@ export default function Hero({
             className="z-10"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl text-gray-300">Hi, I'm</span> <br />
-              <span className="gradient-text">{name}</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-3">Hi, I'm</span> <br />
+              <span className="gradient-text whitespace-nowrap">{name}</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
               <span className="relative inline-block gradient-text">{title}</span>
@@ -234,7 +234,7 @@ export default function Hero({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center items-center md:justify-end p-4 relative"
+            className="flex justify-center items-center md:justify-end pl-0 pr-6 relative"
           >
             {/* Background glow effects */}
             <div className="absolute -z-10 w-96 h-96 blur-[120px] rounded-full bg-purple-700/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
