@@ -66,7 +66,7 @@ export default function Projects({ projects }: ProjectsProps) {
   }, []);
 
   return (
-    <section id="projects" className="py-20 bg-dark/20 backdrop-blur-sm">
+    <section id="projects" className="py-10 bg-dark/10 backdrop-blur-sm">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

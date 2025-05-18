@@ -19,6 +19,7 @@ const defaultData = {
     about: "With several years of experience in web development...",
     avatar: "/images/profile.png",
     email: "hello@example.com",
+    phone: "+880 1676797123",
     location: "Dhaka, Bangladesh",
     careerStartDate: "2016-04-01",
     socialLinks: {
@@ -110,6 +111,8 @@ export default function Home() {
       <Contact 
         email={personalInfo.email}
         location={personalInfo.location}
+        phone={personalInfo.phone}
+        socialLinks={personalInfo.socialLinks}
       />
       
       <Footer />
