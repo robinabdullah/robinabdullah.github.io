@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaLinkedinIn, FaTwitter, FaCheckCircle, FaExclamationTriangle, FaLock } from 'react-icons/fa';
 import { 
   PAGECLIP_SCRIPT_URL, 
   PAGECLIP_CSS_URL, 
@@ -30,6 +30,16 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Check localStorage on initial load to see if user has already submitted a message
+  useEffect(() => {
+    const previousSubmission = localStorage.getItem('contactFormSubmitted');
+    if (previousSubmission === 'true') {
+      setHasSubmitted(true);
+    }
+  }, []);
 
   useEffect(() => {
     // Load PageClip script
@@ -58,14 +68,14 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (hasSubmitted) return; // Prevent changes if already submitted
+    
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
     });
   };
 
-  // The PageClip form will handle submission directly, but we'll keep this function
-  // to reset the form state when the PageClip callback is triggered
   const handleFormReset = () => {
     setFormState({
       name: '',
@@ -75,24 +85,36 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
     });
   };
 
-  // Optional: hook into Pageclip form submit events when the script is loaded
+  // Hook into Pageclip form submit events
   useEffect(() => {
     const setupPageclip = () => {
-      if (window.Pageclip) {
-        const form = document.querySelector('.pageclip-form') as HTMLFormElement;
-        if (form) {
-          window.Pageclip.form(form, {
-            onResponse: (error: any, response: any) => {
-              if (!error) {
-                handleFormReset();
-                setSubmitStatus('success');
-              } else {
-                setSubmitStatus('error');
-              }
-              setIsSubmitting(false);
+      if (window.Pageclip && formRef.current) {
+        window.Pageclip.form(formRef.current, {
+          onSubmit: (event) => {
+            // Prevent submission if user has already submitted a form
+            if (hasSubmitted) {
+              return false;
             }
-          });
-        }
+            
+            setIsSubmitting(true);
+            // Return true to allow the submission to proceed
+            return true;
+          },
+          onResponse: (error: any, response: any) => {
+            if (!error) {
+              // Set the form as submitted permanently
+              setHasSubmitted(true);
+              localStorage.setItem('contactFormSubmitted', 'true');
+              
+              handleFormReset();
+              setSubmitStatus('success');
+            } else {
+              setSubmitStatus('error');
+            }
+            setIsSubmitting(false);
+          },
+          successTemplate: '<span></span>' // Use empty template since we handle success UI ourselves
+        });
       }
     };
 
@@ -111,7 +133,7 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
       // Clean up interval
       return () => clearInterval(checkPageclip);
     }
-  }, []);
+  }, [hasSubmitted]);
   
   return (
     <section id="contact" className="py-2 bg-dark/10 backdrop-blur-sm">
@@ -226,24 +248,73 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="relative"
           >
+            {/* Permanent Form Disabled Overlay - Shows when user has already submitted */}
+            {hasSubmitted && submitStatus !== 'success' && (
+              <div className="absolute inset-0 z-10 bg-black/80 backdrop-blur-sm rounded-lg flex flex-col items-center justify-center p-8 text-center">
+                <div className="bg-primary-light/20 p-4 rounded-full mb-4">
+                  <FaLock className="h-10 w-10 text-primary-light" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Message Already Sent</h3>
+                <p className="text-gray-300 mb-4">
+                  You've already sent a message. Thank you for reaching out!
+                </p>
+                <p className="text-gray-400 text-sm max-w-md">
+                  I've received your message and will respond as soon as possible.
+                  If you need to send additional information, please use email.
+                </p>
+              </div>
+            )}
+
+            {/* Success Message Overlay */}
+            <AnimatePresence>
+              {submitStatus === 'success' && (
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0 z-10 bg-black/80 backdrop-blur-sm rounded-lg flex flex-col items-center justify-center p-8 text-center"
+                >
+                  <div className="bg-gradient-to-r from-primary-light to-primary-dark p-4 rounded-full mb-4">
+                    <FaCheckCircle className="h-12 w-12 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Message Sent!</h3>
+                  <p className="text-gray-200 mb-3">Thank you for your message. I'll get back to you as soon as possible.</p>
+                  <p className="text-gray-400 text-sm mb-6">For additional inquiries, please reach out via email.</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Error Message */}
+            <AnimatePresence>
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-0 inset-x-0 z-10 bg-red-900/80 text-white p-4 rounded-t-lg flex items-center"
+                >
+                  <FaExclamationTriangle className="h-5 w-5 text-red-300 mr-2" />
+                  <p>There was an error sending your message. Please try again.</p>
+                  <button 
+                    onClick={() => setSubmitStatus(null)}
+                    className="ml-auto text-red-300 hover:text-white"
+                    aria-label="Close error message"
+                  >
+                    ×
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             <form 
+              ref={formRef}
               action={getFormActionUrl()} 
               method="post"
-              className="pageclip-form bg-white/5 backdrop-blur-sm rounded-lg shadow-md p-8"
+              className={`pageclip-form bg-white/5 backdrop-blur-sm rounded-lg shadow-md p-8 ${hasSubmitted ? 'opacity-80' : ''}`}
             >
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-900/50 text-green-300 rounded-md">
-                  Thank you for your message! I'll get back to you as soon as possible.
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-900/50 text-red-300 rounded-md">
-                  There was an error sending your message. Please try again later.
-                </div>
-              )}
-              
               <div className="mb-6">
                 <label htmlFor="name" className="block text-white mb-2">Name</label>
                 <input
@@ -252,8 +323,9 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
                   name="name"
                   value={formState.name}
                   onChange={handleChange}
+                  disabled={hasSubmitted || isSubmitting}
                   required
-                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light disabled:opacity-70"
                 />
               </div>
 
@@ -265,8 +337,9 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
                   name="email"
                   value={formState.email}
                   onChange={handleChange}
+                  disabled={hasSubmitted || isSubmitting}
                   required
-                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light disabled:opacity-70"
                 />
               </div>
 
@@ -278,8 +351,9 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
                   name="subject"
                   value={formState.subject}
                   onChange={handleChange}
+                  disabled={hasSubmitted || isSubmitting}
                   required
-                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light disabled:opacity-70"
                 />
               </div>
 
@@ -291,17 +365,32 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
                   rows={5}
                   value={formState.message}
                   onChange={handleChange}
+                  disabled={hasSubmitted || isSubmitting}
                   required
-                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  className="w-full p-3 bg-white/10 border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary-light disabled:opacity-70"
                 />
               </div>
 
               <button
                 type="submit"
-                className="pageclip-form__submit w-full button-primary py-3 flex justify-center items-center"
+                disabled={hasSubmitted || isSubmitting}
+                className="pageclip-form__submit w-full button-primary py-3 flex justify-center items-center disabled:opacity-70"
               >
-                <span>Send Message</span>
+                <span>
+                  {isSubmitting 
+                    ? 'Sending...' 
+                    : hasSubmitted 
+                      ? 'Message Sent' 
+                      : 'Send Message'
+                  }
+                </span>
               </button>
+              
+              {hasSubmitted && !submitStatus && (
+                <p className="text-center text-gray-400 text-sm mt-4">
+                  You have already sent a message. Thank you!
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
