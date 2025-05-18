@@ -8,6 +8,7 @@ import About from '@/components/sections/About';
 import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
+import portfolioData from '@/data/portfolio.json';
 
 // Sample data structure to prevent hydration errors
 const defaultData = {
@@ -16,7 +17,7 @@ const defaultData = {
     title: "Full Stack Developer",
     bio: "I am a passionate full stack developer with expertise in building responsive web applications.",
     about: "With several years of experience in web development...",
-    avatar: "/images/profile.jpg",
+    avatar: "/images/profile.png",
     email: "hello@example.com",
     location: "Dhaka, Bangladesh",
     careerStartDate: "2016-04-01",
@@ -48,28 +49,16 @@ const defaultData = {
 };
 
 export default function Home() {
-  const [portfolioData, setPortfolioData] = useState(defaultData);
   const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/api/portfolio');
-        if (!response.ok) throw new Error('Failed to fetch portfolio data');
-        const data = await response.json();
-        setPortfolioData(data);
-      } catch (error) {
-        console.error('Error loading portfolio data:', error);
-        // Fall back to default data in case of error
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
+    // Use the directly imported data instead of fetching from API
+    setData(portfolioData);
+    setIsLoading(false);
   }, []);
 
-  const { personalInfo, skills, experience, education, projects, statistics } = portfolioData;
+  const { personalInfo, skills, experience, education, projects, statistics } = data;
 
   if (isLoading) {
     return (

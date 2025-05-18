@@ -36,4 +36,21 @@ body {
   .button-secondary {
     @apply px-6 py-3 border border-gray-300 rounded-md font-medium hover:bg-gray-50 transition-colors;
   }
+  
+  /* Project card related styles */
+  .project-card-shadow {
+    @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .project-tech-badge {
+    @apply bg-white/10 text-gray-300 px-2 py-1 rounded-full text-xs inline-block;
+  }
+  
+  .project-category-badge {
+    @apply bg-primary-dark/80 text-white text-xs px-2 py-1 rounded-full absolute top-3 right-3;
+  }
+  
+  .project-link {
+    @apply text-gray-300 hover:text-white transition-colors;
+  }
 }
