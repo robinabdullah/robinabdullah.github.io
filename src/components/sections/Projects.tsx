@@ -78,7 +78,7 @@ export default function Projects({ projects }: ProjectsProps) {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-light to-primary-dark mx-auto mb-6"></div>
           <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-            A selection of my notable projects throughout my career
+          A collection of my works across various technologies and domains. Each project represents unique challenges and solutions.
           </p>
         </motion.div>
 
