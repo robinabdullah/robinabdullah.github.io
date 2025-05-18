@@ -5,6 +5,8 @@ import GradientBackground from '@/components/ui/GradientBackground';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Portfolio | Robin Abdullah',
   description: 'Personal portfolio website showcasing my skills and projects',
