@@ -176,14 +176,14 @@ export default function About({ name, about, avatar, experience, education, care
   }, [experience]);
 
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-1">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-10"
+          className="text-center mb-6"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-3">About Me</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mb-4"></div>

@@ -66,14 +66,14 @@ export default function Projects({ projects }: ProjectsProps) {
   }, []);
 
   return (
-    <section id="projects" className="py-10 bg-dark/10 backdrop-blur-sm">
+    <section id="projects" className="py-2 bg-dark/10 backdrop-blur-sm">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-light to-primary-dark mx-auto mb-6"></div>
@@ -83,7 +83,7 @@ export default function Projects({ projects }: ProjectsProps) {
         </motion.div>
 
         {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
           {categories.map((category, index) => (
             <motion.button
               key={index}

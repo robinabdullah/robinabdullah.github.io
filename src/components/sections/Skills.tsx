@@ -174,7 +174,7 @@ export default function Skills({ skills }: SkillsProps) {
   ];
 
   return (
-    <section id="skills" className="py-10 relative overflow-hidden">
+    <section id="skills" className="py-2 relative overflow-hidden">
       {/* Background animation elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div 

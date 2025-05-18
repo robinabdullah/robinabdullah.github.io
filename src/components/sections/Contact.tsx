@@ -56,14 +56,14 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
   };
 
   return (
-    <section id="contact" className="py-10 backdrop-blur-sm">
+    <section id="contact" className="py-2 bg-dark/10 backdrop-blur-sm">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Get In Touch</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-light to-primary-dark mx-auto mb-6"></div>
