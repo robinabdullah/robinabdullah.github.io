@@ -166,7 +166,7 @@
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/nsda.png",
       "githubLink": "",
-      "liveDemoLink": ""
+      "liveDemoLink": "https://www.skillsportal.gov.bd/"
     },
     {
       "id": 3,
@@ -179,7 +179,7 @@
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/shastho-batayon.png",
       "githubLink": "",
-      "liveDemoLink": ""
+      "liveDemoLink": "http://16263.dghs.gov.bd/"
     },
     {
       "id": 4,
@@ -190,7 +190,7 @@
       "skills": ["Systems Design", "OOP", "Angular CLI", "Docker", "JHipster"],
       "date": "Feb 2021 – Nov 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/no-image.png",
+      "imageUrl": "/images/projects/cst.png",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -205,7 +205,7 @@
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/neir.png",
       "githubLink": "",
-      "liveDemoLink": ""
+      "liveDemoLink": "https://neir.btrc.gov.bd/auth/login"
     },
     {
       "id": 6,
@@ -218,7 +218,7 @@
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/corona-bot.png",
       "githubLink": "",
-      "liveDemoLink": ""
+      "liveDemoLink": "https://www.facebook.com/ShasthoBatayon"
     },
     {
       "id": 7,
@@ -235,14 +235,14 @@
     },
     {
       "id": 8,
-      "title": "E-Prescription (Reusable Microservice)",
+      "title": "E-Prescription",
       "description": "Microservice for sending e-prescriptions via SMS with pluggable gateway vendors.",
       "category": "Microservices",
       "techStack": ["Java Spring Boot", "MySQL", "Liquibase"],
       "skills": ["SOA", "Microservices", "System Deployment"],
       "date": "Jul 2020 – Jan 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/no-image.png",
+      "imageUrl": "/images/projects/e-prescription.png",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -261,14 +261,14 @@
     },
     {
       "id": 10,
-      "title": "File Service (Reusable Microservice)",
+      "title": "File Service",
       "description": "Plug-and-play file microservice with upload, batch processing, update, and delete functionality.",
       "category": "Microservices",
       "techStack": ["Java Spring Boot", "MySQL"],
       "skills": ["SOA", "Microservices"],
       "date": "Aug 2020 – Oct 2020",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/no-image.png",
+      "imageUrl": "/images/projects/file-service.png",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -306,7 +306,7 @@
       "skills": ["OOP", "Reporting"],
       "date": "Jan 2018 – Apr 2018",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/no-image.png",
+      "imageUrl": "/images/projects/acr.png",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -319,7 +319,7 @@
       "skills": ["OOP", "Database Design"],
       "date": "Sep 2017 – Dec 2017",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/no-image.png",
+      "imageUrl": "/images/projects/bpo.png",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -331,7 +331,7 @@
       "techStack": [".NET WPF", "SQL Server"],
       "skills": ["OOP", "Desktop Development"],
       "date": "Jan 2016 – Mar 2017",
-      "imageUrl": "/images/projects/no-image.png",
+      "imageUrl": "/images/projects/pos.png",
       "githubLink": "",
       "liveDemoLink": ""
     }
