@@ -28,11 +28,11 @@
       "TypeScript"
     ],
     "frameworks": [
+      ".NET Core",
       "ASP.NET Core",
       "ASP.NET MVC",
       "Blazor",
       "Express.js",
-      "React",
       "Next.js"
     ],
     "architecturesPatterns": [
@@ -40,14 +40,13 @@
       "Microservices",
       "Client-Server",
       "Event-Driven",
-      "CQRS",
       "Serverless"
     ],
     "databases": [
       "MSSQL",
+      "PostgreSQL",
       "MongoDB",
       "MySQL",
-      "DynamoDB",
       "SQLite"
     ],
     "cloudPlatforms": [
@@ -74,7 +73,6 @@
       "SignalR & Socket.io",
       "Entity Framework Core",
       "REST",
-      "gRPC",
       "LINQ",
       "RabbitMQ",
       "Redis"
@@ -117,7 +115,7 @@
       "company": "Freelance",
       "position": "Freelance Software Engineer",
       "period": "Apr 2016 - May 2017",
-      "description": "Developed software for clients while completing my degree. Successfully delivered and deployed three projects built with ASP.Net web and ASP.NET WPF. One project expanded to multiple development phases as new requirements emerged.",
+      "description": "Developed software for clients while completing my degree. Successfully delivered and deployed three projects built with ASP.Net web and ASP.NET WPF. One project expanded to multiple development phases as new requirements emerged. This hands-on experience taught me invaluable skills in software development, project management, and problem-solving, which continue to empower me to tackle more complex and challenging roles today",
       "location": "Bangladesh",
       "workType": "Freelance"
     }

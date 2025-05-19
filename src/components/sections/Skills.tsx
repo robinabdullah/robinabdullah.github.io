@@ -1,12 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaReact, FaNode, FaAws, FaDocker, FaGitAlt, FaJira, FaAngular, FaBootstrap, FaMicrosoft } from 'react-icons/fa';
+import { FaReact, FaAws, FaDocker, FaGitAlt, FaJira, FaAngular, FaBootstrap, FaMicrosoft } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiDotnet, SiNextdotjs, SiMongodb, SiMysql, 
-         SiRedis, SiExpress, SiRedux, SiTailwindcss, SiMui } from 'react-icons/si';
+         SiExpress, SiRedux, SiTailwindcss, SiMui, 
+         SiRabbitmq,
+         SiSqlite,
+         SiBlazor} from 'react-icons/si';
 import { TbBrandCSharp, TbDatabaseSearch } from 'react-icons/tb';
 import { GoDatabase } from 'react-icons/go';
 import { BsDiagram3Fill, BsHddNetwork } from 'react-icons/bs';
+import { VscAzure, VscAzureDevops } from "react-icons/vsc";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { DiMsqlServer, DiRedis } from "react-icons/di";
+import { LiaJenkins } from "react-icons/lia";
 
 interface SkillsProps {
   skills: {
@@ -46,9 +53,10 @@ const getSkillIcon = (skillName: string): { icon: React.ReactNode; color: string
     "TypeScript": { icon: <SiTypescript />, color: "bg-blue-500" },
     
     // Frameworks
+    ".NET Core": { icon: <SiDotnet />, color: "bg-purple-600" },
     "ASP.NET Core": { icon: <SiDotnet />, color: "bg-purple-600" },
     "ASP.NET MVC": { icon: <SiDotnet />, color: "bg-purple-500" },
-    "Blazor": { icon: <SiDotnet />, color: "bg-purple-400" },
+    "Blazor": { icon: <SiBlazor />, color: "bg-purple-400" },
     "Express.js": { icon: <SiExpress />, color: "bg-gray-500" },
     "React": { icon: <FaReact />, color: "bg-blue-500" },
     "Next.js": { icon: <SiNextdotjs />, color: "bg-black" },
@@ -63,20 +71,20 @@ const getSkillIcon = (skillName: string): { icon: React.ReactNode; color: string
     
     // Databases
     "MSSQL": { icon: <TbDatabaseSearch />, color: "bg-blue-500" },
+    "PostgreSQL": { icon: <BiLogoPostgresql />, color: "bg-blue-500" },
     "MongoDB": { icon: <SiMongodb />, color: "bg-green-500" },
-    "MySQL": { icon: <SiMysql />, color: "bg-blue-600" },
-    "DynamoDB": { icon: <FaAws />, color: "bg-orange-400" },
-    "SQLite": { icon: <GoDatabase />, color: "bg-blue-400" },
+    "MySQL": { icon: <DiMsqlServer />, color: "bg-blue-600" },
+    "SQLite": { icon: <SiSqlite />, color: "bg-blue-400" },
     
     // Cloud
-    "Azure": { icon: <FaMicrosoft />, color: "bg-blue-500" },
+    "Azure": { icon: <VscAzure />, color: "bg-blue-500" },
     "AWS": { icon: <FaAws />, color: "bg-orange-400" },
     
     // DevOps
     "Git": { icon: <FaGitAlt />, color: "bg-red-500" },
-    "Azure DevOps": { icon: <FaMicrosoft />, color: "bg-blue-500" },
+    "Azure DevOps": { icon: <VscAzureDevops />, color: "bg-blue-500" },
     "Docker": { icon: <FaDocker />, color: "bg-blue-500" },
-    "Jenkins": { icon: <TbDatabaseSearch />, color: "bg-red-400" },
+    "Jenkins": { icon: <LiaJenkins />, color: "bg-red-400" },
     "IIS": { icon: <FaMicrosoft />, color: "bg-blue-500" },
     "Jira": { icon: <FaJira />, color: "bg-blue-400" },
     
@@ -92,10 +100,10 @@ const getSkillIcon = (skillName: string): { icon: React.ReactNode; color: string
     "Entity Framework Core": { icon: <SiDotnet />, color: "bg-purple-500" },
     "Entity Framework": { icon: <SiDotnet />, color: "bg-purple-500" },
     "REST": { icon: <BsHddNetwork />, color: "bg-green-500" },
-    "gRPC": { icon: <BsHddNetwork />, color: "bg-blue-400" },
+    // "gRPC": { icon: <BsHddNetwork />, color: "bg-blue-400" },
     "LINQ": { icon: <SiDotnet />, color: "bg-purple-500" },
-    "RabbitMQ": { icon: <BsHddNetwork />, color: "bg-orange-400" },
-    "Redis": { icon: <SiRedis />, color: "bg-red-500" }
+    "RabbitMQ": { icon: <SiRabbitmq />, color: "bg-orange-400" },
+    "Redis": { icon: <DiRedis />, color: "bg-red-500" }
   };
 
   // Default icon and color if not found
