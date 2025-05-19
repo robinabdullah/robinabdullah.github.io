@@ -184,9 +184,9 @@
     {
       "id": 4,
       "title": "CST",
-      "description": "Enterprise system with modern architecture patterns leveraging Angular and Docker. Implemented robust frontend components with responsive design and optimized data flow between client and server for enhanced performance.",
+      "description": "Enterprise system with modern architecture patterns leveraging Angular and Java Spring Boot. Implemented robust frontend components with responsive design and optimized data flow between client and server for enhanced performance.",
       "category": "Web Development",
-      "techStack": ["Angular", "Docker"],
+      "techStack": ["Angular", "Java Spring Boot"],
       "skills": ["Systems Design", "OOP", "Angular CLI", "Docker", "JHipster"],
       "date": "Feb 2021 – Nov 2021",
       "associatedWith": "Synesis IT",
@@ -275,9 +275,9 @@
     {
       "id": 11,
       "title": "Telenor Health",
-      "description": "Health platform with modern architecture leveraging Angular and Docker containerization. Implemented responsive UI components and optimized data flow for smooth user experience across various devices and network conditions.",
+      "description": "Implemented responsive UI components and optimized data flow for smooth user experience across various devices and network conditions.",
       "category": "Web Development",
-      "techStack": ["Angular", "Docker"],
+      "techStack": ["Angular"],
       "skills": ["Systems Design", "Angular CLI", "Docker"],
       "date": "May 2019 – Aug 2020",
       "associatedWith": "Synesis IT",
