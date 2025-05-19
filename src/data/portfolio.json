@@ -157,7 +157,7 @@
     },
     {
       "id": 2,
-      "title": "National Skills Development Authority",
+      "title": "National Skills Authority (NSDA)",
       "description": "Platform for 100,000+ training providers with role-based access control and payment gateway integration. Led the developer team to ensure scalability through loosely coupled components and automated backups.",
       "category": "Web Development",
       "techStack": ["Java Spring Boot", "Liquibase", "Microservices", "PostgreSQL", "Angular"],

@@ -43,11 +43,11 @@ body {
   }
   
   .project-tech-badge {
-    @apply bg-white/10 text-gray-300 px-2 py-1 rounded-full text-xs inline-block;
+    @apply bg-white/10 text-gray-300 px-2.5 py-1 rounded-full text-xs inline-block font-medium;
   }
   
   .project-category-badge {
-    @apply bg-primary-dark/80 text-white text-xs px-2 py-1 rounded-full absolute top-3 right-3;
+    @apply bg-primary-dark/90 text-white text-xs font-medium px-3 py-1 rounded-full absolute top-3 right-3 shadow-md backdrop-blur-sm;
   }
   
   .project-link {

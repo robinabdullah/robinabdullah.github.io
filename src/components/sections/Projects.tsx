@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaBuilding } from 'react-icons/fa';
 
 interface Project {
   id: number;
@@ -176,22 +176,27 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="p-4 flex-grow flex flex-col">
         <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
         
-        {project.associatedWith && (
-          <p className="text-xs text-primary-light/90 mb-2">
-            {project.associatedWith}
-          </p>
-        )}
+        <div className="flex flex-col gap-1 mb-3">
+          {project.associatedWith && (
+            <div className="flex items-center gap-1.5">
+              <FaBuilding className="text-primary-light/90 w-3 h-3" />
+              <p className="text-sm text-white/80">
+                {project.associatedWith}
+              </p>
+            </div>
+          )}
+        </div>
         
         <p className="text-gray-300 text-sm mb-auto">
           {project.description}
         </p>
         
         <div className="mt-4">
-          <div className="flex flex-wrap gap-1 mb-4">
+          <div className="flex flex-wrap gap-1.5 mb-4">
             {project.techStack.map((tech, i) => (
               <span 
                 key={i} 
-                className="project-tech-badge"
+                className="project-tech-badge hover:bg-primary-light/20 transition-colors duration-200"
               >
                 {tech}
               </span>
