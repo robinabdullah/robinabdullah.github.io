@@ -150,6 +150,7 @@
       "techStack": [".NET Core", ".NET Background Worker", "Angular", "PostgreSQL", "RABBITMQ"],
       "skills": ["Systems Design", "Multithreading", "ASP.NET Core", "Angular CLI", "TypeScript", "SOA", "C#", "SQL Server", "Web Development"],
       "date": "Mar 2016 – Present",
+      "associatedWith": "Freelance",
       "imageUrl": "/images/projects/parsing-project.jpg",
       "githubLink": "",
       "liveDemoLink": ""
@@ -160,7 +161,7 @@
       "description": "Platform for 100,000+ skill training providers with access control and payment integration. Led developer team for this large-scale project.",
       "category": "Web Development",
       "techStack": ["Java Spring Boot", "Liquibase", "Microservices", "PostgreSQL", "Angular"],
-      "skills": ["Systems Design", "OOP", "Team Leadership", "SOA", "Angular CLI", "TypeScript", "MySQL", "Agile Project Management"],
+      "skills": ["Systems Design", "Team Leadership", "Angular", "TypeScript", "PostgreSQL", "Agile Project Management"],
       "date": "Jun 2021 – Apr 2022",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/nsda.jpg",
@@ -172,7 +173,7 @@
       "title": "Shastho Batayon (16263)",
       "description": "Telemedicine platform serving 30M+ users. Scalable CRM handling 100k+ calls daily during pandemic. Contributed 20k+ lines of code.",
       "category": "Web Development",
-      "techStack": [".Net Core", "Angular", "Liquibase", "Docker"],
+      "techStack": [".Net Core", "Angular", "MySQL"],
       "skills": ["Systems Design", "OOP", "SOA", "Microservices", "Agile Methodologies", "MySQL"],
       "date": "Aug 2019 – Dec 2021",
       "associatedWith": "Synesis IT",
@@ -185,7 +186,7 @@
       "title": "CST",
       "description": "Enterprise system development with modern architecture patterns.",
       "category": "Web Development",
-      "techStack": ["Angular", "Docker", "JHipster"],
+      "techStack": ["Angular", "Docker"],
       "skills": ["Systems Design", "OOP", "Angular CLI", "Docker", "JHipster"],
       "date": "Feb 2021 – Nov 2021",
       "associatedWith": "Synesis IT",
@@ -198,7 +199,7 @@
       "title": "National Equipment Identity Register",
       "description": "Highly scalable microservices for national equipment registry with automated deployment of 40 redundant services.",
       "category": "Microservices",
-      "techStack": ["Oracle DB", "Microservices", "Bash scripting"],
+      "techStack": ["Microservices", "Bash scripting"],
       "skills": ["SOA", "System Architecture", "DevOps", "Microservices"],
       "date": "Feb 2021 – May 2021",
       "associatedWith": "Synesis IT",
@@ -250,7 +251,7 @@
       "title": "Trendy Bot (Chatbot)",
       "description": "Reusable Facebook Messenger bot handling 800+ concurrent threads with NLP. Integrated in-app product purchases.",
       "category": "AI",
-      "techStack": [".NET", "Node.js", "MySQL"],
+      "techStack": [".NET", "Node.js", "MySQL", "Facebook Platform API", "Python"],
       "skills": ["OOP", "SOA", "ASP.NET Core", "Node.js"],
       "date": "Apr 2019 – Jan 2021",
       "associatedWith": "Synesis IT",
@@ -289,9 +290,10 @@
       "title": "Business Suit",
       "description": "Web application for managing client orders with modern interface.",
       "category": "Web Development",
-      "techStack": ["ASP.NET MVC", "EF Core", "SQL Server", "jQuery"],
+      "techStack": ["ASP.NET MVC", "EF", "SQL Server", "jQuery", "Bootstrap"],
       "skills": ["OOP", "ASP.NET", "Web Development"],
       "date": "Mar 2018 – Nov 2018",
+      "associatedWith": "Freelance",
       "imageUrl": "/images/projects/business-suit.jpg",
       "githubLink": "",
       "liveDemoLink": ""
@@ -301,7 +303,7 @@
       "title": "Annual Confidential Report",
       "description": "Crystal Reports generation for education board annual reports.",
       "category": "Web Development",
-      "techStack": ["ASP.NET", "Laravel", "PHP"],
+      "techStack": ["ASP.NET", "jQuery"],
       "skills": ["OOP", "Reporting"],
       "date": "Jan 2018 – Apr 2018",
       "associatedWith": "Synesis IT",
@@ -314,7 +316,7 @@
       "title": "Bangladesh Post Office",
       "description": "Enhancements to savings certificate management system.",
       "category": "Web Development",
-      "techStack": ["C#", "Oracle DB", "SVN"],
+      "techStack": ["C#", "Oracle DB", "SVN", "Crystal Reports"],
       "skills": ["OOP", "Database Design"],
       "date": "Sep 2017 – Dec 2017",
       "associatedWith": "Synesis IT",
@@ -330,23 +332,10 @@
       "techStack": [".NET WPF", "SQL Server"],
       "skills": ["OOP", "Desktop Development"],
       "date": "Jan 2016 – Mar 2017",
+      "associatedWith": "Freelance",
       "imageUrl": "/images/projects/pos.jpg",
       "githubLink": "",
       "liveDemoLink": ""
-    }
-  ],
-  "testimonials": [
-    {
-      "name": "Sarah Johnson",
-      "position": "CTO, Tech Solutions",
-      "content": "Robin is an exceptional developer who consistently delivers high-quality code. His attention to detail and problem-solving skills make him a valuable asset to any team.",
-      "avatar": "/images/testimonial1.jpg"
-    },
-    {
-      "name": "Michael Chen",
-      "position": "Project Manager, WebDev Agency",
-      "content": "Working with Robin was a pleasure. He has a great understanding of user experience and always meets deadlines while maintaining code quality.",
-      "avatar": "/images/testimonial2.jpg"
     }
   ]
 }
