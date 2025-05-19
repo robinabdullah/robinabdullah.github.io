@@ -20,6 +20,8 @@ interface ContactProps {
   };
 }
 
+type SubmitStatusType = null | 'success' | 'error';
+
 export default function Contact({ email, location, phone = "+880 1676797123", socialLinks }: ContactProps) {
   const [formState, setFormState] = useState({
     name: '',
@@ -29,7 +31,7 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatusType>(null);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -253,7 +255,7 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
             {/* Permanent Form Disabled Overlay - Shows when user has already submitted */}
             {hasSubmitted && submitStatus !== 'success' && (
               <div className="absolute inset-0 z-10 bg-black/80 backdrop-blur-sm rounded-lg flex flex-col items-center justify-center p-8 text-center">
-                <div className="bg-primary-light/20 p-4 rounded-full mb-4">
+                <div className="bg-white/10 shadow-md p-4 rounded-full mb-4">
                   <FaLock className="h-10 w-10 text-primary-light" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Message Already Sent</h3>
@@ -277,8 +279,8 @@ export default function Contact({ email, location, phone = "+880 1676797123", so
                   transition={{ duration: 0.3 }}
                   className="absolute inset-0 z-10 bg-black/80 backdrop-blur-sm rounded-lg flex flex-col items-center justify-center p-8 text-center"
                 >
-                  <div className="bg-gradient-to-r from-primary-light to-primary-dark p-4 rounded-full mb-4">
-                    <FaCheckCircle className="h-12 w-12 text-white" />
+                  <div className="bg-white/10 shadow-md p-4 rounded-full mb-4">
+                    <FaCheckCircle className="h-12 w-12 text-primary-light" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">Message Sent!</h3>
                   <p className="text-gray-200 mb-3">Thank you for your message. I'll get back to you as soon as possible.</p>
