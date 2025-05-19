@@ -132,7 +132,7 @@
     {
       "id": 0,
       "title": "Optimizely Configured Commerce",
-      "description": "Enterprise-grade B2B commerce platform with advanced product configuration capabilities and streamlined checkout processes. Enhanced performance and modernized the UI for better user experience.",
+      "description": "Enterprise-grade B2B commerce platform with advanced product configuration and streamlined checkout. Enhanced performance by 35% and modernized UI for better UX. Led code reviews to maintain standards with cross-functional teams.",
       "category": "E-commerce",
       "techStack": ["React", "Redux", "C#", "ASP.NET Core", "WCF", "MSSQL", "EF Core", "TypeScript", "Angular", "Azure"],
       "skills": ["Systems Design", "Enterprise Architecture", "E-commerce", "Cloud Infrastructure", "Performance Optimization"],
@@ -145,7 +145,7 @@
     {
       "id": 1,
       "title": "Parsing Project",
-      "description": "Unicode address parser with custom algorithm and dynamic dictionary. Multithreaded processing for PDFs. 70% faster APIs using compression.",
+      "description": "Unicode address parser with custom algorithm and dynamic dictionary. Implemented multi-threaded processing for PDFs, improving throughput dramatically. Offloaded processing to Angular frontend with 70% faster API responses via compression.",
       "category": "Web Development",
       "techStack": [".NET Core", ".NET Background Worker", "Angular", "PostgreSQL", "RABBITMQ"],
       "skills": ["Systems Design", "Multithreading", "ASP.NET Core", "Angular CLI", "TypeScript", "SOA", "C#", "SQL Server", "Web Development"],
@@ -158,7 +158,7 @@
     {
       "id": 2,
       "title": "National Skills Development Authority",
-      "description": "Platform for 100,000+ skill training providers with access control and payment integration. Led developer team for this large-scale project.",
+      "description": "Platform for 100,000+ training providers with role-based access control and payment gateway integration. Led the developer team to ensure scalability through loosely coupled components and automated backups.",
       "category": "Web Development",
       "techStack": ["Java Spring Boot", "Liquibase", "Microservices", "PostgreSQL", "Angular"],
       "skills": ["Systems Design", "Team Leadership", "Angular", "TypeScript", "PostgreSQL", "Agile Project Management"],
@@ -171,7 +171,7 @@
     {
       "id": 3,
       "title": "Shastho Batayon (16263)",
-      "description": "Telemedicine platform serving 30M+ users. Scalable CRM handling 100k+ calls daily during pandemic. Contributed 20k+ lines of code.",
+      "description": "Telemedicine platform serving 30M+ users with remote diagnoses. Built scalable, redundant CRM handling 100k+ calls daily during pandemic peak. Contributed 20k+ lines of API and frontend code to the core solution.",
       "category": "Web Development",
       "techStack": [".Net Core", "Angular", "MySQL"],
       "skills": ["Systems Design", "OOP", "SOA", "Microservices", "Agile Methodologies", "MySQL"],
@@ -184,7 +184,7 @@
     {
       "id": 4,
       "title": "CST",
-      "description": "Enterprise system development with modern architecture patterns.",
+      "description": "Enterprise system with modern architecture patterns leveraging Angular and Docker. Implemented robust frontend components with responsive design and optimized data flow between client and server for enhanced performance.",
       "category": "Web Development",
       "techStack": ["Angular", "Docker"],
       "skills": ["Systems Design", "OOP", "Angular CLI", "Docker", "JHipster"],
@@ -197,7 +197,7 @@
     {
       "id": 5,
       "title": "National Equipment Identity Register",
-      "description": "Highly scalable microservices for national equipment registry with automated deployment of 40 redundant services.",
+      "description": "Highly scalable, reliable microservices for national equipment registry. Created Bash scripts to automate deployment of 40 redundant services, significantly reducing manual configuration errors and deployment time.",
       "category": "Microservices",
       "techStack": ["Microservices", "Bash scripting"],
       "skills": ["SOA", "System Architecture", "DevOps", "Microservices"],
@@ -210,7 +210,7 @@
     {
       "id": 6,
       "title": "Shastho Batayon Corona Bot",
-      "description": "Facebook Messenger bot delivering COVID-19 information and self-assessment with integrated third-party APIs.",
+      "description": "Facebook Messenger bot delivering COVID-19 information and self-assessment. Integrated third-party APIs for live statistics and achieved high throughput with optimized message handling and response generation.",
       "category": "AI",
       "techStack": ["Node.js", "MySQL", "Facebook Platform API"],
       "skills": ["Systems Design", "SOA", "Agile"],
@@ -223,7 +223,7 @@
     {
       "id": 7,
       "title": "Covid-19 Patient Management",
-      "description": "Dynamic telehealth CRM serving 10,000+ patients daily with customizable questionnaires and report generation.",
+      "description": "Dynamic telehealth CRM serving 10,000+ patients daily during pandemic peak. Implemented fully configurable questionnaire system and versatile admin reporting tool for real-time data analysis and decision support.",
       "category": "Web Development",
       "techStack": [".Net Core", "Angular"],
       "skills": ["Systems Design", "Agile", "Web Development"],
@@ -236,7 +236,7 @@
     {
       "id": 8,
       "title": "E-Prescription",
-      "description": "Microservice for sending e-prescriptions via SMS with pluggable gateway vendors.",
+      "description": "Microservice for sending e-prescriptions via SMS with pluggable gateway vendors. Designed with scalability in mind to handle varying loads and implemented comprehensive logging for troubleshooting and auditing.",
       "category": "Microservices",
       "techStack": ["Java Spring Boot", "MySQL", "Liquibase"],
       "skills": ["SOA", "Microservices", "System Deployment"],
@@ -249,7 +249,7 @@
     {
       "id": 9,
       "title": "Trendy Bot (Chatbot)",
-      "description": "Reusable Facebook Messenger bot handling 800+ concurrent threads with NLP. Integrated in-app product purchases.",
+      "description": "Reusable Facebook Messenger bot handling 800+ concurrent threads with NLP (Rasa). Integrated in-app product purchases via chat interface. Optimized message handling for fast response times even under high loads.",
       "category": "AI",
       "techStack": [".NET", "Node.js", "MySQL", "Facebook Platform API", "Python"],
       "skills": ["OOP", "SOA", "ASP.NET Core", "Node.js"],
@@ -262,7 +262,7 @@
     {
       "id": 10,
       "title": "File Service",
-      "description": "Plug-and-play file microservice with upload, batch processing, update, and delete functionality.",
+      "description": "Plug-and-play file microservice with upload, batch processing, update, and delete functionality. Designed as a reusable component with clean API interface that could be integrated into multiple projects with minimal configuration.",
       "category": "Microservices",
       "techStack": [".Net Core", "MySQL"],
       "skills": ["SOA", "Microservices"],
@@ -275,7 +275,7 @@
     {
       "id": 11,
       "title": "Telenor Health",
-      "description": "Health platform with modern architecture and robust features.",
+      "description": "Health platform with modern architecture leveraging Angular and Docker containerization. Implemented responsive UI components and optimized data flow for smooth user experience across various devices and network conditions.",
       "category": "Web Development",
       "techStack": ["Angular", "Docker"],
       "skills": ["Systems Design", "Angular CLI", "Docker"],
@@ -288,7 +288,7 @@
     {
       "id": 12,
       "title": "Business Suit",
-      "description": "Web application for managing client orders with modern interface.",
+      "description": "Web application for managing client orders with modern interface. Implemented responsive design with Bootstrap and optimized data retrieval patterns for faster page loads and improved user experience.",
       "category": "Web Development",
       "techStack": ["ASP.NET MVC", "EF", "SQL Server", "jQuery", "Bootstrap"],
       "skills": ["OOP", "ASP.NET", "Web Development"],
@@ -301,7 +301,7 @@
     {
       "id": 13,
       "title": "Annual Confidential Report",
-      "description": "Crystal Reports generation for education board annual reports.",
+      "description": "Crystal Reports generation system for education board annual reports. Designed complex report templates with parameterized queries to support flexible data presentation and formatted output for different stakeholder needs.",
       "category": "Web Development",
       "techStack": ["ASP.NET", "jQuery"],
       "skills": ["OOP", "Reporting"],
@@ -314,7 +314,7 @@
     {
       "id": 14,
       "title": "Bangladesh Post Office",
-      "description": "Enhancements to savings certificate management system.",
+      "description": "Enhanced savings certificate management system with improved reporting and transaction tracking. Implemented complex database queries and optimized data retrieval to handle large volumes of financial records efficiently.",
       "category": "Web Development",
       "techStack": ["C#", "Oracle DB", "SVN", "Crystal Reports"],
       "skills": ["OOP", "Database Design"],
@@ -327,7 +327,7 @@
     {
       "id": 15,
       "title": "Point of Sale",
-      "description": "WPF desktop app for mobile shop inventory management.",
+      "description": "WPF desktop application for mobile shop inventory management. Implemented barcode scanning, invoice generation, and real-time stock tracking. Designed intuitive UI for easy navigation and efficient workflow for retail staff.",
       "category": "Desktop Development",
       "techStack": [".NET WPF", "SQL Server"],
       "skills": ["OOP", "Desktop Development"],

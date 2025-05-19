@@ -188,7 +188,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         
         <div className="mt-4">
           <div className="flex flex-wrap gap-1 mb-4">
-            {project.techStack.slice(0, 5).map((tech, i) => (
+            {project.techStack.map((tech, i) => (
               <span 
                 key={i} 
                 className="project-tech-badge"
@@ -196,11 +196,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 {tech}
               </span>
             ))}
-            {project.techStack.length > 5 && (
-              <span className="bg-white/5 text-gray-400 px-2 py-1 rounded-full text-xs">
-                +{project.techStack.length - 5} more
-              </span>
-            )}
           </div>
         </div>
         
@@ -218,15 +213,20 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           )}
           
           {project.liveDemoLink && (
-            <Link 
-              href={project.liveDemoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-              aria-label="View live demo"
-            >
-              <FaExternalLinkAlt size={18} />
-            </Link>
+            <div className="relative group">
+              <Link 
+                href={project.liveDemoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+                aria-label="View live demo"
+              >
+                <FaExternalLinkAlt size={18} />
+              </Link>
+              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                View Live Demo
+              </div>
+            </div>
           )}
         </div>
       </div>
