@@ -156,8 +156,8 @@ export default function Hero({
         </p>
         <div className="flex flex-wrap gap-4 items-center">
           <a 
-            href="/cv/Resume of Abdullah Saleh Robin.pdf" 
-            download="Abdullah_Robin_Resume.pdf"
+            href="/cv/Resume_of_Abdullah_Saleh_Robin.pdf" 
+            download="Abdullah_Saleh_Robin_Resume.pdf"
             className="px-5 py-2.5 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-100 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center w-44"
           >
             Download Resume
