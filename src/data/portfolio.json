@@ -152,7 +152,7 @@
       "techStack": [".NET Core", ".NET Background Worker", "Angular", "PostgreSQL", "RABBITMQ"],
       "skills": ["Systems Design", "Multithreading", "ASP.NET Core", "Angular CLI", "TypeScript", "SOA", "C#", "SQL Server", "Web Development"],
       "date": "Mar 2016 – Present",
-      "imageUrl": "/images/projects/parsing-project.png",
+      "imageUrl": "/images/projects/parsing-project.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -165,7 +165,7 @@
       "skills": ["Systems Design", "OOP", "Team Leadership", "SOA", "Angular CLI", "TypeScript", "MySQL", "Agile Project Management"],
       "date": "Jun 2021 – Apr 2022",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/nsda.png",
+      "imageUrl": "/images/projects/nsda.jpg",
       "githubLink": "",
       "liveDemoLink": "https://www.skillsportal.gov.bd/"
     },
@@ -178,7 +178,7 @@
       "skills": ["Systems Design", "OOP", "SOA", "Microservices", "Agile Methodologies", "MySQL"],
       "date": "Aug 2019 – Dec 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/shastho-batayon.png",
+      "imageUrl": "/images/projects/shastho-batayon.jpg",
       "githubLink": "",
       "liveDemoLink": "http://16263.dghs.gov.bd/"
     },
@@ -191,7 +191,7 @@
       "skills": ["Systems Design", "OOP", "Angular CLI", "Docker", "JHipster"],
       "date": "Feb 2021 – Nov 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/cst.png",
+      "imageUrl": "/images/projects/cst.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -204,7 +204,7 @@
       "skills": ["SOA", "System Architecture", "DevOps", "Microservices"],
       "date": "Feb 2021 – May 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/neir.png",
+      "imageUrl": "/images/projects/neir.jpg",
       "githubLink": "",
       "liveDemoLink": "https://neir.btrc.gov.bd/auth/login"
     },
@@ -217,7 +217,7 @@
       "skills": ["Systems Design", "SOA", "Agile"],
       "date": "Jun 2020 – May 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/corona-bot.png",
+      "imageUrl": "/images/projects/corona-bot.jpg",
       "githubLink": "",
       "liveDemoLink": "https://www.facebook.com/ShasthoBatayon"
     },
@@ -230,7 +230,7 @@
       "skills": ["Systems Design", "Agile", "Web Development"],
       "date": "Jun 2020 – Feb 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/covid-patient.png",
+      "imageUrl": "/images/projects/covid-patient.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -243,7 +243,7 @@
       "skills": ["SOA", "Microservices", "System Deployment"],
       "date": "Jul 2020 – Jan 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/e-prescription.png",
+      "imageUrl": "/images/projects/e-prescription.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -256,7 +256,7 @@
       "skills": ["OOP", "SOA", "ASP.NET Core", "Node.js"],
       "date": "Apr 2019 – Jan 2021",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/trendy-bot.png",
+      "imageUrl": "/images/projects/trendy-bot.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -269,7 +269,7 @@
       "skills": ["SOA", "Microservices"],
       "date": "Aug 2020 – Oct 2020",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/file-service.png",
+      "imageUrl": "/images/projects/file-service.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -282,7 +282,7 @@
       "skills": ["Systems Design", "Angular CLI", "Docker"],
       "date": "May 2019 – Aug 2020",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/telenor-health.png",
+      "imageUrl": "/images/projects/telenor-health.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -294,7 +294,7 @@
       "techStack": ["ASP.NET MVC", "EF Core", "SQL Server", "jQuery"],
       "skills": ["OOP", "ASP.NET", "Web Development"],
       "date": "Mar 2018 – Nov 2018",
-      "imageUrl": "/images/projects/business-suit.png",
+      "imageUrl": "/images/projects/business-suit.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -307,7 +307,7 @@
       "skills": ["OOP", "Reporting"],
       "date": "Jan 2018 – Apr 2018",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/acr.png",
+      "imageUrl": "/images/projects/acr.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -320,7 +320,7 @@
       "skills": ["OOP", "Database Design"],
       "date": "Sep 2017 – Dec 2017",
       "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/bpo.png",
+      "imageUrl": "/images/projects/bpo.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     },
@@ -332,7 +332,7 @@
       "techStack": [".NET WPF", "SQL Server"],
       "skills": ["OOP", "Desktop Development"],
       "date": "Jan 2016 – Mar 2017",
-      "imageUrl": "/images/projects/pos.png",
+      "imageUrl": "/images/projects/pos.jpg",
       "githubLink": "",
       "liveDemoLink": ""
     }
