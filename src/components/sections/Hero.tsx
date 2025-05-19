@@ -22,7 +22,7 @@ interface HeroProps {
     yearsExperience?: number;
     projectsDelivered: number;
     technologiesMastered: number;
-    codeCommits: number;
+    codeQuality: number;
   };
 }
 
@@ -124,7 +124,7 @@ export default function Hero({
     yearsExperience: yearsOfExperience,
     projectsDelivered: statistics?.projectsDelivered || 0,
     technologiesMastered: statistics?.technologiesMastered || 0,
-    codeCommits: statistics?.codeCommits || 0
+    codeQuality: statistics?.codeQuality || 0
   };
 
   const dotLottieRefCallback = (dotLottie: any) => {
@@ -261,7 +261,7 @@ export default function Hero({
               transition={{ duration: 0.3, delay: 0.8 }}
               className="flex flex-col items-center"
             >
-              <StatItem value={displayStats.codeCommits} label="Code Commits" delay={1.2} />
+              <StatItem value={displayStats.codeQuality} label="Code Quality Index" delay={1.2} />
             </StatItemWrapper>
           </>
         ) : (
@@ -286,9 +286,9 @@ export default function Hero({
             </div>
             <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
               <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                {displayStats.codeCommits.toLocaleString()}+
+                {displayStats.codeQuality}+
               </div>
-              <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Code Commits</div>
+              <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Code Quality</div>
             </div>
           </>
         )}
@@ -325,7 +325,7 @@ export default function Hero({
   return (
     <section id="home" className="relative min-h-screen flex items-center">
       <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_0.7fr] gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Hero content - with or without animations */}
           {renderHeroContent(isMounted)}
           

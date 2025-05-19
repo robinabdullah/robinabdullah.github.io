@@ -214,7 +214,7 @@ export default function About({ name, about, avatar, experience, education, care
               <div className="p-5">
                 <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">{name}</h3>
                 <p className="text-gray-200 text-[15px] leading-relaxed">
-                  With over {yearsOfExperience} years of experience as a full-stack developer, I specialize in building enterprise-grade applications using .NET, Angular, and various cloud platforms. I'm passionate about creating clean, maintainable, and high-performance software solutions that solve real business problems. My expertise spans backend systems, RESTful APIs, database design, and front-end development.
+                  With over {yearsOfExperience} years of experience as a full-stack developer, I specialize in building enterprise-grade applications using .NET, Reactand Angular, alongside various cloud platforms. I'm passionate about creating clean, maintainable, and high-performance software solutions that solve real business problems. My expertise spans backend systems, RESTful APIs, database design, and front-end development.
                 </p>
                 
                 <div className="mt-5 mb-3 flex items-center">

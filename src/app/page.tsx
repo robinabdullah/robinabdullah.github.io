@@ -32,7 +32,7 @@ const defaultData = {
     yearsExperience: 7,
     projectsDelivered: 20,
     technologiesMastered: 15,
-    codeCommits: 5000
+    codeQuality: 90
   },
   skills: {
     programmingLanguages: ["JavaScript", "TypeScript"],
