@@ -418,7 +418,6 @@
     {
       "title": "SpireWiz",
       "role": "Co-engineered at Optimizely",
-      "period": "2024 – 2026",
       "tagline": "AI-powered upgrade automation for Optimizely Configured Commerce.",
       "description": "Optimizely Configured Commerce upgrades were a manual, repetitive drag on every client project. We put the OpenAI Platform API into three-way merge conflict analysis so the tool proposes resolutions instead of engineers hand-reconciling each one, and folded it into the delivery workflow across enterprise B2B projects.",
       "metrics": [
