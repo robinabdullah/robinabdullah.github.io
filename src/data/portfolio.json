@@ -1,14 +1,14 @@
 {
   "personalInfo": {
     "name": "Abdullah Saleh Robin",
-    "title": "Full Stack .Net Developer",
+    "title": "Senior Software Engineer",
     "email": "abdullahsalehrobin@gmail.com",
-    "phone": "+880 1676797123",
-    "location": "Dhaka, Bangladesh",
-    "bio": "Blending .NET and React expertise with DevOps and cloud innovation to deliver scalable, enterprise-ready applications on Azure & AWS.",
-    "about": "With over 5 years of experience in web development, I specialize in creating robust applications using React, Next.js, Node.js, and other cutting-edge technologies. I'm dedicated to writing clean, maintainable code and constantly expanding my knowledge in the ever-evolving world of web development.",
+    "phone": "+49 152 06964467",
+    "location": "Berlin, Germany",
+    "bio": "Senior Software Engineer building .NET and C# back-ends, React and Angular front-ends, and applied AI in production.",
+    "about": "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on cloud-native .NET and Angular/React architectures and on AI-augmented engineering workflows. Based in Germany, available immediately, and authorized to work without sponsorship.",
     "avatar": "/images/profile.png",
-    "careerStartDate": "2016-04-01",
+    "careerStartDate": "2017-09-01",
     "socialLinks": {
       "github": "https://github.com/robinabdullah",
       "linkedin": "https://www.linkedin.com/in/robinabdullah/",
@@ -16,74 +16,147 @@
     }
   },
   "statistics": {
-    "yearsExperience": 7,
-    "projectsDelivered": 20,
-    "technologiesMastered": 15,
-    "codeQuality": 90
+    "projectsDelivered": 20
   },
   "skills": {
     "programmingLanguages": [
       "C#",
+      "TypeScript",
       "JavaScript",
-      "TypeScript"
+      "SQL",
+      "Python",
+      "Java"
     ],
-    "frameworks": [
-      ".NET Core",
+    "dotnetBackend": [
+      ".NET",
       "ASP.NET Core",
-      "ASP.NET MVC",
+      "Entity Framework Core",
+      "REST APIs",
       "Blazor",
-      "Express.js",
-      "Next.js"
+      "Spring Boot",
+      ".NET Framework",
+      "ASP.NET MVC"
     ],
     "architecturesPatterns": [
-      "Domain Driven Design",
       "Microservices",
-      "Client-Server",
-      "Event-Driven",
-      "Serverless"
-    ],
-    "databases": [
-      "MSSQL",
-      "PostgreSQL",
-      "MongoDB",
-      "MySQL",
-      "SQLite"
-    ],
-    "cloudPlatforms": [
-      "Azure",
-      "AWS"
-    ],
-    "devOpsTools": [
-      "Git",
-      "Azure DevOps",
-      "Docker",
-      "Jenkins",
-      "IIS",
-      "Jira"
+      "Event-Driven Architecture",
+      "Clean Architecture",
+      "Serverless",
+      "Domain-Driven Design",
+      "CQRS",
+      "SOLID Principles",
+      "Object-Oriented Design"
     ],
     "frontEndTechnologies": [
       "React",
       "Angular",
+      "RxJS",
+      "Next.js",
       "Redux",
-      "Bootstrap",
+      "Webpack",
       "Tailwind CSS",
-      "Material UI"
+      "Bootstrap"
     ],
-    "otherSkills": [
-      "SignalR & Socket.io",
-      "Entity Framework Core",
-      "REST",
-      "LINQ",
+    "nodeJs": [
+      "Node.js",
+      "Express",
+      "Background Workers"
+    ],
+    "securityAuth": [
+      "JWT",
+      "RBAC",
+      "2FA",
+      "HMAC-SHA256 request signing",
+      "Web Crypto API",
+      "SHA-256 hashing",
+      "Route Guards",
+      "Rate Limiting"
+    ],
+    "databases": [
+      "SQL Server",
+      "PostgreSQL",
+      "Redis",
+      "MySQL",
+      "MongoDB",
+      "Azure Table Storage",
+      "SQLite",
+      "Query Optimization & Indexing"
+    ],
+    "cloudPlatforms": [
+      "Azure",
+      "AWS",
+      "Google Cloud"
+    ],
+    "devOpsTools": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Git",
+      "ArgoCD",
+      "GitHub Actions",
+      "Nginx",
+      "IIS"
+    ],
+    "apisMessaging": [
+      "OpenAPI / Swagger",
+      "HTTP",
       "RabbitMQ",
-      "Redis"
+      "gRPC",
+      "Protobuf",
+      "MediatR",
+      "Google Drive API",
+      "Facebook Messenger Platform"
+    ],
+    "aiLlmIntegration": [
+      "OpenAI Platform API",
+      "Google Gemini API",
+      "RAG",
+      "Google Cloud Vision API",
+      "OpenCV",
+      "Rasa NLP",
+      "Optimizely Opal",
+      "Schema-Constrained JSON Output"
+    ],
+    "aiAssistedDevelopment": [
+      "Claude Code",
+      "Cursor IDE",
+      "GitHub Copilot",
+      "MCP-based workflows"
+    ],
+    "documentProcessingOcr": [
+      "Google Cloud Vision OCR",
+      "PDF.js",
+      "Ghostscript",
+      "OpenCV Table Extraction",
+      "SHA-256 OCR Caching",
+      "Multi-Threaded Batch Processing"
+    ],
+    "platformsProducts": [
+      "Optimizely Configured Commerce",
+      "Sitecore"
+    ],
+    "testing": [
+      "TDD",
+      "NUnit",
+      "xUnit",
+      "Playwright",
+      "Unit Testing",
+      "Integration Testing"
+    ],
+    "methodologies": [
+      "Agile",
+      "Jira",
+      "Pull-Request Review",
+      "Pair Programming",
+      "Mentoring"
     ]
   },
   "experience": [
     {
       "company": "Optimizely",
       "position": "Senior Developer",
-      "period": "May 2023 - Present",
-      "description": "Customized and maintained Optimizely Configured Commerce (B2B) Product, collaborating with cross-functional international teams. Engineered a script to accelerate product upgrades, reducing upgrade time by 35%. Led code reviews to uphold best practices and coding standards.",
+      "period": "May 2023 - June 2026",
+      "description": "Customized and maintained Optimizely Configured Commerce (B2B), collaborating with cross-functional international teams across the US and Canada. Co-engineered SpireWiz, an AI-powered upgrade automation tool that cut upgrade cycles by up to 80% and reclaimed 600+ developer hours a year. Delivered the platform's first Classic to Spire storefront migrations and reviewed 100+ pull requests across 15+ client projects.",
       "location": "Dhaka, Bangladesh",
       "workType": "Full-time, On-site"
     },
@@ -110,22 +183,14 @@
       "description": "Worked as a full-stack developer mainly in .Net Core, Java Spring, Angular. Practiced agile methodologies for improving software quality at each release. Initialized projects from scratch using design principles and standard coding conventions. Created highly readable, clean and easily maintainable source code.",
       "location": "Dhaka",
       "workType": "Full-time"
-    },
-    {
-      "company": "Freelance",
-      "position": "Freelance Software Engineer",
-      "period": "Apr 2016 - May 2017",
-      "description": "Developed software for clients while completing my degree. Successfully delivered and deployed three projects built with ASP.Net web and ASP.NET WPF. One project expanded to multiple development phases as new requirements emerged. This hands-on experience taught me invaluable skills in software development, project management, and problem-solving, which continue to empower me to tackle more complex and challenging roles today",
-      "location": "Bangladesh",
-      "workType": "Freelance"
     }
   ],
   "education": [
     {
-      "institution": "University of Dhaka",
-      "degree": "Bachelor of Science in Computer Science",
-      "period": "2014 - 2018",
-      "description": "Focused on web development and software engineering principles. Participated in coding competitions and hackathons."
+      "institution": "American International University-Bangladesh",
+      "degree": "B.Sc. in Computer Science & Engineering",
+      "period": "2014 - 2017",
+      "description": "CGPA 3.41 out of 4.00. Focused on software engineering principles and web development, with coding competitions alongside coursework."
     }
   ],
   "projects": [
@@ -136,7 +201,7 @@
       "category": "E-commerce",
       "techStack": ["React", "Redux", "C#", "ASP.NET Core", "WCF", "MSSQL", "EF Core", "TypeScript", "Angular", "Azure"],
       "skills": ["Systems Design", "Enterprise Architecture", "E-commerce", "Cloud Infrastructure", "Performance Optimization"],
-      "date": "May 2023 - Present",
+      "date": "May 2023 - June 2026",
       "associatedWith": "Optimizely",
       "imageUrl": "/images/projects/optimizely-commerce.jpg",
       "githubLink": "",
@@ -144,13 +209,13 @@
     },
     {
       "id": 1,
-      "title": "Parsing Project",
-      "description": "Unicode address parser with custom algorithm and dynamic dictionary. Implemented multi-threaded processing for PDFs, improving throughput dramatically. Offloaded processing to Angular frontend with 70% faster API responses via compression.",
+      "title": "Smart Voter Info",
+      "description": "Election-data processing platform for 340+ client organisations in Bangladesh, in production 2021 to January 2026. I designed, built and operated it: an OCR and LLM document pipeline over a 65M-record PostgreSQL database, served by two Angular SPAs on Kubernetes. It processed 230,000+ scanned PDFs and 177M+ voter entries, and served roughly 10M searches during a 15-day national-election window.",
       "category": "Web Development",
-      "techStack": [".NET Core", ".NET Background Worker", "Angular", "PostgreSQL", "RABBITMQ"],
-      "skills": ["Systems Design", "Multithreading", "ASP.NET Core", "Angular CLI", "TypeScript", "SOA", "C#", "SQL Server", "Web Development"],
-      "date": "Mar 2016 – Present",
-      "associatedWith": "Freelance",
+      "techStack": [".NET", "ASP.NET Core", "PostgreSQL", "RabbitMQ", "OpenAI Platform API", "Google Gemini API", "Google Cloud Vision", "Kubernetes", "Angular", "TypeScript"],
+      "skills": ["Systems Design", "Distributed Systems", "AI Integration", "OCR Pipelines", "Kubernetes", "Angular", "PostgreSQL", "Performance Optimization"],
+      "date": "2016 - January 2026",
+      "associatedWith": "",
       "imageUrl": "/images/projects/parsing-project.jpg",
       "githubLink": "",
       "liveDemoLink": ""
@@ -293,7 +358,7 @@
       "techStack": ["ASP.NET MVC", "EF", "SQL Server", "jQuery", "Bootstrap"],
       "skills": ["OOP", "ASP.NET", "Web Development"],
       "date": "Mar 2018 – Nov 2018",
-      "associatedWith": "Freelance",
+      "associatedWith": "",
       "imageUrl": "/images/projects/business-suit.jpg",
       "githubLink": "",
       "liveDemoLink": ""
@@ -332,7 +397,7 @@
       "techStack": [".NET WPF", "SQL Server"],
       "skills": ["OOP", "Desktop Development"],
       "date": "Jan 2016 – Mar 2017",
-      "associatedWith": "Freelance",
+      "associatedWith": "",
       "imageUrl": "/images/projects/pos.jpg",
       "githubLink": "",
       "liveDemoLink": ""

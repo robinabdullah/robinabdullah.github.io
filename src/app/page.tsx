@@ -13,36 +13,41 @@ import portfolioData from '@/data/portfolio.json';
 // Sample data structure to prevent hydration errors
 const defaultData = {
   personalInfo: {
-    name: "Robin Abdullah",
-    title: "Full Stack Developer",
+    name: "Abdullah Saleh Robin",
+    title: "Senior Software Engineer",
     bio: "I am a passionate full stack developer with expertise in building responsive web applications.",
     about: "With several years of experience in web development...",
     avatar: "/images/profile.png",
-    email: "hello@example.com",
-    phone: "+880 1676797123",
-    location: "Dhaka, Bangladesh",
-    careerStartDate: "2016-04-01",
+    email: "abdullahsalehrobin@gmail.com",
+    phone: "+49 152 06964467",
+    location: "Berlin, Germany",
+    careerStartDate: "2017-09-01",
     socialLinks: {
-      github: "https://github.com/",
-      linkedin: "https://linkedin.com/in/",
-      twitter: "https://twitter.com/"
+      github: "https://github.com/robinabdullah",
+      linkedin: "https://www.linkedin.com/in/robinabdullah/",
+      twitter: "https://twitter.com/robinabdullah"
     }
   },
   statistics: {
-    yearsExperience: 7,
-    projectsDelivered: 20,
-    technologiesMastered: 15,
-    codeQuality: 90
+    projectsDelivered: 20
   },
   skills: {
-    programmingLanguages: ["JavaScript", "TypeScript"],
-    frameworks: ["React", "Next.js"],
+    programmingLanguages: [],
+    dotnetBackend: [],
     architecturesPatterns: [],
+    frontEndTechnologies: [],
+    nodeJs: [],
+    securityAuth: [],
     databases: [],
     cloudPlatforms: [],
-    devOpsTools: ["Git", "GitHub"],
-    frontEndTechnologies: ["HTML", "CSS"],
-    otherSkills: []
+    devOpsTools: [],
+    apisMessaging: [],
+    aiLlmIntegration: [],
+    aiAssistedDevelopment: [],
+    documentProcessingOcr: [],
+    platformsProducts: [],
+    testing: [],
+    methodologies: []
   },
   experience: [],
   education: [],
@@ -72,13 +77,21 @@ export default function Home() {
   // Create a default skills object that matches the Skills component interface
   const skillsData = {
     programmingLanguages: skills.programmingLanguages || [],
-    frameworks: skills.frameworks || [],
+    dotnetBackend: skills.dotnetBackend || [],
     architecturesPatterns: skills.architecturesPatterns || [],
+    frontEndTechnologies: skills.frontEndTechnologies || [],
+    nodeJs: skills.nodeJs || [],
+    securityAuth: skills.securityAuth || [],
     databases: skills.databases || [],
     cloudPlatforms: skills.cloudPlatforms || [],
     devOpsTools: skills.devOpsTools || [],
-    frontEndTechnologies: skills.frontEndTechnologies || [],
-    otherSkills: skills.otherSkills || []
+    apisMessaging: skills.apisMessaging || [],
+    aiLlmIntegration: skills.aiLlmIntegration || [],
+    aiAssistedDevelopment: skills.aiAssistedDevelopment || [],
+    documentProcessingOcr: skills.documentProcessingOcr || [],
+    platformsProducts: skills.platformsProducts || [],
+    testing: skills.testing || [],
+    methodologies: skills.methodologies || []
   };
 
   return (

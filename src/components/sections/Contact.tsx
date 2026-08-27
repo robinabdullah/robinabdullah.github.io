@@ -22,7 +22,7 @@ interface ContactProps {
 
 type SubmitStatusType = null | 'success' | 'error';
 
-export default function Contact({ email, location, phone = "+880 1676797123", socialLinks }: ContactProps) {
+export default function Contact({ email, location, phone = "+49 152 06964467", socialLinks }: ContactProps) {
   const [formState, setFormState] = useState({
     name: '',
     email: '',

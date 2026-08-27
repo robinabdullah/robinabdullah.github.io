@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "static": "next build && echo > ./out/.nojekyll && echo 'biswajitpanday.github.io' > ./out/CNAME",
+    "static": "next build && echo > ./out/.nojekyll && echo 'robinabdullah.github.io' > ./out/CNAME",
     "deploy": "npm run static && gh-pages -d out"
   },
   "homepage": "https://robinabdullah.github.io/",

@@ -21,8 +21,8 @@ interface HeroProps {
   statistics?: {
     yearsExperience?: number;
     projectsDelivered: number;
-    technologiesMastered: number;
-    codeQuality: number;
+    technologiesMastered?: number;
+    codeQuality?: number;
   };
 }
 
@@ -122,9 +122,7 @@ export default function Hero({
   // Prepare a static or dynamic statistics object
   const displayStats = {
     yearsExperience: yearsOfExperience,
-    projectsDelivered: statistics?.projectsDelivered || 0,
-    technologiesMastered: statistics?.technologiesMastered || 0,
-    codeQuality: statistics?.codeQuality || 0
+    projectsDelivered: statistics?.projectsDelivered || 0
   };
 
   const dotLottieRefCallback = (dotLottie: any) => {
@@ -222,7 +220,7 @@ export default function Hero({
     return (
       // @ts-ignore - TS doesn't like dynamic components with props
       <StatWrapper
-        className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden"
+        className="mt-12 grid grid-cols-2 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden"
         {...wrapperProps}
       >
         {/* Decorative elements */}
@@ -247,22 +245,6 @@ export default function Hero({
             >
               <StatItem value={displayStats.projectsDelivered} label="Projects Delivered" delay={0.8} />
             </StatItemWrapper>
-            <StatItemWrapper
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.7 }}
-              className="flex flex-col items-center"
-            >
-              <StatItem value={displayStats.technologiesMastered} label="Technologies Mastered" delay={1.0} />
-            </StatItemWrapper>
-            <StatItemWrapper
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.8 }}
-              className="flex flex-col items-center"
-            >
-              <StatItem value={displayStats.codeQuality} label="Code Quality Index" delay={1.2} />
-            </StatItemWrapper>
           </>
         ) : (
           <>
@@ -277,18 +259,6 @@ export default function Hero({
                 {displayStats.projectsDelivered}+
               </div>
               <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Projects Delivered</div>
-            </div>
-            <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                {displayStats.technologiesMastered}+
-              </div>
-              <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Technologies Mastered</div>
-            </div>
-            <div className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                {displayStats.codeQuality}+
-              </div>
-              <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white">Code Quality</div>
             </div>
           </>
         )}

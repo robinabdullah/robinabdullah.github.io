@@ -1,12 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaReact, FaAws, FaDocker, FaGitAlt, FaJira, FaAngular, FaBootstrap, FaMicrosoft } from 'react-icons/fa';
-import { SiTypescript, SiJavascript, SiDotnet, SiNextdotjs, SiMongodb, SiMysql, 
-         SiExpress, SiRedux, SiTailwindcss, SiMui, 
+import { FaReact, FaAws, FaDocker, FaGitAlt, FaJira, FaAngular, FaBootstrap, FaMicrosoft,
+         FaJava, FaNodeJs, FaUserShield, FaShieldAlt, FaCogs, FaFilePdf, FaVial, FaTasks,
+         FaUsers } from 'react-icons/fa';
+import { SiTypescript, SiJavascript, SiDotnet, SiNextdotjs, SiMongodb, SiMysql,
+         SiExpress, SiRedux, SiTailwindcss, SiMui,
          SiRabbitmq,
          SiSqlite,
-         SiBlazor} from 'react-icons/si';
+         SiBlazor,
+         SiPython, SiReactivex, SiWebpack, SiGooglecloud, SiGnubash, SiGoogledrive,
+         SiMessenger, SiOpencv, SiGithubcopilot, SiProtodotio, SiOpenai, SiClaude,
+         SiGooglegemini, SiKubernetes, SiGithubactions, SiArgo, SiNginx, SiSwagger,
+         SiSitecore, SiSpringboot, SiJsonwebtokens } from 'react-icons/si';
 import { TbBrandCSharp, TbDatabaseSearch } from 'react-icons/tb';
 import { GoDatabase } from 'react-icons/go';
 import { BsDiagram3Fill, BsHddNetwork } from 'react-icons/bs';
@@ -18,13 +24,21 @@ import { LiaJenkins } from "react-icons/lia";
 interface SkillsProps {
   skills: {
     programmingLanguages: string[];
-    frameworks: string[];
+    dotnetBackend: string[];
     architecturesPatterns: string[];
+    frontEndTechnologies: string[];
+    nodeJs: string[];
+    securityAuth: string[];
     databases: string[];
     cloudPlatforms: string[];
     devOpsTools: string[];
-    frontEndTechnologies: string[];
-    otherSkills: string[];
+    apisMessaging: string[];
+    aiLlmIntegration: string[];
+    aiAssistedDevelopment: string[];
+    documentProcessingOcr: string[];
+    platformsProducts: string[];
+    testing: string[];
+    methodologies: string[];
   };
 }
 
@@ -47,63 +61,126 @@ interface SkillCategoryProps {
 // Icon mapping for skills
 const getSkillIcon = (skillName: string): { icon: React.ReactNode; color: string } => {
   const iconMap: { [key: string]: { icon: React.ReactNode; color: string } } = {
-    // Programming Languages
     "C#": { icon: <TbBrandCSharp />, color: "bg-purple-500" },
-    "JavaScript": { icon: <SiJavascript />, color: "bg-yellow-500" },
     "TypeScript": { icon: <SiTypescript />, color: "bg-blue-500" },
-    
-    // Frameworks
-    ".NET Core": { icon: <SiDotnet />, color: "bg-purple-600" },
+    "JavaScript": { icon: <SiJavascript />, color: "bg-yellow-500" },
+    "SQL": { icon: <GoDatabase />, color: "bg-slate-500" },
+    "Python": { icon: <SiPython />, color: "bg-yellow-600" },
+    "Java": { icon: <FaJava />, color: "bg-red-600" },
+    ".NET": { icon: <SiDotnet />, color: "bg-purple-600" },
     "ASP.NET Core": { icon: <SiDotnet />, color: "bg-purple-600" },
-    "ASP.NET MVC": { icon: <SiDotnet />, color: "bg-purple-500" },
-    "Blazor": { icon: <SiBlazor />, color: "bg-purple-400" },
-    "Express.js": { icon: <SiExpress />, color: "bg-gray-500" },
-    "React": { icon: <FaReact />, color: "bg-blue-500" },
-    "Next.js": { icon: <SiNextdotjs />, color: "bg-black" },
-    
-    // Architectures
-    "Domain Driven Design": { icon: <BsDiagram3Fill />, color: "bg-green-500" },
-    "Microservices": { icon: <BsHddNetwork />, color: "bg-blue-500" },
-    "Client-Server": { icon: <BsHddNetwork />, color: "bg-purple-500" },
-    "Event-Driven": { icon: <BsDiagram3Fill />, color: "bg-red-500" },
-    "CQRS": { icon: <BsDiagram3Fill />, color: "bg-orange-500" },
-    "Serverless": { icon: <FaAws />, color: "bg-orange-400" },
-    
-    // Databases
-    "MSSQL": { icon: <TbDatabaseSearch />, color: "bg-blue-500" },
-    "PostgreSQL": { icon: <BiLogoPostgresql />, color: "bg-blue-500" },
-    "MongoDB": { icon: <SiMongodb />, color: "bg-green-500" },
-    "MySQL": { icon: <DiMsqlServer />, color: "bg-blue-600" },
-    "SQLite": { icon: <SiSqlite />, color: "bg-blue-400" },
-    
-    // Cloud
-    "Azure": { icon: <VscAzure />, color: "bg-blue-500" },
-    "AWS": { icon: <FaAws />, color: "bg-orange-400" },
-    
-    // DevOps
-    "Git": { icon: <FaGitAlt />, color: "bg-red-500" },
-    "Azure DevOps": { icon: <VscAzureDevops />, color: "bg-blue-500" },
-    "Docker": { icon: <FaDocker />, color: "bg-blue-500" },
-    "Jenkins": { icon: <LiaJenkins />, color: "bg-red-400" },
-    "IIS": { icon: <FaMicrosoft />, color: "bg-blue-500" },
-    "Jira": { icon: <FaJira />, color: "bg-blue-400" },
-    
-    // Frontend
-    "Angular": { icon: <FaAngular />, color: "bg-red-500" },
-    "Redux": { icon: <SiRedux />, color: "bg-purple-500" },
-    "Bootstrap": { icon: <FaBootstrap />, color: "bg-purple-500" },
-    "Tailwind CSS": { icon: <SiTailwindcss />, color: "bg-blue-400" },
-    "Material UI": { icon: <SiMui />, color: "bg-blue-500" },
-    
-    // Other
-    "SignalR & Socket.io": { icon: <BsHddNetwork />, color: "bg-blue-500" },
     "Entity Framework Core": { icon: <SiDotnet />, color: "bg-purple-500" },
     "Entity Framework": { icon: <SiDotnet />, color: "bg-purple-500" },
+    ".NET Framework": { icon: <SiDotnet />, color: "bg-purple-700" },
+    "ASP.NET MVC": { icon: <SiDotnet />, color: "bg-purple-500" },
+    "REST APIs": { icon: <BsHddNetwork />, color: "bg-green-500" },
     "REST": { icon: <BsHddNetwork />, color: "bg-green-500" },
-    // "gRPC": { icon: <BsHddNetwork />, color: "bg-blue-400" },
     "LINQ": { icon: <SiDotnet />, color: "bg-purple-500" },
+    "SignalR": { icon: <BsHddNetwork />, color: "bg-blue-500" },
+    "Socket.IO": { icon: <BsHddNetwork />, color: "bg-gray-600" },
+    "MediatR": { icon: <BsDiagram3Fill />, color: "bg-indigo-500" },
+    "WPF": { icon: <FaMicrosoft />, color: "bg-blue-600" },
+    "Blazor": { icon: <SiBlazor />, color: "bg-purple-400" },
+    "Spring Boot": { icon: <SiSpringboot />, color: "bg-green-600" },
+    "Express.js": { icon: <SiExpress />, color: "bg-gray-500" },
+    "Express": { icon: <SiExpress />, color: "bg-gray-500" },
+    "Node.js": { icon: <FaNodeJs />, color: "bg-green-600" },
+    "Background Workers": { icon: <FaCogs />, color: "bg-slate-600" },
+    "Microservices": { icon: <BsHddNetwork />, color: "bg-blue-500" },
+    "Event-Driven Architecture": { icon: <BsDiagram3Fill />, color: "bg-red-500" },
+    "Event-Driven": { icon: <BsDiagram3Fill />, color: "bg-red-500" },
+    "Clean Architecture": { icon: <BsDiagram3Fill />, color: "bg-teal-500" },
+    "Domain-Driven Design": { icon: <BsDiagram3Fill />, color: "bg-green-500" },
+    "Domain Driven Design": { icon: <BsDiagram3Fill />, color: "bg-green-500" },
+    "CQRS": { icon: <BsDiagram3Fill />, color: "bg-orange-500" },
+    "SOLID Principles": { icon: <BsDiagram3Fill />, color: "bg-cyan-600" },
+    "Object-Oriented Design": { icon: <BsDiagram3Fill />, color: "bg-indigo-500" },
+    "Design Patterns": { icon: <BsDiagram3Fill />, color: "bg-violet-500" },
+    "Serverless": { icon: <FaAws />, color: "bg-orange-400" },
+    "Client-Server": { icon: <BsHddNetwork />, color: "bg-purple-500" },
+    "React": { icon: <FaReact />, color: "bg-blue-500" },
+    "Angular": { icon: <FaAngular />, color: "bg-red-500" },
+    "RxJS": { icon: <SiReactivex />, color: "bg-pink-600" },
+    "Angular Material": { icon: <FaAngular />, color: "bg-red-400" },
+    "Next.js": { icon: <SiNextdotjs />, color: "bg-black" },
+    "Redux": { icon: <SiRedux />, color: "bg-purple-500" },
+    "Web Workers": { icon: <FaCogs />, color: "bg-slate-500" },
+    "Webpack": { icon: <SiWebpack />, color: "bg-sky-600" },
+    "Tailwind CSS": { icon: <SiTailwindcss />, color: "bg-blue-400" },
+    "Bootstrap": { icon: <FaBootstrap />, color: "bg-purple-500" },
+    "Material UI": { icon: <SiMui />, color: "bg-blue-500" },
+    "JWT": { icon: <SiJsonwebtokens />, color: "bg-rose-600" },
+    "RBAC": { icon: <FaUserShield />, color: "bg-emerald-600" },
+    "2FA": { icon: <FaUserShield />, color: "bg-emerald-500" },
+    "HMAC-SHA256 request signing": { icon: <FaShieldAlt />, color: "bg-rose-500" },
+    "Web Crypto API": { icon: <FaShieldAlt />, color: "bg-rose-500" },
+    "SHA-256 hashing": { icon: <FaShieldAlt />, color: "bg-rose-500" },
+    "Route Guards": { icon: <FaShieldAlt />, color: "bg-emerald-600" },
+    "Rate Limiting": { icon: <FaShieldAlt />, color: "bg-amber-600" },
+    "SQL Server": { icon: <DiMsqlServer />, color: "bg-blue-600" },
+    "MSSQL": { icon: <DiMsqlServer />, color: "bg-blue-600" },
+    "PostgreSQL": { icon: <BiLogoPostgresql />, color: "bg-blue-500" },
+    "Redis": { icon: <DiRedis />, color: "bg-red-500" },
+    "MySQL": { icon: <SiMysql />, color: "bg-blue-600" },
+    "MongoDB": { icon: <SiMongodb />, color: "bg-green-500" },
+    "Azure Table Storage": { icon: <VscAzure />, color: "bg-blue-500" },
+    "SQLite": { icon: <SiSqlite />, color: "bg-blue-400" },
+    "Query Optimization & Indexing": { icon: <TbDatabaseSearch />, color: "bg-cyan-600" },
+    "Azure": { icon: <VscAzure />, color: "bg-blue-500" },
+    "AWS": { icon: <FaAws />, color: "bg-orange-400" },
+    "Google Cloud": { icon: <SiGooglecloud />, color: "bg-sky-500" },
+    "Docker": { icon: <FaDocker />, color: "bg-blue-500" },
+    "Kubernetes": { icon: <SiKubernetes />, color: "bg-blue-600" },
+    "CI/CD": { icon: <FaCogs />, color: "bg-amber-600" },
+    "Git": { icon: <FaGitAlt />, color: "bg-red-500" },
+    "GitHub Actions": { icon: <SiGithubactions />, color: "bg-slate-700" },
+    "ArgoCD": { icon: <SiArgo />, color: "bg-orange-500" },
+    "Kustomize": { icon: <SiKubernetes />, color: "bg-blue-500" },
+    "Nginx": { icon: <SiNginx />, color: "bg-green-600" },
+    "IIS": { icon: <FaMicrosoft />, color: "bg-blue-500" },
+    "Bash": { icon: <SiGnubash />, color: "bg-gray-700" },
+    "Jenkins": { icon: <LiaJenkins />, color: "bg-red-400" },
+    "Azure DevOps": { icon: <VscAzureDevops />, color: "bg-blue-500" },
+    "OpenAPI / Swagger": { icon: <SiSwagger />, color: "bg-green-500" },
+    "HTTP": { icon: <BsHddNetwork />, color: "bg-sky-600" },
     "RabbitMQ": { icon: <SiRabbitmq />, color: "bg-orange-400" },
-    "Redis": { icon: <DiRedis />, color: "bg-red-500" }
+    "gRPC": { icon: <BsHddNetwork />, color: "bg-blue-400" },
+    "Protobuf": { icon: <SiProtodotio />, color: "bg-indigo-600" },
+    "Google Drive API": { icon: <SiGoogledrive />, color: "bg-yellow-500" },
+    "Facebook Messenger Platform": { icon: <SiMessenger />, color: "bg-blue-500" },
+    "API Integration": { icon: <BsHddNetwork />, color: "bg-teal-600" },
+    "OpenAI Platform API": { icon: <SiOpenai />, color: "bg-emerald-700" },
+    "Google Gemini API": { icon: <SiGooglegemini />, color: "bg-indigo-500" },
+    "RAG": { icon: <BsDiagram3Fill />, color: "bg-fuchsia-600" },
+    "Google Cloud Vision API": { icon: <SiGooglecloud />, color: "bg-sky-500" },
+    "OpenCV": { icon: <SiOpencv />, color: "bg-green-600" },
+    "Rasa NLP": { icon: <BsDiagram3Fill />, color: "bg-purple-600" },
+    "Optimizely Opal": { icon: <BsDiagram3Fill />, color: "bg-blue-700" },
+    "Schema-Constrained JSON Output": { icon: <BsDiagram3Fill />, color: "bg-slate-600" },
+    "Claude Code": { icon: <SiClaude />, color: "bg-orange-600" },
+    "Cursor IDE": { icon: <FaCogs />, color: "bg-slate-800" },
+    "GitHub Copilot": { icon: <SiGithubcopilot />, color: "bg-slate-700" },
+    "MCP-based workflows": { icon: <BsHddNetwork />, color: "bg-violet-600" },
+    "Google Cloud Vision OCR": { icon: <SiGooglecloud />, color: "bg-sky-500" },
+    "PDF.js": { icon: <FaFilePdf />, color: "bg-red-600" },
+    "Ghostscript": { icon: <FaFilePdf />, color: "bg-red-500" },
+    "OpenCV Table Extraction": { icon: <SiOpencv />, color: "bg-green-600" },
+    "SHA-256 OCR Caching": { icon: <FaShieldAlt />, color: "bg-rose-500" },
+    "Multi-Threaded Batch Processing": { icon: <FaCogs />, color: "bg-slate-600" },
+    "Optimizely Configured Commerce": { icon: <BsHddNetwork />, color: "bg-blue-700" },
+    "Sitecore": { icon: <SiSitecore />, color: "bg-red-600" },
+    "TDD": { icon: <FaVial />, color: "bg-lime-600" },
+    "NUnit": { icon: <FaVial />, color: "bg-green-600" },
+    "xUnit": { icon: <FaVial />, color: "bg-green-500" },
+    "Playwright": { icon: <FaVial />, color: "bg-emerald-600" },
+    "Unit Testing": { icon: <FaVial />, color: "bg-lime-600" },
+    "Integration Testing": { icon: <FaVial />, color: "bg-teal-600" },
+    "Agile": { icon: <FaTasks />, color: "bg-sky-600" },
+    "Jira": { icon: <FaJira />, color: "bg-blue-400" },
+    "Pull-Request Review": { icon: <FaGitAlt />, color: "bg-red-500" },
+    "Pair Programming": { icon: <FaUsers />, color: "bg-amber-600" },
+    "Mentoring": { icon: <FaUsers />, color: "bg-violet-500" },
+    "SignalR & Socket.io": { icon: <BsHddNetwork />, color: "bg-blue-500" }
   };
 
   // Default icon and color if not found
@@ -138,19 +215,37 @@ export default function Skills({ skills }: SkillsProps) {
       glowColor: "bg-purple-500/20"
     },
     { 
-      title: "Frameworks", 
-      items: skills.frameworks,
+      title: ".NET & Backend", 
+      items: skills.dotnetBackend,
       headerGradient: "from-indigo-600 to-purple-600",
       glowColor: "bg-indigo-500/20"
     },
     { 
-      title: "Architectures", 
+      title: "Architecture & Patterns", 
       items: skills.architecturesPatterns,
       headerGradient: "from-green-600 to-teal-600",
       glowColor: "bg-green-500/20"
     },
     { 
-      title: "Databases", 
+      title: "Front-End", 
+      items: skills.frontEndTechnologies,
+      headerGradient: "from-pink-600 to-rose-600",
+      glowColor: "bg-pink-500/20"
+    },
+    { 
+      title: "Node.js", 
+      items: skills.nodeJs,
+      headerGradient: "from-lime-600 to-green-600",
+      glowColor: "bg-lime-500/20"
+    },
+    { 
+      title: "Security & Auth", 
+      items: skills.securityAuth,
+      headerGradient: "from-rose-600 to-red-600",
+      glowColor: "bg-rose-500/20"
+    },
+    { 
+      title: "Databases & Caching", 
       items: skills.databases,
       headerGradient: "from-cyan-600 to-blue-600",
       glowColor: "bg-cyan-500/20"
@@ -162,22 +257,52 @@ export default function Skills({ skills }: SkillsProps) {
       glowColor: "bg-blue-500/20"
     },
     { 
-      title: "DevOps & Tools", 
+      title: "Cloud-Native & DevOps", 
       items: skills.devOpsTools,
       headerGradient: "from-amber-600 to-orange-600",
       glowColor: "bg-amber-500/20"
     },
     { 
-      title: "Front-End", 
-      items: skills.frontEndTechnologies,
-      headerGradient: "from-pink-600 to-rose-600",
-      glowColor: "bg-pink-500/20"
+      title: "APIs & Messaging", 
+      items: skills.apisMessaging,
+      headerGradient: "from-teal-600 to-cyan-600",
+      glowColor: "bg-teal-500/20"
     },
     { 
-      title: "Other Skills", 
-      items: skills.otherSkills,
-      headerGradient: "from-violet-600 to-purple-600",
+      title: "AI & LLM Integration", 
+      items: skills.aiLlmIntegration,
+      headerGradient: "from-fuchsia-600 to-purple-600",
+      glowColor: "bg-fuchsia-500/20"
+    },
+    { 
+      title: "AI-Assisted Development", 
+      items: skills.aiAssistedDevelopment,
+      headerGradient: "from-violet-600 to-fuchsia-600",
       glowColor: "bg-violet-500/20"
+    },
+    { 
+      title: "Document Processing & OCR", 
+      items: skills.documentProcessingOcr,
+      headerGradient: "from-orange-600 to-red-600",
+      glowColor: "bg-orange-500/20"
+    },
+    { 
+      title: "Platforms & Products", 
+      items: skills.platformsProducts,
+      headerGradient: "from-sky-600 to-indigo-600",
+      glowColor: "bg-sky-500/20"
+    },
+    { 
+      title: "Testing", 
+      items: skills.testing,
+      headerGradient: "from-emerald-600 to-green-600",
+      glowColor: "bg-emerald-500/20"
+    },
+    { 
+      title: "Methodologies", 
+      items: skills.methodologies,
+      headerGradient: "from-slate-600 to-gray-600",
+      glowColor: "bg-slate-500/20"
     }
   ];
 
