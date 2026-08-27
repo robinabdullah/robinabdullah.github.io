@@ -64,13 +64,14 @@ const calculateDuration = (periodString: string): string => {
     const endDate = new Date(dates[1]);
     
     // Calculate years and months difference
-    let yearsDiff = endDate.getFullYear() - startDate.getFullYear();
-    let monthsDiff = endDate.getMonth() - startDate.getMonth();
-    
-    if (monthsDiff < 0) {
-      monthsDiff += 12;
-      yearsDiff--;
-    }
+    // Total months, counting BOTH the start and the end month. This is LinkedIn's
+    // convention: May 2023 - Jun 2026 reads as 3 yrs 2 mos, not 3 yrs 1 mo.
+    const totalMonths =
+      (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+      (endDate.getMonth() - startDate.getMonth()) + 1;
+
+    const yearsDiff = Math.floor(totalMonths / 12);
+    const monthsDiff = totalMonths % 12;
     
     // Format the duration
     if (yearsDiff > 0 && monthsDiff > 0) {

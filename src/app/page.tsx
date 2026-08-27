@@ -8,6 +8,8 @@ import About from '@/components/sections/About';
 import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
+import FeaturedWork from '@/components/sections/FeaturedWork';
+import Certifications from '@/components/sections/Certifications';
 import portfolioData from '@/data/portfolio.json';
 
 // Sample data structure to prevent hydration errors
@@ -24,13 +26,13 @@ const defaultData = {
     careerStartDate: "2017-09-01",
     socialLinks: {
       github: "https://github.com/robinabdullah",
-      linkedin: "https://www.linkedin.com/in/robinabdullah/",
-      twitter: "https://twitter.com/robinabdullah"
-    }
+      linkedin: "https://www.linkedin.com/in/robinabdullah/"
+    },
+    availability: "Open to work \u00b7 Berlin, Germany",
+    proofPoints: [{"value": "up to 80%", "label": "faster upgrade cycles"}, {"value": "600+", "label": "dev hours reclaimed a year"}, {"value": "{{years}} years", "label": "professional experience"}]
   },
-  statistics: {
-    projectsDelivered: 20
-  },
+  featured: [],
+  certifications: [],
   skills: {
     programmingLanguages: [],
     dotnetBackend: [],
@@ -64,7 +66,7 @@ export default function Home() {
     setIsLoading(false);
   }, []);
 
-  const { personalInfo, skills, experience, education, projects, statistics } = data;
+  const { personalInfo, skills, experience, education, projects, featured, certifications } = data;
 
   if (isLoading) {
     return (
@@ -105,7 +107,8 @@ export default function Home() {
         avatar={personalInfo.avatar}
         socialLinks={personalInfo.socialLinks}
         careerStartDate={personalInfo.careerStartDate}
-        statistics={statistics}
+        availability={personalInfo.availability}
+        proofPoints={personalInfo.proofPoints}
       />
       
       <About 
@@ -119,7 +122,11 @@ export default function Home() {
       
       <Skills skills={skillsData} />
       
+      <FeaturedWork featured={featured} />
+
       <Projects projects={projects} />
+
+      <Certifications certifications={certifications} />
       
       <Contact 
         email={personalInfo.email}

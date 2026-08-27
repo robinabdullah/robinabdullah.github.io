@@ -11,12 +11,23 @@
     "careerStartDate": "2017-09-01",
     "socialLinks": {
       "github": "https://github.com/robinabdullah",
-      "linkedin": "https://www.linkedin.com/in/robinabdullah/",
-      "twitter": "https://twitter.com/robinabdullah"
-    }
-  },
-  "statistics": {
-    "projectsDelivered": 20
+      "linkedin": "https://www.linkedin.com/in/robinabdullah/"
+    },
+    "availability": "Open to work · Berlin, Germany",
+    "proofPoints": [
+      {
+        "value": "up to 80%",
+        "label": "faster upgrade cycles"
+      },
+      {
+        "value": "600+",
+        "label": "dev hours reclaimed a year"
+      },
+      {
+        "value": "{{years}} years",
+        "label": "professional experience"
+      }
+    ]
   },
   "skills": {
     "programmingLanguages": [
@@ -401,6 +412,64 @@
       "imageUrl": "/images/projects/pos.jpg",
       "githubLink": "",
       "liveDemoLink": ""
+    }
+  ],
+  "featured": [
+    {
+      "title": "SpireWiz",
+      "role": "Co-engineered at Optimizely",
+      "period": "2024 – 2026",
+      "tagline": "AI-powered upgrade automation for Optimizely Configured Commerce.",
+      "description": "Optimizely Configured Commerce upgrades were a manual, repetitive drag on every client project. We put the OpenAI Platform API into three-way merge conflict analysis so the tool proposes resolutions instead of engineers hand-reconciling each one, and folded it into the delivery workflow across enterprise B2B projects.",
+      "metrics": [
+        {
+          "value": "up to 80%",
+          "label": "faster upgrade cycles"
+        },
+        {
+          "value": "600+",
+          "label": "dev hours reclaimed a year"
+        }
+      ],
+      "techStack": [".NET", "C#", "OpenAI Platform API", "Three-way merge"]
+    },
+    {
+      "title": "Smart Voter Info",
+      "role": "Designed, built and operated it",
+      "period": "2016 – January 2026",
+      "tagline": "Election-data processing platform for 340+ client organisations in Bangladesh.",
+      "description": "In production from 2021 to January 2026. An OCR and LLM document pipeline over a 65M-record PostgreSQL database, served by two Angular SPAs on Kubernetes. The heavy compute was deliberately pushed to background workers and the browser so the API stayed a thin store-and-serve layer, which is what let it hold up through a national election.",
+      "metrics": [
+        {
+          "value": "230,000+",
+          "label": "scanned PDFs processed"
+        },
+        {
+          "value": "177M+",
+          "label": "records processed"
+        },
+        {
+          "value": "40 → 5 min",
+          "label": "batch processing time"
+        }
+      ],
+      "techStack": [".NET", "ASP.NET Core", "PostgreSQL", "RabbitMQ", "OpenAI Platform API", "Google Cloud Vision", "Kubernetes", "Angular"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      "authority": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "2355E1550D085480",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/AbdullahRobin-1174/2355E1550D085480"
+    },
+    {
+      "name": "Optimizely Opal Tools Certified 2025",
+      "authority": "Optimizely",
+      "issued": "Dec 2025",
+      "credentialId": "85936b8a-0f2f-44d2-b3b1-12e55f63158d",
+      "url": "https://www.credly.com/badges/85936b8a-0f2f-44d2-b3b1-12e55f63158d/linked_in_profile"
     }
   ]
 }

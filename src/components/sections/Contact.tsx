@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaLinkedinIn, FaTwitter, FaCheckCircle, FaExclamationTriangle, FaLock } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaCheckCircle, FaExclamationTriangle, FaLock } from 'react-icons/fa';
 import { 
   PAGECLIP_SCRIPT_URL, 
   PAGECLIP_CSS_URL, 
@@ -16,7 +16,6 @@ interface ContactProps {
   socialLinks?: {
     github?: string;
     linkedin?: string;
-    twitter?: string;
   };
 }
 
@@ -228,15 +227,6 @@ export default function Contact({ email, location, phone = "+49 152 06964467", s
                       aria-label="LinkedIn Profile"
                     >
                       <FaLinkedinIn className="h-6 w-6" />
-                    </a>
-                    <a 
-                      href={socialLinks?.twitter} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-primary-light transition-colors"
-                      aria-label="Twitter Profile"
-                    >
-                      <FaTwitter className="h-6 w-6" />
                     </a>
                   </div>
                 </div>
