@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Logo & Description */}
           <div>
             <Link href="/" className="text-xl font-semibold">
-              <span className="gradient-text">Robin Abdullah</span>
+              <span className="gradient-text">Abdullah Saleh Robin</span>
             </Link>
             <p className="mt-4 text-gray-400">
               Full Stack Developer specializing in building exceptional digital experiences.

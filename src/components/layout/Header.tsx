@@ -47,7 +47,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent hover:opacity-90 transition-opacity">
-              Abdullah Robin
+              Abdullah Saleh Robin
             </Link>
           </div>
 

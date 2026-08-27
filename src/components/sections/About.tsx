@@ -281,12 +281,8 @@ export default function About({ name, about, avatar, experience, education, care
               {/* Timeline style experience section - grouped by company */}
               <div className="relative border-l-2 border-purple-500/30 ml-[10px]">
                 {groupedExperience.map((companyData, index) => {
-                  // Hard-code current date for Optimizely if it's the current company
-                  let overallPeriod = companyData.overallPeriod;
-                  if (companyData.company === "Optimizely") {
-                    overallPeriod = "May 2023 - Present";
-                  }
-                  
+                  const overallPeriod = companyData.overallPeriod;
+
                   return (
                     <div key={index} className={`mb-6 relative pl-6 ${index === groupedExperience.length - 1 ? 'pb-0' : ''}`}>
                       {/* Timeline dot - perfectly centered on the line */}
