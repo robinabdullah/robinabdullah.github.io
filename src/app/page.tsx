@@ -15,8 +15,8 @@ const defaultData = {
   personalInfo: {
     name: "Abdullah Saleh Robin",
     title: "Senior Software Engineer",
-    bio: "I am a passionate full stack developer with expertise in building responsive web applications.",
-    about: "With several years of experience in web development...",
+    bio: "Senior Software Engineer building .NET and C# back-ends, React and Angular front-ends, and applied AI in production.",
+    about: "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on cloud-native .NET and Angular/React architectures and on AI-augmented engineering workflows. Based in Germany, available immediately, and authorized to work without sponsorship.",
     avatar: "/images/profile.png",
     email: "abdullahsalehrobin@gmail.com",
     phone: "+49 152 06964467",
