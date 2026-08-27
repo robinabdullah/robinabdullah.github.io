@@ -5,7 +5,7 @@
     "email": "abdullahsalehrobin@gmail.com",
     "phone": "+49 152 06964467",
     "location": "Berlin, Germany",
-    "bio": "Senior Software Engineer building .NET and C# back-ends, React and Angular front-ends, and applied AI in production.",
+    "bio": "Senior Software Engineer with 9 years delivering enterprise applications across e-commerce, healthcare, compliance and public-sector platforms.\n\nI designed, built and ran Smart Voter Info end to end — an election-data platform that processed 230,000+ scanned PDFs and 177M+ records, and served roughly 10M searches inside a 15-day national election window.\n\nAt Optimizely I co-engineered SpireWiz, cutting upgrade cycles by up to 80% and reclaiming 600+ developer hours a year. Microsoft Certified.",
     "about": "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on cloud-native .NET and Angular/React architectures and on AI-augmented engineering workflows. Based in Germany, available immediately, and authorized to work without sponsorship.",
     "avatar": "/images/profile.png",
     "careerStartDate": "2017-09-01",
@@ -16,16 +16,16 @@
     "availability": "Open to work · Berlin, Germany",
     "proofPoints": [
       {
-        "value": "up to 80%",
-        "label": "faster upgrade cycles"
+        "value": "40 → 5 min",
+        "label": "Batch document processing"
       },
       {
-        "value": "600+",
-        "label": "dev hours reclaimed a year"
+        "value": "3 hrs → 20 min",
+        "label": "AI-assisted data entry"
       },
       {
-        "value": "{{years}} years",
-        "label": "professional experience"
+        "value": "55% faster",
+        "label": "Enterprise migration delivery"
       }
     ]
   },

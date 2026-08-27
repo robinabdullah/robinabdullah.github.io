@@ -83,6 +83,11 @@ export default function Hero({
     [proofPoints, yearsOfExperience]
   );
 
+  const bioParagraphs = useMemo(
+    () => bio.split(/\n+/).map((t) => t.trim()).filter(Boolean),
+    [bio]
+  );
+
   useEffect(() => {
     setIsMounted(true);
     return () => setIsMounted(false);
@@ -119,25 +124,13 @@ export default function Hero({
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
           <span className="relative inline-block gradient-text">{title}</span>
         </h2>
-        <p className="text-lg text-gray-300 mb-7">{bio}</p>
-
-        {pills.length > 0 && (
-          <div className="flex flex-wrap gap-3 mb-8">
-            {pills.map((pill, i) => (
-              <div
-                key={i}
-                className="px-4 py-2.5 rounded-lg bg-[#0300147a] backdrop-blur-xl border border-[#ffffff18] hover:border-[#a855f7]/50 transition-all duration-300 cursor-default group"
-              >
-                <div className="text-base md:text-lg font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500">
-                  {pill.value}
-                </div>
-                <div className="text-xs text-gray-400 font-medium group-hover:text-gray-200 transition-colors">
-                  {pill.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="mb-8 space-y-3">
+          {bioParagraphs.map((para, i) => (
+            <p key={i} className="text-[17px] leading-relaxed text-gray-300">
+              {para}
+            </p>
+          ))}
+        </div>
 
         <div className="flex flex-wrap gap-4 items-center">
           <a
@@ -219,13 +212,54 @@ export default function Hero({
     );
   };
 
+  // Stat strip — full width, below the two hero columns (its original position).
+  const renderStats = (withAnimation = false) => {
+    if (pills.length === 0) return null;
+
+    const StatWrapper = withAnimation ? motion.div : 'div';
+    const wrapperProps = withAnimation
+      ? {
+          initial: { opacity: 0, y: 20 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.5, delay: 0.4 }
+        }
+      : {};
+
+    return (
+      // @ts-ignore - TS doesn't like dynamic components with props
+      <StatWrapper
+        className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden"
+        {...wrapperProps}
+      >
+        <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
+        <div className="absolute -left-12 -bottom-12 w-24 h-24 rounded-full bg-blue-500/10 blur-xl"></div>
+
+        {pills.map((pill, i) => (
+          <div
+            key={i}
+            className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group"
+          >
+            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500 whitespace-nowrap">
+              {pill.value}
+            </div>
+            <div className="mt-1 text-sm text-gray-300 font-medium group-hover:text-white text-center">
+              {pill.label}
+            </div>
+          </div>
+        ))}
+      </StatWrapper>
+    );
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
+    <section id="home" className="relative min-h-screen flex items-center py-24">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {renderHeroContent(isMounted)}
           {renderPortrait(isMounted)}
         </div>
+
+        {renderStats(isMounted)}
       </div>
 
       {renderScrollDownIndicator()}
