@@ -1,27 +1,24 @@
-# Abdullah Saleh Robin's Portfolio
+# robinabdullah.github.io
 
-This is my professional portfolio website built with Next.js and deployed on GitHub Pages.
+My portfolio site — experience, projects, skills and contact details. Live at
+**[robinabdullah.github.io](https://robinabdullah.github.io/)**.
 
-## Features
+## How it works
 
-- Responsive design using Tailwind CSS
-- Static site generation for fast loading
-- Displays skills, experience, and projects
-- Contact information
+All content lives in one file, **`src/data/portfolio.json`** — personal details, statistics, skills,
+experience, education and projects. The components under `src/components/sections` render it, so
+updating the site means editing that file, not the components.
 
-## Deployment
+`src/app/page.tsx` holds a small `defaultData` object used only for the pre-hydration paint. Keep it
+consistent with `portfolio.json` or the first frame shows stale values.
 
-This site is deployed at [robinabdullah.github.io](https://robinabdullah.github.io/).
+## Built with
 
-## Local Development
+Next.js · TypeScript · Tailwind CSS · Framer Motion · React Icons
+
+## Running it
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
-npm run dev
-
-# Build for production
+npm run dev     # http://localhost:3000
 npm run build
-``` 
