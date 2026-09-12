@@ -12,7 +12,9 @@ import { SiTypescript, SiJavascript, SiDotnet, SiNextdotjs, SiMongodb, SiMysql,
          SiPython, SiReactivex, SiWebpack, SiGooglecloud, SiGnubash, SiGoogledrive,
          SiMessenger, SiOpencv, SiGithubcopilot, SiProtodotio, SiOpenai, SiClaude,
          SiGooglegemini, SiKubernetes, SiGithubactions, SiArgo, SiNginx, SiSwagger,
-         SiSitecore, SiSpringboot, SiJsonwebtokens } from 'react-icons/si';
+         SiSitecore, SiSpringboot, SiJsonwebtokens,
+         SiSpringsecurity, SiSpring, SiHibernate, SiApachekafka, SiApachemaven,
+         SiJunit5 } from 'react-icons/si';
 import { TbBrandCSharp, TbDatabaseSearch } from 'react-icons/tb';
 import { GoDatabase } from 'react-icons/go';
 import { BsDiagram3Fill, BsHddNetwork } from 'react-icons/bs';
@@ -24,6 +26,7 @@ import { LiaJenkins } from "react-icons/lia";
 interface SkillsProps {
   skills: {
     programmingLanguages: string[];
+    javaJvm: string[];
     dotnetBackend: string[];
     architecturesPatterns: string[];
     frontEndTechnologies: string[];
@@ -82,6 +85,13 @@ const getSkillIcon = (skillName: string): { icon: React.ReactNode; color: string
     "WPF": { icon: <FaMicrosoft />, color: "bg-blue-600" },
     "Blazor": { icon: <SiBlazor />, color: "bg-purple-400" },
     "Spring Boot": { icon: <SiSpringboot />, color: "bg-green-600" },
+    "Spring Security": { icon: <SiSpringsecurity />, color: "bg-green-700" },
+    "Spring Data JPA": { icon: <SiSpring />, color: "bg-green-600" },
+    "Hibernate": { icon: <SiHibernate />, color: "bg-amber-700" },
+    "Kafka": { icon: <SiApachekafka />, color: "bg-neutral-700" },
+    "Maven": { icon: <SiApachemaven />, color: "bg-red-700" },
+    "JUnit": { icon: <SiJunit5 />, color: "bg-emerald-700" },
+    "Row-Level Security (RLS)": { icon: <FaShieldAlt />, color: "bg-rose-600" },
     "Express.js": { icon: <SiExpress />, color: "bg-gray-500" },
     "Express": { icon: <SiExpress />, color: "bg-gray-500" },
     "Node.js": { icon: <FaNodeJs />, color: "bg-green-600" },
@@ -213,6 +223,12 @@ export default function Skills({ skills }: SkillsProps) {
       items: skills.programmingLanguages,
       headerGradient: "from-purple-600 to-blue-600",
       glowColor: "bg-purple-500/20"
+    },
+    { 
+      title: "Java & JVM",
+      items: skills.javaJvm,
+      headerGradient: "from-red-600 to-orange-600",
+      glowColor: "bg-red-500/20"
     },
     { 
       title: ".NET & Backend", 

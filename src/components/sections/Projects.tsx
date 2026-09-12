@@ -145,7 +145,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   const [imgError, setImgError] = useState(false);
   
   // Use fallback image if none provided or if there was an error loading the image
-  const imageUrl = imgError || !project.imageUrl ? '/images/projects/no-image.png' : project.imageUrl;
+  const imageUrl = imgError || !project.imageUrl ? '/images/projects/no-image.jpg' : project.imageUrl;
 
   return (
     <motion.div

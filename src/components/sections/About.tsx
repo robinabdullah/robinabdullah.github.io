@@ -88,26 +88,6 @@ const calculateDuration = (periodString: string): string => {
   }
 };
 
-// Calculate years of experience from a start date to present
-const calculateYearsOfExperience = (startDate: string): number => {
-  try {
-    const start = new Date(startDate);
-    const today = new Date();
-    
-    let years = today.getFullYear() - start.getFullYear();
-    
-    // Adjust if we haven't reached the anniversary month/day yet
-    if (today.getMonth() < start.getMonth() || 
-        (today.getMonth() === start.getMonth() && today.getDate() < start.getDate())) {
-      years--;
-    }
-    
-    return years > 0 ? years : 0;
-  } catch (error) {
-    return 0;
-  }
-};
-
 // Extract date from period string
 const extractDate = (periodString: string, isStartDate: boolean): Date => {
   try {
@@ -122,13 +102,10 @@ const extractDate = (periodString: string, isStartDate: boolean): Date => {
 };
 
 export default function About({ name, about, avatar, experience, education, careerStartDate }: AboutProps) {
-  // Calculate years of experience if career start date is provided
-  const yearsOfExperience = useMemo(() => {
-    if (careerStartDate) {
-      return calculateYearsOfExperience(careerStartDate);
-    }
-    return 0;
-  }, [careerStartDate]);
+  // NOTE: years-of-experience is deliberately NOT computed here. Hero.tsx owns that figure
+  // and rounds; this component used to floor it, so the same careerStartDate produced two
+  // different numbers for part of every year. The result was never rendered, so the
+  // duplicate is removed rather than reconciled.
 
   // Group experience by company
   const groupedExperience = useMemo(() => {
@@ -154,9 +131,15 @@ export default function About({ name, about, avatar, experience, education, care
       const latestEndDate = Math.max(...positions.map(p => extractDate(p.period, false).getTime()));
       const earliestStartDate = Math.min(...positions.map(p => extractDate(p.period, true).getTime()));
       
+      // Ongoing is decided by what the DATA says, not by comparing timestamps. The previous
+      // test (latestEndDate === Date.now()) could never be true - extractDate returns midnight
+      // on the 1st for a "Present" role - so a current job rendered a silently advancing end
+      // month instead of "Present".
+      const isOngoing = positions.some(p => p.period.split(' - ')[1] === 'Present');
+      
       // Format the dates for overall company period
       const startDateStr = new Date(earliestStartDate).toLocaleString('en-US', { month: 'short', year: 'numeric' });
-      const endDateStr = latestEndDate === new Date().getTime() ? 'Present' : new Date(latestEndDate).toLocaleString('en-US', { month: 'short', year: 'numeric' });
+      const endDateStr = isOngoing ? 'Present' : new Date(latestEndDate).toLocaleString('en-US', { month: 'short', year: 'numeric' });
       const overallPeriod = `${startDateStr} - ${endDateStr}`;
       
       return {

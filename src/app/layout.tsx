@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Abdullah Saleh Robin — Senior Software Engineer',
-  description: 'Senior Software Engineer with nine years building .NET and C# back-ends, React and Angular front-ends, and applied AI in production. Based in Berlin, Germany.',
+  title: 'Abdullah Saleh Robin - Senior Backend & Full-Stack Engineer',
+  description: 'Senior Backend & Full-Stack Engineer with nine years building enterprise back-ends in Java with Spring Boot and in .NET with C#, React and Angular front-ends, and applied AI in production. Based in Berlin, Germany.',
   icons: {
     icon: '/favicon.svg',
   },

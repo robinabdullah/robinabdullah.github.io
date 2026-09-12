@@ -1,12 +1,12 @@
 {
   "personalInfo": {
     "name": "Abdullah Saleh Robin",
-    "title": "Senior Software Engineer",
+    "title": "Senior Backend & Full-Stack Engineer",
     "email": "abdullahsalehrobin@gmail.com",
     "phone": "+49 152 06964467",
     "location": "Berlin, Germany",
-    "bio": "Senior Software Engineer with 9 years delivering enterprise applications across e-commerce, healthcare, compliance and public-sector platforms.\n\nI designed, built and ran Smart Voter Info end to end — an election-data platform that processed 230,000+ scanned PDFs and 177M+ records, and served roughly 10M searches inside a 15-day national election window.\n\nAt Optimizely I co-engineered SpireWiz, cutting upgrade cycles by up to 80% and reclaiming 600+ developer hours a year. Microsoft Certified.",
-    "about": "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on cloud-native .NET and Angular/React architectures and on AI-augmented engineering workflows. Based in Germany, available immediately, and authorized to work without sponsorship.",
+    "bio": "Senior Backend & Full-Stack Engineer with 9 years building enterprise systems in Java with Spring Boot and in .NET with C#, across e-commerce, healthcare, compliance and public-sector platforms.\n\nI designed, built and ran an election-data platform end to end that processed 230,000+ scanned PDFs and 177M+ records, and served roughly 10M searches inside a 15-day national election window.\n\nAt Optimizely I co-engineered SpireWiz, cutting upgrade cycles by up to 80% and reclaiming 600+ developer hours a year. Microsoft Certified.",
+    "about": "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on Java and Spring Boot back-ends, cloud-native .NET, and Angular and React front-ends, together with applied AI: integrating LLMs into production systems with schema-constrained output and fallback handling. Based in Germany, available immediately, and authorized to work without sponsorship.",
     "avatar": "/images/profile.png",
     "careerStartDate": "2017-09-01",
     "socialLinks": {
@@ -31,12 +31,22 @@
   },
   "skills": {
     "programmingLanguages": [
+      "Java",
       "C#",
       "TypeScript",
       "JavaScript",
       "SQL",
-      "Python",
-      "Java"
+      "Python"
+    ],
+    "javaJvm": [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
+      "Kafka",
+      "Maven",
+      "JUnit"
     ],
     "dotnetBackend": [
       ".NET",
@@ -44,7 +54,6 @@
       "Entity Framework Core",
       "REST APIs",
       "Blazor",
-      "Spring Boot",
       ".NET Framework",
       "ASP.NET MVC"
     ],
@@ -81,7 +90,8 @@
       "Web Crypto API",
       "SHA-256 hashing",
       "Route Guards",
-      "Rate Limiting"
+      "Rate Limiting",
+      "Row-Level Security (RLS)"
     ],
     "databases": [
       "SQL Server",
@@ -121,7 +131,6 @@
     "aiLlmIntegration": [
       "OpenAI Platform API",
       "Google Gemini API",
-      "RAG",
       "Google Cloud Vision API",
       "OpenCV",
       "Rasa NLP",
@@ -183,7 +192,7 @@
       "company": "Synesis IT",
       "position": "Senior Programmer",
       "period": "Sep 2020 - Apr 2022",
-      "description": "Worked as a Senior full-stack developer mainly in .Net Core, Java Spring, Angular, TypeScript. Led development teams and guided their career growth. Participated in client meetings, collected requirements, analyzed system needs, and prioritized tasks. Handled database design, built complex queries, and analyzed technical problems to design solutions.",
+      "description": "Worked as a senior full-stack developer mainly in Java with Spring Boot, alongside .NET Core, Angular and TypeScript. Led development teams and guided their career growth. Participated in client meetings, collected requirements, analyzed system needs, and prioritized tasks. Handled database design, built complex queries, and analyzed technical problems to design solutions.",
       "location": "Dhaka, Bangladesh",
       "workType": "Full-time"
     },
@@ -191,7 +200,7 @@
       "company": "Synesis IT",
       "position": "Programmer",
       "period": "Sep 2017 - Aug 2020",
-      "description": "Worked as a full-stack developer mainly in .Net Core, Java Spring, Angular. Practiced agile methodologies for improving software quality at each release. Initialized projects from scratch using design principles and standard coding conventions. Created highly readable, clean and easily maintainable source code.",
+      "description": "Worked as a full-stack developer mainly in Java with Spring Boot, alongside .NET Core and Angular. Practiced agile methodologies for improving software quality at each release. Initialized projects from scratch using design principles and standard coding conventions. Created highly readable, clean and easily maintainable source code.",
       "location": "Dhaka",
       "workType": "Full-time"
     }
@@ -210,8 +219,25 @@
       "title": "Optimizely Configured Commerce",
       "description": "Enterprise-grade B2B commerce platform with advanced product configuration and streamlined checkout. Enhanced performance by 35% and modernized UI for better UX. Led code reviews to maintain standards with cross-functional teams.",
       "category": "E-commerce",
-      "techStack": ["React", "Redux", "C#", "ASP.NET Core", "WCF", "MSSQL", "EF Core", "TypeScript", "Angular", "Azure"],
-      "skills": ["Systems Design", "Enterprise Architecture", "E-commerce", "Cloud Infrastructure", "Performance Optimization"],
+      "techStack": [
+        "React",
+        "Redux",
+        "C#",
+        "ASP.NET Core",
+        "WCF",
+        "MSSQL",
+        "EF Core",
+        "TypeScript",
+        "Angular",
+        "Azure"
+      ],
+      "skills": [
+        "Systems Design",
+        "Enterprise Architecture",
+        "E-commerce",
+        "Cloud Infrastructure",
+        "Performance Optimization"
+      ],
       "date": "May 2023 - June 2026",
       "associatedWith": "Optimizely",
       "imageUrl": "/images/projects/optimizely-commerce.jpg",
@@ -220,11 +246,31 @@
     },
     {
       "id": 1,
-      "title": "Smart Voter Info",
+      "title": "Parsing Project",
       "description": "Election-data processing platform for 340+ client organisations in Bangladesh, in production 2021 to January 2026. I designed, built and operated it: an OCR and LLM document pipeline over a 65M-record PostgreSQL database, served by two Angular SPAs on Kubernetes. It processed 230,000+ scanned PDFs and 177M+ voter entries, and served roughly 10M searches during a 15-day national-election window.",
       "category": "Web Development",
-      "techStack": [".NET", "ASP.NET Core", "PostgreSQL", "RabbitMQ", "OpenAI Platform API", "Google Gemini API", "Google Cloud Vision", "Kubernetes", "Angular", "TypeScript"],
-      "skills": ["Systems Design", "Distributed Systems", "AI Integration", "OCR Pipelines", "Kubernetes", "Angular", "PostgreSQL", "Performance Optimization"],
+      "techStack": [
+        ".NET",
+        "ASP.NET Core",
+        "PostgreSQL",
+        "RabbitMQ",
+        "OpenAI Platform API",
+        "Google Gemini API",
+        "Google Cloud Vision",
+        "Kubernetes",
+        "Angular",
+        "TypeScript"
+      ],
+      "skills": [
+        "Systems Design",
+        "Distributed Systems",
+        "AI Integration",
+        "OCR Pipelines",
+        "Kubernetes",
+        "Angular",
+        "PostgreSQL",
+        "Performance Optimization"
+      ],
       "date": "2016 - January 2026",
       "associatedWith": "",
       "imageUrl": "/images/projects/parsing-project.jpg",
@@ -236,8 +282,21 @@
       "title": "National Skills Authority (NSDA)",
       "description": "Platform for 100,000+ training providers with role-based access control and payment gateway integration. Led the developer team to ensure scalability through loosely coupled components and automated backups.",
       "category": "Web Development",
-      "techStack": ["Java Spring Boot", "Liquibase", "Microservices", "PostgreSQL", "Angular"],
-      "skills": ["Systems Design", "Team Leadership", "Angular", "TypeScript", "PostgreSQL", "Agile Project Management"],
+      "techStack": [
+        "Java Spring Boot",
+        "Liquibase",
+        "Microservices",
+        "PostgreSQL",
+        "Angular"
+      ],
+      "skills": [
+        "Systems Design",
+        "Team Leadership",
+        "Angular",
+        "TypeScript",
+        "PostgreSQL",
+        "Agile Project Management"
+      ],
       "date": "Jun 2021 – Apr 2022",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/nsda.jpg",
@@ -249,8 +308,26 @@
       "title": "Shastho Batayon (16263)",
       "description": "Telemedicine platform serving 30M+ users with remote diagnoses. Built scalable, redundant CRM handling 100k+ calls daily during pandemic peak. Contributed 20k+ lines of API and frontend code to the core solution.",
       "category": "Web Development",
-      "techStack": [".Net Core", "Angular", "MySQL"],
-      "skills": ["Systems Design", "OOP", "SOA", "Microservices", "Agile Methodologies", "MySQL"],
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "REST APIs",
+        "Asterisk",
+        "RabbitMQ",
+        "STOMP WebSocket",
+        "MySQL",
+        "Hibernate",
+        "Angular",
+        "Docker"
+      ],
+      "skills": [
+        "Systems Design",
+        "OOP",
+        "SOA",
+        "Microservices",
+        "Agile Methodologies",
+        "MySQL"
+      ],
       "date": "Aug 2019 – Dec 2021",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/shastho-batayon.jpg",
@@ -258,25 +335,28 @@
       "liveDemoLink": "http://16263.dghs.gov.bd/"
     },
     {
-      "id": 4,
-      "title": "CST",
-      "description": "Enterprise system with modern architecture patterns leveraging Angular and Java Spring Boot. Implemented robust frontend components with responsive design and optimized data flow between client and server for enhanced performance.",
-      "category": "Web Development",
-      "techStack": ["Angular", "Java Spring Boot"],
-      "skills": ["Systems Design", "OOP", "Angular CLI", "Docker", "JHipster"],
-      "date": "Feb 2021 – Nov 2021",
-      "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/cst.jpg",
-      "githubLink": "",
-      "liveDemoLink": ""
-    },
-    {
       "id": 5,
       "title": "National Equipment Identity Register",
       "description": "Highly scalable, reliable microservices for national equipment registry. Created Bash scripts to automate deployment of 40 redundant services, significantly reducing manual configuration errors and deployment time.",
       "category": "Microservices",
-      "techStack": ["Microservices", "Bash scripting"],
-      "skills": ["SOA", "System Architecture", "DevOps", "Microservices"],
+      "techStack": [
+        "Spring Boot",
+        "Spring Cloud",
+        "Consul",
+        "Zuul",
+        "Kafka",
+        "Redis",
+        "Oracle",
+        "Angular",
+        "Docker",
+        "Nginx"
+      ],
+      "skills": [
+        "SOA",
+        "System Architecture",
+        "DevOps",
+        "Microservices"
+      ],
       "date": "Feb 2021 – May 2021",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/neir.jpg",
@@ -288,8 +368,16 @@
       "title": "Shastho Batayon Corona Bot",
       "description": "Facebook Messenger bot delivering COVID-19 information and self-assessment. Integrated third-party APIs for live statistics and achieved high throughput with optimized message handling and response generation.",
       "category": "AI",
-      "techStack": ["Node.js", "MySQL", "Facebook Platform API"],
-      "skills": ["Systems Design", "SOA", "Agile"],
+      "techStack": [
+        "Node.js",
+        "MySQL",
+        "Facebook Platform API"
+      ],
+      "skills": [
+        "Systems Design",
+        "SOA",
+        "Agile"
+      ],
       "date": "Jun 2020 – May 2021",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/corona-bot.jpg",
@@ -301,8 +389,16 @@
       "title": "Covid-19 Patient Management",
       "description": "Dynamic telehealth CRM serving 10,000+ patients daily during pandemic peak. Implemented fully configurable questionnaire system and versatile admin reporting tool for real-time data analysis and decision support.",
       "category": "Web Development",
-      "techStack": [".Net Core", "Angular"],
-      "skills": ["Systems Design", "Agile", "Web Development"],
+      "techStack": [
+        "Angular",
+        "Java Spring Boot",
+        "JHipster"
+      ],
+      "skills": [
+        "Systems Design",
+        "Agile",
+        "Web Development"
+      ],
       "date": "Jun 2020 – Feb 2021",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/covid-patient.jpg",
@@ -311,11 +407,21 @@
     },
     {
       "id": 8,
-      "title": "E-Prescription",
-      "description": "Microservice for sending e-prescriptions via SMS with pluggable gateway vendors. Designed with scalability in mind to handle varying loads and implemented comprehensive logging for troubleshooting and auditing.",
+      "title": "E-Prescription Service (gRPC Microservice)",
+      "description": "A shared Spring Boot microservice delivering e-prescriptions to patients by SMS, used across several national healthcare platforms and sending around 50,000 prescriptions a day. New SMS vendors were added through configuration alone, with no backend code change. Delivery adapted to the handset: smartphones received one message, feature phones received ordered parts.",
       "category": "Microservices",
-      "techStack": ["Java Spring Boot", "MySQL", "Liquibase"],
-      "skills": ["SOA", "Microservices", "System Deployment"],
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "gRPC",
+        "MySQL",
+        "Liquibase"
+      ],
+      "skills": [
+        "SOA",
+        "Microservices",
+        "System Deployment"
+      ],
       "date": "Jul 2020 – Jan 2021",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/e-prescription.jpg",
@@ -324,11 +430,26 @@
     },
     {
       "id": 9,
-      "title": "Trendy Bot (Chatbot)",
-      "description": "Reusable Facebook Messenger bot handling 800+ concurrent threads with NLP (Rasa). Integrated in-app product purchases via chat interface. Optimized message handling for fast response times even under high loads.",
+      "title": "Trendy Bot (Multi-Tenant Facebook Commerce Platform)",
+      "description": "A multi-tenant platform automating Facebook pages for commerce, built on .NET across four services with a Node.js edge for the Messenger integration. Served more than 50 pages from a single deployment, sustaining 800 concurrent messages per second, with per-tenant configuration, scheduled broadcast campaigns and in-chat checkout.",
       "category": "AI",
-      "techStack": [".NET", "Node.js", "MySQL", "Facebook Platform API", "Python"],
-      "skills": ["OOP", "SOA", "ASP.NET Core", "Node.js"],
+      "techStack": [
+        ".NET",
+        "ASP.NET Web API",
+        "Entity Framework",
+        "SQL Server",
+        "Hangfire",
+        "Node.js",
+        "Express",
+        "Rasa NLP",
+        "Socket.IO"
+      ],
+      "skills": [
+        "OOP",
+        "SOA",
+        "ASP.NET Core",
+        "Node.js"
+      ],
       "date": "Apr 2019 – Jan 2021",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/trendy-bot.jpg",
@@ -337,11 +458,19 @@
     },
     {
       "id": 10,
-      "title": "File Service",
-      "description": "Plug-and-play file microservice with upload, batch processing, update, and delete functionality. Designed as a reusable component with clean API interface that could be integrated into multiple projects with minimal configuration.",
+      "title": "Shared File Service (gRPC Microservice)",
+      "description": "A shared microservice handling file upload and download for other services, consumed independently by two national platforms. Callable over gRPC, storing small to large files concurrently on server storage, deployed on premises.",
       "category": "Microservices",
-      "techStack": [".Net Core", "MySQL"],
-      "skills": ["SOA", "Microservices"],
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "gRPC",
+        "Protobuf"
+      ],
+      "skills": [
+        "SOA",
+        "Microservices"
+      ],
       "date": "Aug 2020 – Oct 2020",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/file-service.jpg",
@@ -351,10 +480,20 @@
     {
       "id": 11,
       "title": "Telenor Health",
-      "description": "Implemented responsive UI components and optimized data flow for smooth user experience across various devices and network conditions.",
+      "description": "A second deployment of the national telemedicine platform for a separate commercial venture, running the same core codebase with client-specific tuning. This is what proved the contact-centre platform was a reusable product rather than one bespoke build.",
       "category": "Web Development",
-      "techStack": ["Angular"],
-      "skills": ["Systems Design", "Angular CLI", "Docker"],
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "Angular",
+        "Docker"
+      ],
+      "skills": [
+        "Systems Design",
+        "Angular CLI",
+        "Docker"
+      ],
       "date": "May 2019 – Aug 2020",
       "associatedWith": "Synesis IT",
       "imageUrl": "/images/projects/telenor-health.jpg",
@@ -362,54 +501,76 @@
       "liveDemoLink": ""
     },
     {
-      "id": 12,
-      "title": "Business Suit",
-      "description": "Web application for managing client orders with modern interface. Implemented responsive design with Bootstrap and optimized data retrieval patterns for faster page loads and improved user experience.",
-      "category": "Web Development",
-      "techStack": ["ASP.NET MVC", "EF", "SQL Server", "jQuery", "Bootstrap"],
-      "skills": ["OOP", "ASP.NET", "Web Development"],
-      "date": "Mar 2018 – Nov 2018",
-      "associatedWith": "",
-      "imageUrl": "/images/projects/business-suit.jpg",
-      "githubLink": "",
-      "liveDemoLink": ""
-    },
-    {
-      "id": 13,
-      "title": "Annual Confidential Report",
-      "description": "Crystal Reports generation system for education board annual reports. Designed complex report templates with parameterized queries to support flexible data presentation and formatted output for different stakeholder needs.",
-      "category": "Web Development",
-      "techStack": ["ASP.NET", "jQuery"],
-      "skills": ["OOP", "Reporting"],
-      "date": "Jan 2018 – Apr 2018",
-      "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/acr.jpg",
-      "githubLink": "",
-      "liveDemoLink": ""
-    },
-    {
-      "id": 14,
-      "title": "Bangladesh Post Office",
-      "description": "Enhanced savings certificate management system with improved reporting and transaction tracking. Implemented complex database queries and optimized data retrieval to handle large volumes of financial records efficiently.",
-      "category": "Web Development",
-      "techStack": ["C#", "Oracle DB", "SVN", "Crystal Reports"],
-      "skills": ["OOP", "Database Design"],
-      "date": "Sep 2017 – Dec 2017",
-      "associatedWith": "Synesis IT",
-      "imageUrl": "/images/projects/bpo.jpg",
-      "githubLink": "",
-      "liveDemoLink": ""
-    },
-    {
       "id": 15,
-      "title": "Point of Sale",
-      "description": "WPF desktop application for mobile shop inventory management. Implemented barcode scanning, invoice generation, and real-time stock tracking. Designed intuitive UI for easy navigation and efficient workflow for retail staff.",
-      "category": "Desktop Development",
-      "techStack": [".NET WPF", "SQL Server"],
-      "skills": ["OOP", "Desktop Development"],
+      "title": "Point of Sale (Open Source)",
+      "description": "An ASP.NET MVC point-of-sale web application covering products, barcodes, suppliers, purchases, sales and printed receipts. Published open source and picked up by other developers as a reference implementation. An earlier desktop version was built in WPF on a three-layer separation with LINQ to SQL and Crystal Reports.",
+      "category": "Web Development",
+      "techStack": [
+        "ASP.NET MVC",
+        "C#",
+        "SQL Server",
+        "WPF"
+      ],
+      "skills": [
+        "OOP",
+        "Desktop Development"
+      ],
       "date": "Jan 2016 – Mar 2017",
       "associatedWith": "",
       "imageUrl": "/images/projects/pos.jpg",
+      "githubLink": "https://github.com/robinabdullah/POS-ASP.NET-MVC",
+      "liveDemoLink": ""
+    },
+    {
+      "id": 16,
+      "title": "Makkah Hotel Management System",
+      "description": "Multi-tenant hotel management and booking platform, designed and built end to end. Tenant isolation runs across four independent layers: HTTP middleware, Entity Framework Core global query filters on reads, a SaveChanges interceptor on writes, and PostgreSQL row-level security on the tables themselves. Onion architecture with domain-driven design, and a Next.js front end in strict TypeScript with right-to-left Arabic support.",
+      "category": "Web Development",
+      "techStack": [
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework Core",
+        "PostgreSQL",
+        "Row-Level Security (RLS)",
+        "Next.js",
+        "TypeScript",
+        "JWT"
+      ],
+      "skills": [
+        "Systems Design",
+        "Multi-Tenant Architecture",
+        "PostgreSQL",
+        "Next.js",
+        "TypeScript"
+      ],
+      "date": "Jul 2025 – Sep 2025",
+      "associatedWith": "",
+      "imageUrl": "",
+      "githubLink": "",
+      "liveDemoLink": ""
+    },
+    {
+      "id": 17,
+      "title": "Digital-Asset Platform (Real-Time Layer)",
+      "description": "Real-time communication layer for a digital-asset platform, built for a US client. Persistent client-server connectivity over SignalR and Socket.IO, with connection-management workflows covering lost connections, reconnections and the edge cases around live user interaction.",
+      "category": "Web Development",
+      "techStack": [
+        ".NET",
+        "ASP.NET Core",
+        "SignalR",
+        "Socket.IO",
+        "Azure Table Storage",
+        "MSSQL",
+        "Docker"
+      ],
+      "skills": [
+        "Systems Design",
+        "Real-Time Systems",
+        "Docker"
+      ],
+      "date": "May 2022 – Apr 2023",
+      "associatedWith": "Orion Informatics Ltd",
+      "imageUrl": "",
       "githubLink": "",
       "liveDemoLink": ""
     }
@@ -430,10 +591,15 @@
           "label": "dev hours reclaimed a year"
         }
       ],
-      "techStack": [".NET", "C#", "OpenAI Platform API", "Three-way merge"]
+      "techStack": [
+        ".NET",
+        "C#",
+        "OpenAI Platform API",
+        "Three-way merge"
+      ]
     },
     {
-      "title": "Smart Voter Info",
+      "title": "Parsing Project",
       "role": "Designed, built and operated it",
       "period": "2016 – January 2026",
       "tagline": "Election-data processing platform for 340+ client organisations in Bangladesh.",
@@ -452,7 +618,16 @@
           "label": "batch processing time"
         }
       ],
-      "techStack": [".NET", "ASP.NET Core", "PostgreSQL", "RabbitMQ", "OpenAI Platform API", "Google Cloud Vision", "Kubernetes", "Angular"]
+      "techStack": [
+        ".NET",
+        "ASP.NET Core",
+        "PostgreSQL",
+        "RabbitMQ",
+        "OpenAI Platform API",
+        "Google Cloud Vision",
+        "Kubernetes",
+        "Angular"
+      ]
     }
   ],
   "certifications": [

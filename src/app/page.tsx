@@ -16,9 +16,9 @@ import portfolioData from '@/data/portfolio.json';
 const defaultData = {
   personalInfo: {
     name: "Abdullah Saleh Robin",
-    title: "Senior Software Engineer",
-    bio: "Senior Software Engineer building .NET and C# back-ends, React and Angular front-ends, and applied AI in production.",
-    about: "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on cloud-native .NET and Angular/React architectures and on AI-augmented engineering workflows. Based in Germany, available immediately, and authorized to work without sponsorship.",
+    title: "Senior Backend & Full-Stack Engineer",
+    bio: "Senior Backend & Full-Stack Engineer building back-ends in Java with Spring Boot and in .NET with C#, React and Angular front-ends, and applied AI in production.",
+    about: "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on Java and Spring Boot back-ends, cloud-native .NET, and Angular and React front-ends, together with applied AI: integrating LLMs into production systems with schema-constrained output and fallback handling. Based in Germany, available immediately, and authorized to work without sponsorship.",
     avatar: "/images/profile.png",
     email: "abdullahsalehrobin@gmail.com",
     phone: "+49 152 06964467",
@@ -35,6 +35,7 @@ const defaultData = {
   certifications: [],
   skills: {
     programmingLanguages: [],
+    javaJvm: [],
     dotnetBackend: [],
     architecturesPatterns: [],
     frontEndTechnologies: [],
@@ -79,6 +80,7 @@ export default function Home() {
   // Create a default skills object that matches the Skills component interface
   const skillsData = {
     programmingLanguages: skills.programmingLanguages || [],
+    javaJvm: skills.javaJvm || [],
     dotnetBackend: skills.dotnetBackend || [],
     architecturesPatterns: skills.architecturesPatterns || [],
     frontEndTechnologies: skills.frontEndTechnologies || [],
