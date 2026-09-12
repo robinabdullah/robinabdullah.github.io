@@ -5,7 +5,7 @@
     "email": "abdullahsalehrobin@gmail.com",
     "phone": "+49 152 06964467",
     "location": "Berlin, Germany",
-    "bio": "Senior Backend & Full-Stack Engineer with 9 years building enterprise systems in Java with Spring Boot and in .NET with C#, across e-commerce, healthcare, compliance and public-sector platforms.\n\nI designed, built and ran an election-data platform end to end that processed 230,000+ scanned PDFs and 177M+ records, and served roughly 10M searches inside a 15-day national election window.\n\nAt Optimizely I co-engineered SpireWiz, cutting upgrade cycles by up to 80% and reclaiming 600+ developer hours a year. Microsoft Certified.",
+    "bio": "Senior Backend & Full-Stack Engineer with 9 years building enterprise systems in Java with Spring Boot and in .NET with C#, across e-commerce, healthcare, compliance and public-sector platforms.\n\nI designed, built and ran an election-data platform end to end that processed 230,000+ scanned PDFs and 177M+ records, and served roughly 20M searches inside a 15-day national election window.\n\nAt Optimizely I co-engineered SpireWiz, cutting upgrade cycles by up to 80% and reclaiming 600+ developer hours a year. Microsoft Certified.",
     "about": "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on Java and Spring Boot back-ends, cloud-native .NET, and Angular and React front-ends, together with applied AI: integrating LLMs into production systems with schema-constrained output and fallback handling. Based in Germany, available immediately, and authorized to work without sponsorship.",
     "avatar": "/images/profile.png",
     "careerStartDate": "2017-09-01",
@@ -247,7 +247,7 @@
     {
       "id": 1,
       "title": "Parsing Project",
-      "description": "Election-data processing platform for 340+ client organisations in Bangladesh, in production 2021 to January 2026. I designed, built and operated it: an OCR and LLM document pipeline over a 65M-record PostgreSQL database, served by two Angular SPAs on Kubernetes. It processed 230,000+ scanned PDFs and 177M+ voter entries, and served roughly 10M searches during a 15-day national-election window.",
+      "description": "Election-data processing platform for 340+ client organisations in Bangladesh, in production 2021 to January 2026. I designed, built and operated it: an OCR and LLM document pipeline over a 65M-record PostgreSQL database, served by two Angular SPAs on Kubernetes. It processed 230,000+ scanned PDFs and 177M+ voter entries, and served roughly 20M searches during a 15-day national-election window.",
       "category": "Web Development",
       "techStack": [
         ".NET",
@@ -577,7 +577,7 @@
     {
       "id": 18,
       "title": "SpireWiz",
-      "description": "AI-powered upgrade-automation tool for Optimizely Configured Commerce. Every client blueprint upgrade meant resolving three-way merge conflicts by hand between the client’s customisations, their old platform version and the new one. SpireWiz puts the OpenAI Platform API into that merge analysis, classifying each conflict and proposing a resolution for a developer to review before it lands. Automated 25+ annual upgrade workflows, cut upgrade effort by around 80% and reclaimed 600+ developer hours a year.",
+      "description": "AI-powered upgrade-automation tool for Optimizely Configured Commerce. Every client blueprint upgrade meant resolving three-way merge conflicts by hand between the client’s customisations, their old platform version and the new one. SpireWiz puts the OpenAI Platform API into that merge analysis, classifying each conflict and proposing a resolution for a developer to review before it lands. Automated 25+ annual upgrade workflows, cut upgrade effort by around 80% and reclaimed 600+ developer hours a year, an estimated USD 180K in annual business impact.",
       "category": "AI",
       "techStack": [
         ".NET",
@@ -623,6 +623,10 @@
         {
           "value": "600+",
           "label": "dev hours reclaimed a year"
+        },
+        {
+          "value": "USD 180K",
+          "label": "estimated annual business impact"
         }
       ],
       "techStack": [
