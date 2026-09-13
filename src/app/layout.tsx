@@ -9,7 +9,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Abdullah Saleh Robin - Senior Backend & Full-Stack Engineer',
-  description: 'Senior Backend & Full-Stack Engineer with nine years building enterprise back-ends in Java with Spring Boot and in .NET with C#, React and Angular front-ends, and applied AI in production. Based in Berlin, Germany.',
+  description: 'Senior Backend & Full-Stack Engineer with nine years building enterprise applications: backend services, REST APIs and data-intensive systems in .NET with C# and in Java with Spring Boot, with React and Angular front-ends, and applied AI in production. Based in Berlin, Germany.',
   icons: {
     icon: '/favicon.svg',
   },

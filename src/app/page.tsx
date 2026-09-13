@@ -17,8 +17,8 @@ const defaultData = {
   personalInfo: {
     name: "Abdullah Saleh Robin",
     title: "Senior Backend & Full-Stack Engineer",
-    bio: "Senior Backend & Full-Stack Engineer building back-ends in Java with Spring Boot and in .NET with C#, React and Angular front-ends, and applied AI in production.",
-    about: "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on Java and Spring Boot back-ends, cloud-native .NET, and Angular and React front-ends, together with applied AI: integrating LLMs into production systems with schema-constrained output and fallback handling. Based in Germany, available immediately, and authorized to work without sponsorship.",
+    bio: "Senior Backend & Full-Stack Engineer building enterprise applications in .NET with C# and in Java with Spring Boot, with React and Angular front-ends, and applied AI in production.",
+    about: "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on backend services, REST APIs and data-intensive systems, built in .NET with C# and in Java with Spring Boot, with Angular and React front-ends, together with applied AI: integrating LLMs into production systems with schema-constrained output and fallback handling. Based in Germany, available immediately, and authorized to work without sponsorship.",
     avatar: "/images/profile.png",
     email: "abdullahsalehrobin@gmail.com",
     phone: "+49 152 06964467",

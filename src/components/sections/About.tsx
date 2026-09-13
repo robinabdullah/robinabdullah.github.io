@@ -227,7 +227,7 @@ export default function About({ name, about, avatar, experience, education, care
                       </svg>
                     </div>
                     <h4 className="text-base font-semibold mb-1">Full-Stack Development</h4>
-                    <p className="text-center text-xs text-gray-300">.NET Core, Angular, React</p>
+                    <p className="text-center text-xs text-gray-300">.NET, Java, React, Angular</p>
                   </div>
                   
                   <div className="flex flex-col items-center p-3 rounded-lg bg-[#ffffff0a] hover:bg-[#ffffff12] transition-all duration-300 border border-[#ffffff12] col-span-3">
