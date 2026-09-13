@@ -17,7 +17,7 @@ const defaultData = {
   personalInfo: {
     name: "Abdullah Saleh Robin",
     title: "Senior Backend & Full-Stack Engineer",
-    bio: "Senior Backend & Full-Stack Engineer building enterprise applications in .NET with C# and in Java with Spring Boot, with React and Angular front-ends, and applied AI in production.",
+    bio: "Senior Backend & Full-Stack Engineer with 9 years building enterprise applications in .NET with C# and in Java with Spring Boot, across e-commerce, healthcare, compliance and public-sector platforms.\n\nI designed, built and ran an election-data platform end to end that processed 230,000+ scanned PDFs and 177M+ records, and served roughly 20M searches inside a 15-day national election window.\n\nAt Optimizely I co-engineered SpireWiz, cutting upgrade cycles by up to 80% and reclaiming 600+ developer hours a year. Microsoft Certified.",
     about: "I have nine years of professional experience building scalable enterprise applications across e-commerce, compliance, healthcare and public-sector domains, working with distributed, cross-timezone teams across the US and Canada. My work centres on backend services, REST APIs and data-intensive systems, built in .NET with C# and in Java with Spring Boot, with Angular and React front-ends, together with applied AI: integrating LLMs into production systems with schema-constrained output and fallback handling. Based in Germany, available immediately, and authorized to work without sponsorship.",
     avatar: "/images/profile.png",
     email: "abdullahsalehrobin@gmail.com",
@@ -29,7 +29,7 @@ const defaultData = {
       linkedin: "https://www.linkedin.com/in/robinabdullah/"
     },
     availability: "Open to work \u00b7 Berlin, Germany",
-    proofPoints: [{"value": "up to 80%", "label": "faster upgrade cycles"}, {"value": "600+", "label": "dev hours reclaimed a year"}, {"value": "{{years}} years", "label": "professional experience"}]
+    proofPoints: [{"value": "40 → 5 min", "label": "Batch document processing"}, {"value": "3 hrs → 20 min", "label": "AI-assisted data entry"}, {"value": "55% faster", "label": "Enterprise migration delivery"}]
   },
   featured: [],
   certifications: [],

@@ -108,7 +108,7 @@ export default function Hero({
       // @ts-ignore - TS doesn't like dynamic components with props
       <ContentWrapper className="z-10" {...animationProps}>
         {availability && (
-          <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-[#22c55e12] border border-[#22c55e40] text-sm text-green-300">
+          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full bg-[#22c55e12] border border-[#22c55e40] text-sm text-green-300">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
@@ -117,16 +117,16 @@ export default function Hero({
           </div>
         )}
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-          <span className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-3">Hi, I'm</span> <br />
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+          <span className="block text-2xl md:text-3xl lg:text-4xl leading-tight text-gray-300 mb-1">Hi, I'm</span>
           <span className="gradient-text whitespace-nowrap">{name}</span>
         </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-4">
           <span className="relative inline-block gradient-text">{title}</span>
         </h2>
-        <div className="mb-8 space-y-3">
+        <div className="mb-6 space-y-2.5">
           {bioParagraphs.map((para, i) => (
-            <p key={i} className="text-[17px] leading-relaxed text-gray-300">
+            <p key={i} className="text-base leading-relaxed text-gray-300">
               {para}
             </p>
           ))}
@@ -192,7 +192,7 @@ export default function Hero({
 
     return (
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -228,7 +228,7 @@ export default function Hero({
     return (
       // @ts-ignore - TS doesn't like dynamic components with props
       <StatWrapper
-        className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-2 bg-[#0300147a] backdrop-blur-xl p-5 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden"
+        className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-2 bg-[#0300147a] backdrop-blur-xl p-4 rounded-xl border border-[#ffffff18] shadow-xl relative overflow-hidden"
         {...wrapperProps}
       >
         <div className="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-purple-500/10 blur-xl"></div>
@@ -237,7 +237,7 @@ export default function Hero({
         {pills.map((pill, i) => (
           <div
             key={i}
-            className="flex flex-col items-center p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group"
+            className="flex flex-col items-center p-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/5 cursor-default group"
           >
             <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent group-hover:from-[#6366f1] group-hover:to-[#a855f7] transition-all duration-500 whitespace-nowrap">
               {pill.value}
@@ -252,8 +252,8 @@ export default function Hero({
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center py-24">
-      <div className="section-container">
+    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {renderHeroContent(isMounted)}
           {renderPortrait(isMounted)}
