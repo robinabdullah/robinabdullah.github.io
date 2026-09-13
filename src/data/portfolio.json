@@ -176,7 +176,7 @@
       "company": "Optimizely",
       "position": "Senior Developer",
       "period": "May 2023 - June 2026",
-      "description": "Customized and maintained Optimizely Configured Commerce (B2B), collaborating with cross-functional international teams across the US and Canada. Co-engineered SpireWiz, an AI-powered upgrade automation tool that cut upgrade cycles by up to 80% and reclaimed 600+ developer hours a year. Delivered the platform's first Classic to Spire storefront migrations and reviewed 100+ pull requests across 15+ client projects.",
+      "description": "Identified the manual upgrade bottleneck and co-engineered SpireWiz, an AI-powered upgrade automation tool that applies the OpenAI Platform API to three-way merge analysis; automated 25+ annual upgrades, cut upgrade effort by around 80%, reclaimed 600+ developer hours a year, and contributed an estimated USD 180K in annual business impact.\nExtended the Configured Commerce backend in C# through the platform's handler and pipeline extensibility model rather than forking it, including ERP integration pipelines to Infor CloudSuite Distribution and SX.e.\nPioneered the platform's first two Classic (Angular) to Spire (React) storefront migrations, delivered 55% faster than historical team averages, and codified the reusable migration playbook the team now applies to client upgrades.\nBuilt OpalSpark, a .NET framework for Optimizely Opal AI tools with attribute-based tool discovery, configuration-driven authentication, health checks, rate limiting and request tracing, and shipped a tool on it exposing Configured Commerce order history.\nEmbedded AI-augmented delivery with Claude Code, Cursor, GitHub Copilot and MCP-based tooling across B2B commerce projects; one custom DLL-to-extension migration went from a 200-hour estimate to 90 hours with human-reviewed code.\nReviewed 100+ pull requests across 15+ B2B client projects under a mandatory review process, mentoring developers and cutting deployment errors.",
       "location": "Dhaka, Bangladesh",
       "workType": "Full-time, On-site"
     },
@@ -184,7 +184,7 @@
       "company": "Orion Informatics Ltd",
       "position": "Senior Software Engineer",
       "period": "May 2022 - Apr 2023",
-      "description": "Implemented Socket.IO for a persistent connection manager. Managed edge cases like lost connections, automatic re-connections, and real-time data synchronization. Developed skills in real-time data handling and troubleshooting in a fast-paced environment.",
+      "description": "Built the real-time layer of an NFT and digital-asset marketplace on .NET with SignalR and Socket.IO, holding connection state in Azure Table Storage rather than Redis or memory so live sessions survived restarts and scale-out.\nSecured the real-time transport with dual authentication: JWT for browser clients and HMAC-SHA256 signed tokens for socket clients that cannot send headers.\nTargeted broadcasts through persisted page flags instead of SignalR group lifecycle management, with stale-connection cleanup under optimistic concurrency; containerized development and deployment with Docker.",
       "location": "Bangladesh",
       "workType": "Full-time, Hybrid"
     },
@@ -192,7 +192,7 @@
       "company": "Synesis IT",
       "position": "Senior Programmer",
       "period": "Sep 2020 - Apr 2022",
-      "description": "Worked as a senior full-stack developer mainly in Java with Spring Boot, alongside .NET Core, Angular and TypeScript. Led development teams and guided their career growth. Participated in client meetings, collected requirements, analyzed system needs, and prioritized tasks. Handled database design, built complex queries, and analyzed technical problems to design solutions.",
+      "description": "Led 8-10 engineers across government digital transformation, healthcare, telemedicine and commerce automation projects.\nArchitected and built the service layer behind a national skills-certification platform used by 100,000+ training providers, assessment centres and skilled workers, with JWT authentication, role-based access control, SMS one-time-password verification and a national payment-gateway integration.\nEngineered the APIs behind the national telemedicine contact centre serving 30M+ rural residents, with PBX events fanned out through RabbitMQ to WebSocket dashboards; the centre handled 100,000+ teleconference calls a day.\nBuilt a multi-tenant Facebook page automation platform across four services, sustaining 800 concurrent messages per second across 50+ pages, with Rasa NLP intent handling and in-chat product discovery and checkout.\nDeployed and operated a microservice fleet for the national device-identity register (API gateway, service discovery, inter-service clients, circuit breaking, Kafka messaging) with rolling releases and rollback.\nBuilt a COVID-19 telehealth CRM with a runtime questionnaire builder that let operators change patient-intake questions without a code change; it supported care for 10,000+ patients daily.",
       "location": "Dhaka, Bangladesh",
       "workType": "Full-time"
     },
@@ -200,8 +200,8 @@
       "company": "Synesis IT",
       "position": "Programmer",
       "period": "Sep 2017 - Aug 2020",
-      "description": "Worked as a full-stack developer mainly in Java with Spring Boot, alongside .NET Core and Angular. Practiced agile methodologies for improving software quality at each release. Initialized projects from scratch using design principles and standard coding conventions. Created highly readable, clean and easily maintainable source code.",
-      "location": "Dhaka",
+      "description": "Built full-stack public-sector and healthcare systems, backend services and Angular front-ends.\nStarted several platforms from scratch and set the project structure and coding conventions the team worked in afterwards.\nDelivered the e-prescription service, a shared microservice sending prescriptions to patients by SMS across several national healthcare platforms, averaging 50,000 prescriptions a day, with a configuration-driven gateway that let new SMS vendors be added without a backend code change.\nReduced report-generation query latency by around 70% through targeted database indexing.\nOwned root-cause analysis for critical production incidents.",
+      "location": "Dhaka, Bangladesh",
       "workType": "Full-time"
     }
   ],
@@ -217,7 +217,7 @@
     {
       "id": 0,
       "title": "Optimizely Configured Commerce",
-      "description": "Enterprise B2B commerce delivery on Optimizely Configured Commerce across 15+ client projects, covering Spire (React) and Classic (Angular) storefronts, custom handlers, ERP integrations and the upgrade path between platform versions. Co-engineered SpireWiz, which cut upgrade effort by around 80% and returned 600+ developer hours a year, delivered the platform’s first Classic-to-Spire storefront migrations, and extended Optimizely Opal with a custom AI tool. Reviewed 100+ pull requests across the client portfolio.",
+      "description": "Enterprise B2B commerce delivery on Optimizely Configured Commerce across 15+ client projects, covering Spire (React) and Classic (Angular) storefronts, custom handlers, ERP integrations and the upgrade path between platform versions. Co-engineered SpireWiz, which cut upgrade effort by around 80% and returned 600+ developer hours a year, delivered the platform’s first Classic-to-Spire storefront migrations, and built OpalSpark, a .NET framework for Optimizely Opal AI tools, plus a proof-of-concept Opal to Sitecore integration. Reviewed 100+ pull requests across the client portfolio.",
       "category": "E-commerce",
       "techStack": [
         "React",
@@ -552,7 +552,7 @@
     {
       "id": 17,
       "title": "Digital-Asset Platform (Real-Time Layer)",
-      "description": "Real-time communication layer for a digital-asset platform, built for a US client. Persistent client-server connectivity over SignalR and Socket.IO, with connection-management workflows covering lost connections, reconnections and the edge cases around live user interaction.",
+      "description": "Real-time layer of an NFT and digital-asset marketplace, built for a US client on .NET with SignalR and Socket.IO. Connection state lives in Azure Table Storage rather than Redis or memory, so live sessions survive restarts and scale-out; the transport is secured with JWT for browsers and HMAC-SHA256 signed tokens for socket clients, and broadcasts are targeted through persisted page flags instead of SignalR group lifecycle management.",
       "category": "Web Development",
       "techStack": [
         ".NET",

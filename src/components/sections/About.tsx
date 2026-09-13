@@ -319,7 +319,7 @@ export default function About({ name, about, avatar, experience, education, care
                 <div className="pl-6 pt-1 relative">
                   <a 
                     href="/cv/Resume_of_Abdullah_Saleh_Robin.pdf" 
-                    download="Abdullah_Robin_Resume.pdf"
+                    download="Abdullah_Saleh_Robin_Resume.pdf"
                     className="inline-block px-5 py-2 text-sm bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white rounded-md hover:opacity-100 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center"
                   >
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
